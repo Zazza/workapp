@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+    font-family: Verdana, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-align: center;
+    background-color: #FFFFFF;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 800px;
+    color: #000;
+}
+
+#allcontent {
+	padding: 53px 0 51px 0;
+}
+
+#leftContent {
+	float: left;
+    overflow: auto;
+    text-align: left;
+    width: 200px;
+    padding: 10px;
+}
+
+#leftContent a {
+	color: black;
+}
+
+#rightContent {
+	float: right;
+    overflow: auto;
+    text-align: left;
+    width: 180px;
+    padding: 10px 10px 10px 0;
+}
+
+.errorWrapper {
+    margin: 200px auto;
+    text-align: center;
+    width: 559px;
+}
+
+#rightContent a {
+	color: black;
+}
+
+.mainMenu img {
+	position: relative;
+	margin-left: 3px;
+	right: 5px;
+	bottom: 2px;
+}
+
+#centerContent {
+    overflow-y: auto;
+    text-align: left;
+    padding: 10px 20px 0;
+    position: fixed;
+    bottom: 21px;
+    margin-bottom: 0px;
+    top: 52px;
+    left: 210px;
+    right: 10px;
+}
+
+.bottomPanel {
+    background-color: transparent;
+    bottom: 0;
+    min-width: 900px;
+    position: fixed;
+    width: 100%;
+    z-index: 1050;
+}
+
+#advBottomPanel {
+    bottom: 22px;
+    left: 210px;
+    position: fixed;
+    z-index: 1000;
+    margin-bottom: 0;
+    padding: 7px 15px;
+}
+
+#ajaxLoader {
+	background: transparent;
+	border: 0;
+	border: 0;
+	*border: 0;
+	/* IE6-7 */
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+a.title {
+    text-decoration: none;
+}
+
+.title {
+    color: #000000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+.obj {
+	font-size: 11px;
+    padding: 10px 20px 20px;
+    text-align: left;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    vertical-align: top;
+    padding: 1px;
+    border: 1px solid #777;
+    background-color: #FFF;
+}
+
+.th_help {
+    font-family: Arial;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.help {
+    padding: 10px;
+    margin-bottom: 40px;
+}
+.help img {
+	border: 1px solid black;
+	padding: 3px;
+	margin: 10px 0;
+	max-width: 100%;
+}
+
+.tempmenu {
+	float: left;
+	list-style-type: none;
+	background-color: #708EAA;
+	border: 1px solid #375174;
+	color: #FFFFFF;
+	padding: 7px 10px;
+	cursor: pointer;
+}
+
+.tempmenu a {
+	color: #FFFFFF;
+}
+
+#userParam {
+	padding: 6px 10px;
+}
+
+.grSub {
+	color: #AAA;
+}
+
+#jqContextMenu {
+	text-align: left;	
+}

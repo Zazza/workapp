@@ -1,0 +1,71 @@
+#mail_tophead {
+	overflow: hidden;
+	height: 22px;
+	border: 3px solid #DDD;
+	border-bottom: 0px none;
+}
+
+#mailerhead {
+	overflow-y: none;
+}
+
+#mail_body {
+	overflow: visible;
+}
+
+.emailhead {
+	margin-bottom: 2px;
+}
+
+.itemhover {
+	/*background-color: #DFE4EA;*/
+	border-width: 2px 1px 1px 2px;
+	border-style: solid;
+	border-color: #777 #DDD #DDD #777;
+	background-color: #F0F3F5;
+	text-shadow: 0 1px 0 #DDD;
+}
+.itemhover a {
+	text-shadow: 0 1px 0 #048;
+}
+.emptymail {
+	background-color: #EEE;
+}
+.topfmail {
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.newmail {
+	font-weight: bold;
+}
+
+.attach {
+	background: url("../img/paper-clip-small.png") no-repeat left center;
+	padding-left: 17px;
+}
+
+#attach_files {
+    color: #55A;
+    overflow: hidden;
+}
+
+.bolder {
+	font-weight: bold;
+}
+
+#checkingMail {
+	text-align: left;
+	line-height: 20px;
+}
+
+#mailbut {
+	margin: 10px 0;
+}
+
+#checkingMail {
+    color: #000;
+}
+#checkingMail a {
+    color: #000;
+}

@@ -1,0 +1,346 @@
+@charset "utf-8";
+/* CSS Document */
+
+#fmTop {
+	overflow: hidden;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #F0F0F0;
+	font-size: 13px;
+}
+	
+.tabs {
+	overflow: hidden;
+	width: 700px;
+}
+
+.tbranch {
+	position: relative;
+	top: -3px;
+	left: 5px;
+	text-decoration: none;
+	outline: none;
+	color: black;
+}
+.tbranch:hover {
+	text-decoration: none;
+	outline: none;
+}
+
+.buf_folder, .buf_file {
+	background-color: white;
+	padding: 1px 0 1px 20px;
+}
+
+.buf_folder {
+	background: url("../img/treeview/folder.gif") no-repeat scroll 0 0 transparent;
+}
+.buf_file {
+	background: url("../img/treeview/file.gif") no-repeat scroll 0 0 transparent;
+}
+
+#clip {
+	text-align: left;
+	overflow-y: auto;
+}
+
+#servTop {
+	height: 13px;
+	border: 1px solid #DEDEDE;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+	padding: 4px;
+}
+#servSel {
+	overflow: hidden;
+	position: relative;
+	top: -3px;
+}
+#servClear {
+	float: right;
+	position: relative;
+	bottom: 3px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+#wndShare {
+	margin-top: 10px;
+	padding: 5px;
+}
+/* FM */
+#fm {
+    overflow: auto;
+}
+
+#fm_filesystem {
+    font-size: 10px;
+}
+
+#fm_preview_t {
+	position: absolute;
+	display: none;
+    z-index: 10000;
+}
+#fm_t_img_pre {
+	border: 1px solid #000;
+    background: #fff;
+    padding: 4px;
+    font-size: 11px;
+}
+
+#fm_sel, #fm_unsel {
+    cursor: pointer;
+    float: left;
+    height: 20px;
+    padding: 2px 10px 0;
+    font-size: 11px;
+}
+#fm_sel {
+	margin-right: 10px;
+}
+
+.fname, .fullname {
+	line-height: 10px;
+}
+
+.fm_file, .fm_dirs, .fm_dirs_up {
+    padding: 1px;
+    height: 34px;
+    float: left;
+    width: 110px;
+    height: 100px;
+    padding: 5px;
+}
+
+.fm_unsellabel, .fm_sellabel {
+	padding: 2px;
+}
+
+#fm_up {
+    margin-bottom: 10px;
+    padding: 1px;
+    height: 18px;
+}
+
+.fm_sellabel {
+    background-color: #C1DCFC;
+    border: 1px solid #7DA2CE;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.fm_unsellabel {
+    background-color: transparent;
+}
+
+.watermark {
+   color: #555555;
+}
+
+#fm_createDir, #fm_move {
+	height: 26px;
+    width: 200px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+#fm_dirname {
+	height: 16px;
+    width: 160px;
+    margin: 0;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+#fm_moveToDir {
+	height: 24px;
+    width: 90px;
+    font-size: 14px;
+}
+
+.cm {
+	text-align: left;
+}
+.cm_img {
+	margin-right: 10px;
+}
+
+.lfm {
+	margin: 10px 0;
+	font-size: 11px;
+}
+.lfm .button {
+	font-size: 11px;
+}
+.lfm_border {
+	border: 1px solid #D9E4FF;
+    border-radius: 5px 5px 5px 5px;
+    margin: 20px 0;
+    padding: 5px 7px;
+}
+.lfm_legend {
+    background-color: #FFFFFF;
+    color: #73B304;
+    font: 700 14px Arial,Helvetica,sans-serif;
+    padding: 3px;
+    position: relative;
+    top: -12px;
+    left: 14px;
+}
+
+#fdmain, #fdhistory, #fdchmod {
+	font-size: 12px;
+}
+
+.mode {
+	position: relative;
+	top: 2px;
+	left: 10px;
+	display: none;
+}
+
+div.fieldset {
+	border:  1px solid #afe14c;
+	margin: 10px 0;
+	padding: 20px 10px;
+}
+div.fieldset span.legend {
+	position: relative;
+	background-color: #FFF;
+	padding: 3px;
+	top: -30px;
+	font: 700 14px Arial, Helvetica, sans-serif;
+	color: #73b304;
+}
+
+div.flash {
+	width: 375px;
+	margin: 10px 5px;
+	border-color: #D9E4FF;
+
+	-moz-border-radius-topleft : 5px;
+	-webkit-border-top-left-radius : 5px;
+    -moz-border-radius-topright : 5px;
+    -webkit-border-top-right-radius : 5px;
+    -moz-border-radius-bottomleft : 5px;
+    -webkit-border-bottom-left-radius : 5px;
+    -moz-border-radius-bottomright : 5px;
+    -webkit-border-bottom-right-radius : 5px;
+
+}
+
+#btnSubmit { margin: 0 0 0 155px ; }
+
+#clip li {
+	clear: both;
+    color: #555555;
+    display: block;
+    font-weight: normal;
+    line-height: 18px;
+    padding: 3px 15px;
+    white-space: nowrap;
+}
+
+/* -- Table Styles ------------------------------- */
+
+.progressWrapper {
+	width: 357px;
+	overflow: hidden;
+}
+
+.progressContainer {
+	margin: 5px;
+	padding: 4px;
+	border: solid 1px #E8E8E8;
+	background-color: #F7F7F7;
+	overflow: hidden;
+}
+/* Message */
+.message {
+	margin: 1em 0;
+	padding: 10px 20px;
+	border: solid 1px #FFDD99;
+	background-color: #FFFFCC;
+	overflow: hidden;
+}
+/* Error */
+.red {
+	border: solid 1px #B50000;
+	background-color: #FFEBEB;
+}
+
+/* Current */
+.green {
+	border: solid 1px #DDF0DD;
+	background-color: #EBFFEB;
+}
+
+/* Complete */
+.blue {
+	border: solid 1px #CEE2F2;
+	background-color: #F0F5FF;
+}
+
+.progressName {
+	font-size: 8pt;
+	font-weight: 700;
+	color: #555;
+	width: 323px;
+	height: 14px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.progressBarInProgress,
+.progressBarComplete,
+.progressBarError {
+	font-size: 0;
+	width: 0%;
+	height: 2px;
+	background-color: blue;
+	margin-top: 2px;
+}
+
+.progressBarComplete {
+	width: 100%;
+	background-color: green;
+	visibility: hidden;
+}
+
+.progressBarError {
+	width: 100%;
+	background-color: red;
+	visibility: hidden;
+}
+
+.progressBarStatus {
+	margin-top: 2px;
+	width: 337px;
+	font-size: 7pt;
+	font-family: Arial;
+	text-align: left;
+	white-space: nowrap;
+}
+
+a.progressCancel {
+	font-size: 0;
+	display: block;
+	height: 14px;
+	width: 14px;
+	background-image: url(../img/cancelbutton.gif);
+	background-repeat: no-repeat;
+	background-position: -14px 0px;
+	float: right;
+}
+
+a.progressCancel:hover {
+	background-position: 0px 0px;
+}
+
+
+/* -- SWFUpload Object Styles ------------------------------- */
+.swfupload {
+	vertical-align: top;
+}

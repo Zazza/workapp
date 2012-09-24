@@ -1,0 +1,16 @@
+{% if part.field %}
+<p><b>{{ part.field }}</b></p>
+{% if part.type == 2 %}
+<p>
+	<select name="{{ part.fid }}">
+	{% for part in part.sel %}
+	<option>{{ part.val }}</option>
+	{% endfor %}
+	</select>
+</p>
+{% elseif part.type == 1 %}
+<p><textarea name="{{ part.fid }}"></textarea></p>
+{% elseif part.type == 0 %}
+<p><input type="text" name="{{ part.fid }}" /></p>
+{% endif %}
+{% endif %}

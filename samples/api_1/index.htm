@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>API SAMPLE</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<script type="text/javascript" src="config.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+var data = "module=task&action=getTaskList&login=" + login + "&password=" + password + "&oid=" + oid;
+$.ajax({
+	url: url,
+	data: data,
+	dataType: 'jsonp',
+	success: function(res) {
+		$.each(res, function(key, val) {
+			if (key == "error") {
+				$("#task").html(val);
+			} else {
+				var id = val["id"];
+				var text = val["text"];
+				var open_data = val["open_data"];
+				var close_data = val["close_data"];
+				var author = val["author"];
+				var numComments = val["numComments"];
+				var newComments = val["newComments"];
+				
+				if (close_data == "0000-00-00 00:00:00") {
+					$("#task").append("<div class='otask'><div class='tid'><a href='task.html?tid=" + id + "'>№" + id + "</a></div><div class='tright'><div class='ttext'>" + text + "</div><div class='tsub'>" + author + "</div><div class='tsub'>" + open_data + "</div><div class='tcom'>Комментарии: " + numComments + " [" + newComments + "]</div></div></div>");
+				} else {
+					$("#task").append("<div class='ctask'><div class='tid'><a href='task.html?tid=" + id + "'>№" + id + "</a></div><div class='tright'><div class='ttext'>" + text + "</div><div class='tsub'>" + author + "</div><div class='tsub'>" + open_data + "</div><div class='tclose'>Закрыта: " + close_data + "</div><div class='tcom'>Комментарии: " + numComments + " [" + newComments + "]</div></div></div>");
+				}
+			};
+		});
+	}
+});
+</script>
+</head>
+<body>
+
+<div id="newtask"><a href="addtask.html">Новая задача</a></div>
+
+<div id="task"></div>
+
+</body>
+</html>

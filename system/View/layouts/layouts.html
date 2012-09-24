@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="icon" type="image/gif" href="{{ registry.uri }}favicon.png" />
+<meta name="description" content="{{ description }}" />
+<meta name="keywords" content="{{ keywords }}" />
+<title>{{ title }}</title>
+<link href="{{ registry.uri }}css/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+<link href="{{ registry.uri }}css/main.css" rel="stylesheet" media="all" />
+<link href="{{ registry.uri }}css/jquery.treeview.css" rel="stylesheet" type="text/css" />
+<link href="{{ registry.uri }}css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="{{ registry.uri }}css/cmd.css" rel="stylesheet" type="text/css" />
+<link href="{{ registry.uri }}css/dashboard.css" rel="stylesheet" type="text/css" />
+<link href="{{ registry.uri }}css/users.css" rel="stylesheet" type="text/css" />
+<link href="{{ registry.uri }}css/fa.css" rel="stylesheet" type="text/css" />
+<link href="{{ registry.uri }}css/bootstrap-wysihtml5.css" rel="stylesheet" type="text/css" />
+{% if css %}
+{% for part in css %}
+{{ part }}
+{% endfor %}
+{% endif %}
+<script type="text/javascript" src="{{ registry.uri }}js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/jquery.timers.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/jquery.treeview.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/jquery.cookie.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/jquery.contextmenu.r2.packed.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/scripts.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/cmd.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/dashboard.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/users.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/fm.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/fa.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/wysihtml5-0.3.0.min.js"></script>
+<script type="text/javascript" src="{{ registry.uri }}js/bootstrap-wysihtml5.js"></script>
+{% if js %}
+{% for part in js %}
+{{ part }}
+{% endfor %}
+{% endif %}
+<script type="text/javascript">
+    otmsInit('{{ registry.uri }}', '{{ registry.get.id }}');
+</script>
+</head>
+
+<body>
+
+<!-- CMD Window -->
+<div class="semiopacity">
+	<div id="cmdText"></div>
+	<div id="cmdStr">
+		<div id="leftCmd">workapp#</div><div id="rightCmd"><input type="text" id="mcmd" /></div>
+		<input type="hidden" id="prevcmd" />
+	</div>
+</div>
+<!-- /CMD Window -->
+
+<div class="bottomPanel">
+	<div class="well" style="margin: 0; padding: 0; text-align: left;">
+		<div class="navbar navbar-fixed-bottom" style="padding: 0 10px; font-weight: bold; font-size: 11px; font-family: mo">
+			<div style="float: left; font-weight: bold; margin-right: 5px;">></div>
+			<div id="bStatus" style="float: left;"></div>
+			<div style="float: right;"><a style="cursor: pointer;" onclick="shConsole()"><b>#</b></a></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal" style="display: none;" id="ajaxLoader" >
+<div class="modal-body" style="background: transparent;">
+<img src="{{ registry.uri }}img/ajax-loader-big.gif" alt="ajax-loader" />
+</div>
+</div>
+
+<!-- TOP -->
+{% include "topmenu-white.tpl" %}
+<!-- /TOP -->
+
+
+<!-- CONTENT -->
+<div class="container-fluid" id="allcontent" style="background-color: #F5F5F5;">
+<div class="row-fluid">
+
+{{ content }}
+
+{% if leftBlock %}
+<script type="text/javascript">$(document).ready(function(){$("#centerContent").css('right', '190px');});</script>
+<div id="rightContent">
+<div>	
+	{{ leftBlock }}
+</div>
+</div>
+{% endif %}
+
+
+<div id="leftContent">
+<div class="sidebar-nav">
+	{% include "leftmenu.tpl" %}
+</div>
+</div>
+
+
+<div id="centerContent" class="well" style="background-color: #FFF;">
+	<legend>{{ title }}</legend>
+	<div style="outline: 0 none" id="touchID" tabindex="1">
+    	{{ main_content }}
+    </div>
+    <script type="text/javascript" src="{{ registry.uri }}js/touchscroll.js"></script>
+    
+    {% if advBottomPanel %}
+   	<div id="advBottomPanel" class="well">{{ advBottomPanel }}</div>
+   	<script type="text/javascript">$("#rightContent").css("bottom", "101px");</script>
+   	{% endif %}
+</div>
+
+</div>
+</div>
+<!-- /CONTENT -->
+
+</body>
+</html>

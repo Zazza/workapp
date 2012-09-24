@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+html, body {
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-align: left;
+    background: white;
+    height: 100%;
+    margin: 10px 30px;
+    padding: 0;
+    color: black;
+}
+a {
+	color: #048;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#newtask, #back {
+	margin-bottom: 30px;
+}
+.otask, .ctask {
+	overflow: hidden;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+.ctask {
+	background-color: #EEE;
+}
+.tid {
+	float: left;
+	width: 100px;
+	text-align: center;
+}
+.tright {
+	float: left;
+}
+.ttext {
+	font-weight: bold;
+}
+.tsub, .textcomsub {
+	float: left;
+	font-size: 11px;
+	color: #777;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.tclose {
+	font-size: 11px;
+	color: #777;
+	margin-right: 10px;
+}
+.tcom {
+	font-size: 11px;
+	margin-top: 10px;
+}
+#formcomment {
+	margin: 20px 0;
+}
+.textcom {
+	overflow: hidden;
+	margin: 10px 30px;
+}
+.over {
+	overflow: hidden;
+}
+#taskarea, #comment {
+	height: 100px;
+	width: 300px;
+}

@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+#fm {
+    overflow: auto;
+}
+
+#fm_filesystem {
+    font-size: 10px;
+}
+
+#fm_preview_t{
+	position: absolute;
+	display: none;
+    z-index: 10000;
+}
+#fm_t_img_pre {
+	border: 1px solid #000;
+    background: #fff;
+    padding: 4px;
+    font-size: 11px;
+}
+
+#fm_up {
+    margin-bottom: 10px;
+    padding: 1px;
+    height: 18px;
+}
+
+.watermark {
+   color: #555555;
+}
+
+#fm_createDir, #fm_move {
+	height: 26px;
+    width: 200px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+#fm_moveToDir {
+	height: 24px;
+    width: 90px;
+    font-size: 14px;
+}
+
+.qqfa-uploader {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.qqfa-upload-drop-area {
+    position:absolute; top:0; left:0; width:100%; height:100%; z-index:2;
+    text-align:center; 
+}
+.qqfa-upload-drop-area span {
+    display:block; position:absolute; top: 50%; width:100%; margin-top:-8px;
+}
+.qqfa-upload-drop-area-active { }
+
+.qqfa-upload-list {margin: 5px 10px; padding: 0; list-style: none;}
+.qqfa-upload-list li { margin: 0; padding: 2px 0; line-height: 15px; font-size: 10px;}
+.qqfa-upload-file, .qqfa-upload-spinner, .qqfa-upload-size, .qqfa-upload-cancel, .qqfa-upload-failed-text {
+    margin-right: 7px;
+}
+.qqfa-upload-spinner, .qqfa-upload-size, .qqfa-upload-cancel, .qqfa-upload-failed-text {
+    color: #777;
+}
+
+.qqfa-upload-spinner {display:inline-block; background: url("images/loading.gif"); width:15px; height:15px; vertical-align:text-bottom;}
+.qqfa-upload-size,.qqfa-upload-cancel {font-size:11px;}
+
+.qqfa-upload-failed-text {display:none;}
+.qqfa-upload-fail .qqfa-upload-failed-text {display:inline;}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>API SAMPLE</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<script type="text/javascript" src="config.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#back").attr("href", link);
+});
+
+function parseGetParams() { 
+	var $_GET = {}; 
+	var __GET = window.location.search.substring(1).split("&"); 
+	for(var i=0; i<__GET.length; i++) { 
+		var getVar = __GET[i].split("="); 
+		$_GET[getVar[0]] = typeof(getVar[1])=="undefined" ? "" : getVar[1];
+	} 
+	return $_GET; 
+}
+
+var args = parseGetParams();
+var tid = args["tid"];
+
+var data = "module=task&action=getTask&login=" + login + "&password=" + password + "&oid=" + oid + "&tid=" + tid;
+$.ajax({
+	url: url,
+	data: data,
+	dataType: 'jsonp',
+	success: function(res) {
+		$.each(res, function(key, val) {
+			if (key == "error") {
+				$("#task").html(val);
+			} else {
+				if (key == "task") {
+					var id = val["id"];
+					var text = val["text"];
+					var open_data = val["open_data"];
+					var close_data = val["close_data"];
+					var author = val["author"];
+					var numComments = val["numComments"];
+					var newComments = val["newComments"];
+					
+					if (close_data == "0000-00-00 00:00:00") {
+						$("#task").append("<div class='otask'><div class='tid'><a href='task.html?tid=" + id + "'>№" + id + "</a><p><input type='button' value='Закрыть' onclick='closeTask()'></p></div><div class='tright'><div class='ttext'>" + text + "</div><div class='tsub'>" + author + "</div><div class='tsub'>" + open_data + "</div><div class='tcom'>Комментарии: " + numComments + " [" + newComments + "]</div></div></div>");
+					} else {
+						$("#formcomment").hide();
+						
+						$("#task").append("<div class='ctask'><div class='tid'><a href='task.html?tid=" + id + "'>№" + id + "</a></div><div class='tright'><div class='ttext'>" + text + "</div><div class='tsub'>" + author + "</div><div class='tsub'>" + open_data + "</div><div class='tclose'>Закрыта: " + close_data + "</div><div class='tcom'>Комментарии: " + numComments + " [" + newComments + "]</div></div></div>");
+					}
+				};
+				
+				if (key == "comments") {
+					$.each(val, function(ckey, cval) {
+						$("#comments").append("<div class='textcom'><div class='over'><div class='textcomsub'>" + cval["author"] + "</div><div class='textcomsub'>" + cval["date"] + "</div></div><div>" + cval["text"] + "</div></div>");
+					});
+				};
+			};
+		});
+	}
+});
+
+function addComment() {
+	var data = "module=task&action=addComment&login=" + login + "&password=" + password + "&oid=" + oid + "&tid=" + tid + "&text=" + encodeURIComponent($("#comment").val());
+	$.ajax({
+		url: url,
+		data: data,
+		dataType: 'jsonp',
+		success: function(res) {
+			document.location.href = document.location.href;
+		}
+	});
+}
+
+function closeTask() {
+	var data = "module=task&action=closeTask&login=" + login + "&password=" + password + "&oid=" + oid + "&tid=" + tid;
+	$.ajax({
+		url: url,
+		data: data,
+		dataType: 'jsonp',
+		success: function(res) {
+			document.location.href = link;
+		}
+	});
+}
+</script>
+</head>
+<body>
+
+<p><a id="back" href="">На главную</a></p>
+
+<div id="task"></div>
+
+<div id="comments"></div>
+
+<div id="formcomment">
+	<textarea id="comment"></textarea>
+	<p><input type="button" value="Написать" onclick="addComment()" /></p>
+</div>
+
+</body>
+</html>

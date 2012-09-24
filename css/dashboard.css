@@ -1,0 +1,68 @@
+.dashpre {
+	float: left;
+	padding: 2px 5px;
+	text-align: center;
+	margin-right: 10px;
+	height: 20px;
+	width: 150px;
+	border: 1px solid #EEE;
+}
+
+#dashajaxlogs {
+	overflow-x: none;
+	overflow-y: auto;
+	width: 350px;
+}
+
+.dashbut {
+	float: left;
+	text-align: left;
+	margin: 0 10px 0 3px;
+}
+
+#dashbut .button {
+	font-size: 11px;
+	padding: 3px 5px;
+}
+#dashbut .button a {
+	color: black;
+}
+
+.dashEvent {
+	font-size: 11px;
+	margin: 5px 10px;
+    display: block;
+    overflow: hidden;
+    padding: 3px 7px;
+    position: relative;
+}
+
+.dashEventSub {
+	overflow: hidden;
+	/*background-color: #708EAA;
+	color: #FFF;*/
+	padding: 1px 3px;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+#emptyEvents {
+	padding: 10px;
+	text-align: center;
+}
+
+.evtext {
+	float: left;
+}
+
+.evadv {
+	float: right;
+}
+
+.evtext > a, .evadv > a {
+	clear: none;
+	display: inline;
+	padding: 0 5px;
+	color: #048;
+	text-decoration: underline;
+}

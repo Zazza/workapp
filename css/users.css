@@ -1,0 +1,71 @@
+#bottomUsers {
+    background-color: #FFFFFF;
+    color: black;
+    cursor: default;
+    overflow-y: auto;
+    padding: 0 6px;
+    width: 350px;
+}
+
+#topBU {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 4px 10px;
+}
+
+#bottomBU {
+	border-top: 1px solid #EEE;
+	font-weight: bold;
+	padding: 2px 4px;
+	text-align: center;
+}
+
+#bottomBU span {
+	font-size: 11px;
+	padding: 3px 5px;
+}
+
+#listUser {
+	padding: 6px 10px;
+}
+
+.ul {
+	padding: 2px;
+	background-color: transparent;
+}
+
+.ul:hover {
+	background-color: #e7e7e7;
+	border-radius: 2px 2px 2px 2px;
+}
+
+.gbu, .pgbu {
+	width: 10px;
+	height: 20px;
+}
+.tgbu, .tpgbu, .selgbu {
+	font-weight: bold;
+	padding: 4px 0 4px 5px;
+}
+.tpgbu {
+	font-size: 14px;
+}
+
+.pubu {
+	margin-left: 10px;
+}
+.ubu {
+	margin-left: 10px;
+}
+
+.plusbu {
+	background: url("../img/treeview/plus.gif") no-repeat 0 7px transparent;
+}
+
+.minusbu {
+	background: url("../img/treeview/minus.gif") no-repeat 0 7px transparent;
+}
+.userSel {
+    background-color: #C1DCFC;
+    border-radius: 2px 2px 2px 2px;
+}

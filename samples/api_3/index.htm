@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>API SAMPLE</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.20/jquery-ui.min.js"></script>
+<script type="text/javascript" src="config.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+function send() {
+	var res = "";
+	var params = $("#params").val().split(" ");
+	$.each(params, function(key, val) {
+		res = res + "&args[]=" + val;
+	});
+
+	var data = "login=" + login + "&password=" + password + "&class=" + $("#class").val() + "&method=" + $("#method").val() + res;
+	$.ajax({
+		url: url,
+		data: data,
+		dataType: 'jsonp',
+		success: function(res) {
+			var result = JSON.stringify(res);
+			$("#result").text(result);
+		}
+	});
+}
+</script>
+</head>
+<body>
+
+<div>
+	Class: <input type="text" id="class" /><br />
+	Method: <input type="text" id="method" /><br />
+	Args: <input type="text" id="params" /><br />
+	<input type="button" value="Send" onclick="send()" />
+</div>
+
+<div id="result"></div>
+
+</body>
+</html>

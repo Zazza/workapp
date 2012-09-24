@@ -1,0 +1,102 @@
+/*
+.semiopacity {
+	position: fixed;
+	left: 10px;
+	top: 60px;
+	width: 97%;
+	bottom: 10px;
+	display: none;
+	background: black;
+	border: 2px solid #000;
+	opacity: 0.8;
+	filter: alpha(Opacity=80);
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+	z-index: 1000;
+}
+*/
+.semiopacity {
+    background: none repeat scroll 0 0 #000000;
+    border: 2px groove #EEE;
+    bottom: 15px;
+    color: white;
+    display: none;
+    font-family: monospace;
+    font-size: 12px;
+    height: 400px;
+    left: 0;
+    overflow: hidden;
+    padding: 4px 10px;
+    position: fixed;
+    right: 0;
+    z-index: 1050;
+}
+
+/*.semiopacity #cmdText {
+	padding: 5px;
+	position: absolute;
+	left: 0;
+	top: 30px;
+	right: 0;
+	bottom: 10px;
+	overflow: auto;
+}
+*/
+.semiopacity #cmdText {
+    bottom: 40px;
+    display: table-cell;
+    left: 0;
+    overflow-y: scroll;
+    padding: 4px 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+.semiopacity #cmdStr {
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 90%;
+}
+
+#leftCmd {
+	float: left;
+	margin-top: 3px;
+}
+#rightCmd {
+    margin-left: 60px;
+}
+#mcmd {
+    background-color: transparent;
+    border: 0 none;
+    width: 100%;
+   	color: white;
+	font-weight: bold;
+	font-size: 12px;
+	box-shadow: none;
+}
+.resCmd {
+	padding-bottom: 5px;
+	color: #AAA;
+	margin: 0;
+}
+
+.ps {
+	color: #f51100;
+}
+
+.pre {
+	margin: 0;
+	color: #FFF;
+	background-color: transparent;
+	line-height: 16px;
+}
+
+.dashCmd {
+	overflow: hidden;
+	padding-bottom: 10px;
+}

@@ -1,0 +1,194 @@
+.adv {
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 1px solid #ddd;
+    background-color: #FFF;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.subadv {
+    color: #777;
+}
+
+.info {
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    border: 1px solid #AAA;
+    background-color: #e4eeff;
+    font-size: 11px;
+    margin: 0 10px 0 0;
+    padding: 5px 10px;
+}
+.taskstatus {
+    color: red;
+    font-size: 10px;
+}
+
+.dtask {
+	font-size: 12px;
+	overflow: visible;
+}
+
+.table tbody tr:hover > td, table tbody tr:hover > th {
+	background-color: #FFF;
+}
+
+.table tbody td {
+		padding: 7px;
+}
+
+#sday, #fday {	height: 16px; width: 18px; font-size: 14px; margin-right: 5px }
+#smonth, #fmonth, #month { height: 27px; width: 85px; font-size: 14px; margin-right: 5px }
+#syear, #fyear { height: 16px; width: 34px; font-size: 14px; margin-right: 5px }
+#sbut, #fbut { border: 1px solid #ccc; height: 16px; width: 84px; text-align: center; font-size: 12px }
+
+.caltd {
+    vertical-align: top;
+    min-width: 100px;
+}
+.subtd {
+    padding: 0;
+    margin: 0;
+    background-color: #F0F0F0;
+}
+
+.blockbd {
+    overflow: hidden;
+}
+
+.task {
+    -moz-border-radius: 3px 3px 3px 3px;
+    -moz-box-shadow: 0 1px 3px rgba(156, 181, 202, 1.8);
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px rgba(156, 181, 202, 1.8);
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -webkit-box-shadow: 0 1px 3px rgba(156, 181, 202, 1.8);
+    background-color: #e4eeff;
+    padding: 2px 10px;
+    margin: 5px 0 0 0;
+    float: left;
+}
+
+#caldate {
+	position: absolute;
+	display: none;
+    z-index: 10000;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -moz-box-shadow: 0 1px 3px rgba(156, 181, 202, 1.8);
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px rgba(156, 181, 202, 1.8);
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -webkit-box-shadow: 0 1px 3px rgba(156, 181, 202, 1.8);
+    background-color: #F7F7F1;
+    border: 1px solid #777;
+    padding: 8px 10px;
+    text-align: left;
+    width: 150px;
+}
+
+.caltd {
+    padding: 0;
+    vertical-align: top;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.subtd {
+    font-weight: bold;
+    font-size: 11px;
+    color: #000;
+    padding: 0 5px 3px;
+    margin: 0;
+    text-align: right;
+    background-color: #def;
+    border-bottom: 1px solid #6696AF;
+    -moz-box-shadow: 0 1px 3px rgba(156, 181, 202, 1.8);
+    box-shadow: 0 1px 3px rgba(156, 181, 202, 1.8);
+    -webkit-box-shadow: 0 1px 3px rgba(156, 181, 202, 1.8);
+}
+
+.calcont {
+    /*padding-top: 24px;*/
+    padding: 3px 5px;
+    text-align: center;
+    height: 52px;
+}
+
+.weekday {
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -moz-box-shadow: 0 1px 3px rgba(156, 181, 202, 1.8);
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px rgba(156, 181, 202, 1.8);
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -webkit-box-shadow: 0 1px 3px rgba(156, 181, 202, 1.8);
+}
+
+.workday {
+    background-color: #84c225;
+}
+
+.holiday {
+    background-color: #e77817;
+}
+
+.livetask {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+}
+.livetask:hover {
+	text-decoration: underline;
+}
+.endtask {
+	font-size: 14px;
+	font-weight: bold;
+	color: #999;
+	text-decoration: line-through;
+}
+
+.taskadv {
+	background-color: #FFF;
+	font-weight: normal;
+	font-size: 11px;
+	padding: 10px;
+	border: 1px solid #777;
+	z-index: 1000;
+	position: absolute;
+}
+
+#btaskname {
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+#dtaskname {
+	display: none;
+}
+
+#titletask {
+	font-size: 18px;
+	width: 300px;
+}
+
+.chtask {
+	margin: 5px 0;
+	text-align: left;
+}
+
+#fulltask {
+	width: 50%;
+	margin-left: 20px;
+}
+
+#tabletask {
+	width: 100%;
+}

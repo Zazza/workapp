@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>API SAMPLE</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<script type="text/javascript" src="config.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#back").attr("href", link);
+});
+
+function implode(glue, pieces) {
+	return ((pieces instanceof Array) ? pieces.join (glue) : pieces);
+}
+
+function addTask() {
+	var data = "module=task&action=addTask&login=" + login + "&password=" + password + "&oid=" + oid + "&text=" + encodeURIComponent($("#taskarea").val());
+	if (rall !== undefined) {
+		data = data + "&rall=1";
+	}
+	if (ruser !== undefined) {
+		var str = implode("&ruser[]=", ruser);
+		data = data + "&ruser[]=" + str;
+	}
+	if (gruser !== undefined) {
+		var str = implode("&gruser[]=", gruser);
+		data = data + "&gruser[]=" + str;
+	}
+	$.ajax({
+		url: url,
+		data: data,
+		dataType: 'jsonp',
+		success: function(res) {
+			document.location.href = link;
+		}
+	});
+};
+</script>
+</head>
+<body>
+
+<p><a id="back" href="">На главную</a></p>
+
+<div>
+	<textarea id="taskarea"></textarea>
+	<p><input type="button" value="Создать" onclick="addTask()" /></p>
+</div>
+
+</body>
+</html>

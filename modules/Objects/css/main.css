@@ -1,0 +1,18 @@
+.otherlist, .tviewshow {
+/*	width: 300px;
+	height: 100%;*/
+	float: left;
+	list-style-type: none;
+	padding: 2px;
+	border: 1px solid #AAA;
+}
+.tviewshow {
+	border: 0 none;
+}
+.oinfo {
+	width: auto;
+}
+
+.ui-state-default a {
+	outline: none;
+}

@@ -1,0 +1,1 @@
+<li class="ui-state-default" style="overflow: hidden; {% if part.view.w != 0 %}width: {{ part.view.w }}px;{% endif %} {% if part.view.h != 0 %}height: {{ part.view.h }}px{% endif %}" id="fs{{ part.fid }}"><div style="font-weight: bold; text-align: center">{{ part.field }}</div></li>
