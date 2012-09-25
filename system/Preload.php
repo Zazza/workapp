@@ -27,6 +27,8 @@ class Preload extends Engine_Bootstrap {
 			$ui = new Model_Ui();
 			$this->registry->set("users_sets", $ui->getSet("bu"));
 			
+			$this->registry->set("ajax_notice_sets", $ui->getSet("ajax_notice"));
+			
 		} else if (mb_substr($this->registry["url"], 1, 3) == "api") {
 			$api = new Model_Api();
 			if (!$api->login()) {

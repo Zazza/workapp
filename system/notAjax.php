@@ -19,8 +19,6 @@ class notAjax extends Engine_Interface {
 		
 		$dashboard = new Model_Dashboard();
 			
-		$this->registry->set("ajax_notice_sets", $ui->getSet("ajax_notice"));
-			
 		$dash["events"] = $dashboard->findEvents();
 			
 		if ($dashboard->getServiceVar()) {
