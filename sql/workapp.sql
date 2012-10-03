@@ -1289,7 +1289,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `pass`, `quota`, `name`, `soname`, `signature`, `icq`, `skype`, `adres`, `phone`, `avatar`, `email`, `notify`, `time_notify`, `last_notify`, `email_for_task`) VALUES
-(1, 'workapp', '100bd11c59e7ce6df2d416a120be933c', 104857600, 'Дмитрий', 'Самотой', '', '', '', '', '', '', 'example@domen.ru', 1, '08:00:00', '2012-01-14 09:01:01', 0);
+(1, 'workapp', '100bd11c59e7ce6df2d416a120be933c', 104857600, 'workapp', 'workapp', '', '', '', '', '', '', 'example@domen.ru', 1, '08:00:00', '2012-01-14 09:01:01', 0);
 
 -- --------------------------------------------------------
 
