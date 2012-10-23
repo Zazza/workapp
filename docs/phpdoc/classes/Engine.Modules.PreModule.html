@@ -1,0 +1,324 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Engine\Modules\PreModule</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Engine.html"><i class="icon-th"></i> Engine</a></li>
+<li><a href="../namespaces/Otms.html"><i class="icon-th"></i> Otms</a></li>
+<li><a href="../namespaces/app.html"><i class="icon-th"></i> app</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">489</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___call" title='__call :: "Волшебный" метод для поиска публичного метода.'><span class="description">"Волшебный" метод для поиска публичного метода.</span><pre>__call()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_getConfig" title="getConfig :: Getter"><span class="description">Getter</span><pre>getConfig()</pre></a></li>
+<li class="method public "><a href="#method_postRouterInit" title="postRouterInit :: Вызов из Bootstrap после роутинга, до отображения страницы"><span class="description">Вызов из Bootstrap после роутинга, до отображения страницы</span><pre>postRouterInit()</pre></a></li>
+<li class="method public "><a href="#method_publicMethods" title='publicMethods :: Вызов "публичного" метода модуля
+Например: $this-&gt;registry["module_task"]-&gt;taskshort($id);'><span class="description">Вызов "публичного" метода модуля
+Например: $this-&gt;registry["module_task"]-&gt;taskshort($id);</span><pre>publicMethods()</pre></a></li>
+<li class="method public "><a href="#method_setReason" title="setReason :: Добавление причины, почему модуль не может быть загружен"><span class="description">Добавление причины, почему модуль не может быть загружен</span><pre>setReason()</pre></a></li>
+<li class="method public "><a href="#method_showReason" title="showReason :: Отобразить причину, почему модуль не может быть загружен"><span class="description">Отобразить причину, почему модуль не может быть загружен</span><pre>showReason()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="method protected "><a href="#method_initView" title="initView :: Инициализация экземпляра Вида"><span class="description">Инициализация экземпляра Вида</span><pre>initView()</pre></a></li></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="method private "><a href="#method__initTwig" title="_initTwig :: Инициализация экземпляра Twig."><span class="description">Инициализация экземпляра Twig.</span><pre>_initTwig()</pre></a></li>
+<li class="method private "><a href="#method__setConfig" title="_setConfig :: Настройки"><span class="description">Настройки</span><pre>_setConfig()</pre></a></li>
+<li class="method private "><a href="#method_initModule" title="initModule :: Вызывается из postRouterInit
+Читает CSS и JS файлы, с помощью http://domen.com/resource/
+и передаёт результат в главный вид"><span class="description">Вызывается из postRouterInit
+Читает CSS и JS файлы, с помощью http://domen.com/resource/
+и передаёт результат в главный вид</span><pre>initModule()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul><li class="property public inherited"><a href="#property_registry" title="$registry :: "><span class="description">$registry</span><pre>$registry</pre></a></li></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_config" title="$config :: Конфиг модуля"><span class="description">Конфиг модуля</span><pre>$config</pre></a></li>
+<li class="property protected "><a href="#property_module_name" title="$module_name :: Имя модуля"><span class="description">Имя модуля</span><pre>$module_name</pre></a></li>
+<li class="property protected "><a href="#property_module_path" title="$module_path :: Путь к модулю"><span class="description">Путь к модулю</span><pre>$module_path</pre></a></li>
+<li class="property protected "><a href="#property_modules" title="$modules :: Полный список модулей"><span class="description">Полный список модулей</span><pre>$modules</pre></a></li>
+<li class="property protected "><a href="#property_short_module_name" title="$short_module_name :: Имя модуля строчными буквами"><span class="description">Имя модуля строчными буквами</span><pre>$short_module_name</pre></a></li>
+<li class="property protected "><a href="#property_view" title="$view :: Экземпляр Вида"><span class="description">Экземпляр Вида</span><pre>$view</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_reason" title="$reason :: Причина невозможности загрузки модуля(зависимости)"><span class="description">Причина невозможности загрузки модуля(зависимости)</span><pre>$reason</pre></a></li>
+<li class="property private "><a href="#property_timeLife" title="$timeLife :: Время хранения значения в кеше
+Здесь: сколько времени хранить настройки в кеше"><span class="description">Время хранения значения в кеше
+Здесь: сколько времени хранить настройки в кеше</span><pre>$timeLife</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Engine\Modules\PreModule"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Engine.html">Engine</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Engine.Modules.html">Modules</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Engine.Modules.PreModule.html">PreModule</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">PreModule class</p>
+<div class="details">
+<div class="long_description"><p>Основной для модуля класс, вызывается первый раз при инициализации модуля. Тогда же создаёт необходимые сущности.
+Затем вызывается из роутера.
+И в конце postInit() в Bootstrap выполняет окончательные действия:
+   загрузка JS, CSS файлов, передача нужных шаблонов в $this->registry["view"]</p></div>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:dmitry.samotoy@gmail.com">Dmitry Samotoy</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___call"></a><div class="element clickable method public method___call" data-toggle="collapse" data-target=".method___call .collapse">
+<h2>"Волшебный" метод для поиска публичного метода.</h2>
+<pre>__call(string $name, array $args) : \Engine\Modules\результат</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\Engine\Modules\результат</code>вызова публичного метода</div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($module_name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$module_name</h4></div>
+</div></div>
+</div>
+<a id="method_getConfig"></a><div class="element clickable method public method_getConfig" data-toggle="collapse" data-target=".method_getConfig .collapse">
+<h2>Getter</h2>
+<pre>getConfig() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_postRouterInit"></a><div class="element clickable method public method_postRouterInit" data-toggle="collapse" data-target=".method_postRouterInit .collapse">
+<h2>Вызов из Bootstrap после роутинга, до отображения страницы</h2>
+<pre>postRouterInit() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_publicMethods"></a><div class="element clickable method public method_publicMethods" data-toggle="collapse" data-target=".method_publicMethods .collapse">
+<h2>Вызов "публичного" метода модуля
+Например: $this-&gt;registry["module_task"]-&gt;taskshort($id);</h2>
+<pre>publicMethods(string $name, array $args) : \Engine\Modules\результат</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\Engine\Modules\результат</code>вызова публичного метода</div>
+</div></div>
+</div>
+<a id="method_setReason"></a><div class="element clickable method public method_setReason" data-toggle="collapse" data-target=".method_setReason .collapse">
+<h2>Добавление причины, почему модуль не может быть загружен</h2>
+<pre>setReason(string $reason) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$reason</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_showReason"></a><div class="element clickable method public method_showReason" data-toggle="collapse" data-target=".method_showReason .collapse">
+<h2>Отобразить причину, почему модуль не может быть загружен</h2>
+<pre>showReason() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_initView"></a><div class="element clickable method protected method_initView" data-toggle="collapse" data-target=".method_initView .collapse">
+<h2>Инициализация экземпляра Вида</h2>
+<pre>initView() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method__initTwig"></a><div class="element clickable method private method__initTwig" data-toggle="collapse" data-target=".method__initTwig .collapse">
+<h2>Инициализация экземпляра Twig.</h2>
+<pre>_initTwig() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Поиск шаблонов в /src/Otms/Modules/$this->module_name/$this->config["path"]["tpl"]/</p></div></div></div>
+</div>
+<a id="method__setConfig"></a><div class="element clickable method private method__setConfig" data-toggle="collapse" data-target=".method__setConfig .collapse">
+<h2>Настройки</h2>
+<pre>_setConfig() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_initModule"></a><div class="element clickable method private method_initModule" data-toggle="collapse" data-target=".method_initModule .collapse">
+<h2>Вызывается из postRouterInit
+Читает CSS и JS файлы, с помощью http://domen.com/resource/
+и передаёт результат в главный вид</h2>
+<pre>initModule() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_registry"> </a><div class="element clickable property public property_registry" data-toggle="collapse" data-target=".property_registry .collapse">
+<h2>$registry</h2>
+<pre>$registry </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Singleton::$$registry</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_config"> </a><div class="element clickable property protected property_config" data-toggle="collapse" data-target=".property_config .collapse">
+<h2>Конфиг модуля</h2>
+<pre>$config : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_module_name"> </a><div class="element clickable property protected property_module_name" data-toggle="collapse" data-target=".property_module_name .collapse">
+<h2>Имя модуля</h2>
+<pre>$module_name : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_module_path"> </a><div class="element clickable property protected property_module_path" data-toggle="collapse" data-target=".property_module_path .collapse">
+<h2>Путь к модулю</h2>
+<pre>$module_path : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_modules"> </a><div class="element clickable property protected property_modules" data-toggle="collapse" data-target=".property_modules .collapse">
+<h2>Полный список модулей</h2>
+<pre>$modules : \Engine\Modules\unknown_type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_short_module_name"> </a><div class="element clickable property protected property_short_module_name" data-toggle="collapse" data-target=".property_short_module_name .collapse">
+<h2>Имя модуля строчными буквами</h2>
+<pre>$short_module_name : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_view"> </a><div class="element clickable property protected property_view" data-toggle="collapse" data-target=".property_view .collapse">
+<h2>Экземпляр Вида</h2>
+<pre>$view : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_reason"> </a><div class="element clickable property private property_reason" data-toggle="collapse" data-target=".property_reason .collapse">
+<h2>Причина невозможности загрузки модуля(зависимости)</h2>
+<pre>$reason : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_timeLife"> </a><div class="element clickable property private property_timeLife" data-toggle="collapse" data-target=".property_timeLife .collapse">
+<h2>Время хранения значения в кеше
+Здесь: сколько времени хранить настройки в кеше</h2>
+<pre>$timeLife : \Engine\Modules\unknown_type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-10-16T11:22:01+04:00.<br></footer></div>
+</div>
+</body>
+</html>

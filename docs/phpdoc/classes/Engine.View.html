@@ -1,0 +1,441 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Engine\View</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Engine.html"><i class="icon-th"></i> Engine</a></li>
+<li><a href="../namespaces/Otms.html"><i class="icon-th"></i> Otms</a></li>
+<li><a href="../namespaces/app.html"><i class="icon-th"></i> app</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">489</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___call" title='__call :: Читает "реальный" файл.'><span class="description">Читает "реальный" файл.</span><pre>__call()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addCSS" title="addCSS :: Добавить CSS файл из модуля"><span class="description">Добавить CSS файл из модуля</span><pre>addCSS()</pre></a></li>
+<li class="method public "><a href="#method_addJS" title="addJS :: Добавить JS файл из модуля"><span class="description">Добавить JS файл из модуля</span><pre>addJS()</pre></a></li>
+<li class="method public "><a href="#method_getTemplate" title="getTemplate :: Получение реального имени файла в ФС для шаблона"><span class="description">Получение реального имени файла в ФС для шаблона</span><pre>getTemplate()</pre></a></li>
+<li class="method public "><a href="#method_render" title="render :: Twig render"><span class="description">Twig render</span><pre>render()</pre></a></li>
+<li class="method public "><a href="#method_setAdvBottomPanel" title="setAdvBottomPanel :: Добавить content на дополнительную панель внизу страницы."><span class="description">Добавить content на дополнительную панель внизу страницы.</span><pre>setAdvBottomPanel()</pre></a></li>
+<li class="method public "><a href="#method_setBottomPanel" title="setBottomPanel :: Добавить content на панель вверху страницы."><span class="description">Добавить content на панель вверху страницы.</span><pre>setBottomPanel()</pre></a></li>
+<li class="method public "><a href="#method_setContent" title='setContent :: Добавить "специальный" content после верхнего меню
+Пример: кнопка добавить файл с компьютера'><span class="description">Добавить "специальный" content после верхнего меню
+Пример: кнопка добавить файл с компьютера</span><pre>setContent()</pre></a></li>
+<li class="method public "><a href="#method_setDescription" title='setDescription :: Добавить &lt;meta name="description" content="" /&gt;'><span class="description">Добавить &lt;meta name="description" content="" /&gt;</span><pre>setDescription()</pre></a></li>
+<li class="method public "><a href="#method_setKeywords" title='setKeywords :: Добавить &lt;meta name="keywords" content="" /&gt;'><span class="description">Добавить &lt;meta name="keywords" content="" /&gt;</span><pre>setKeywords()</pre></a></li>
+<li class="method public "><a href="#method_setLeftContent" title="setLeftContent :: Добавить content в правую панель"><span class="description">Добавить content в правую панель</span><pre>setLeftContent()</pre></a></li>
+<li class="method public "><a href="#method_setMainContent" title="setMainContent :: Добавить контент в главную часть страницы"><span class="description">Добавить контент в главную часть страницы</span><pre>setMainContent()</pre></a></li>
+<li class="method public "><a href="#method_setTitle" title="setTitle :: Добавить &lt;title&gt;&lt;/title&gt;"><span class="description">Добавить &lt;title&gt;&lt;/title&gt;</span><pre>setTitle()</pre></a></li>
+<li class="method public "><a href="#method_showPage" title="showPage :: Показать всю страницу"><span class="description">Показать всю страницу</span><pre>showPage()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public inherited"><a href="#property_registry" title="$registry :: "><span class="description">$registry</span><pre>$registry</pre></a></li>
+<li class="property public "><a href="#property_rightBlock" title="$rightBlock :: Контент правого блока"><span class="description">Контент правого блока</span><pre>$rightBlock</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_description" title='$description :: &lt;meta name="description" content="" /&gt;'><span class="description">&lt;meta name="description" content="" /&gt;</span><pre>$description</pre></a></li>
+<li class="property protected "><a href="#property_keywords" title='$keywords :: &lt;meta name="keywords" content="" /&gt;'><span class="description">&lt;meta name="keywords" content="" /&gt;</span><pre>$keywords</pre></a></li>
+<li class="property protected "><a href="#property_main" title="$main :: Главный шаблон страницы layouts.html
+$this-&gt;registry['layouts']"><span class="description">Главный шаблон страницы layouts.html
+$this-&gt;registry['layouts']</span><pre>$main</pre></a></li>
+<li class="property protected "><a href="#property_mainContent" title="$mainContent :: Содержимое страницы"><span class="description">Содержимое страницы</span><pre>$mainContent</pre></a></li>
+<li class="property protected "><a href="#property_title" title="$title :: &lt;title&gt;&lt;/title&gt;"><span class="description">&lt;title&gt;&lt;/title&gt;</span><pre>$title</pre></a></li>
+<li class="property protected "><a href="#property_twig" title="$twig :: Остальные системные шаблоны
+$this-&gt;registry['templates']"><span class="description">Остальные системные шаблоны
+$this-&gt;registry['templates']</span><pre>$twig</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_advBottomPanel" title="$advBottomPanel :: Дополнительная панель внизу страницы."><span class="description">Дополнительная панель внизу страницы.</span><pre>$advBottomPanel</pre></a></li>
+<li class="property private "><a href="#property_bottomPanel" title="$bottomPanel :: Панель вверху страницы."><span class="description">Панель вверху страницы.</span><pre>$bottomPanel</pre></a></li>
+<li class="property private "><a href="#property_bottomPanelRight" title="$bottomPanelRight :: Панель вверху страницы, кнопки справа."><span class="description">Панель вверху страницы, кнопки справа.</span><pre>$bottomPanelRight</pre></a></li>
+<li class="property private "><a href="#property_content" title="$content :: Контент центральной части страницы"><span class="description">Контент центральной части страницы</span><pre>$content</pre></a></li>
+<li class="property private "><a href="#property_css" title="$css :: Массив CSS файлов модулей"><span class="description">Массив CSS файлов модулей</span><pre>$css</pre></a></li>
+<li class="property private "><a href="#property_js" title="$js :: Массив JS файлов модулей"><span class="description">Массив JS файлов модулей</span><pre>$js</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Engine\View"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Engine.html">Engine</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Engine.View.html">View</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">View class</p>
+<div class="details">
+<div class="long_description"><p>Класс наследуемый другими View классами</p></div>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:dmitry.samotoy@gmail.com">Dmitry Samotoy</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___call"></a><div class="element clickable method public method___call" data-toggle="collapse" data-target=".method___call .collapse">
+<h2>Читает "реальный" файл.</h2>
+<pre>__call(\Engine\unknown_type $name, array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Например: $this->registry["fm_content"] вызывает $this->setMainContent($this->twig->loadTemplate($this->getTemplate("fm_content")))</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>\Engine\unknown_type</code><p>(пример: fm_content)</p>
+</div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><ul>
+<li>параметры</li>
+</ul>
+</div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_addCSS"></a><div class="element clickable method public method_addCSS" data-toggle="collapse" data-target=".method_addCSS .collapse">
+<h2>Добавить CSS файл из модуля</h2>
+<pre>addCSS(string $css) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$css</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_addJS"></a><div class="element clickable method public method_addJS" data-toggle="collapse" data-target=".method_addJS .collapse">
+<h2>Добавить JS файл из модуля</h2>
+<pre>addJS($js) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$js</h4></div>
+</div></div>
+</div>
+<a id="method_getTemplate"></a><div class="element clickable method public method_getTemplate" data-toggle="collapse" data-target=".method_getTemplate .collapse">
+<h2>Получение реального имени файла в ФС для шаблона</h2>
+<pre>getTemplate(string $template) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$template</h4>
+<code>string</code><p>(пример: fm_content)</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(пример: fm/content.tpl)</div>
+</div></div>
+</div>
+<a id="method_render"></a><div class="element clickable method public method_render" data-toggle="collapse" data-target=".method_render .collapse">
+<h2>Twig render</h2>
+<pre>render(string $name, array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>(пример: fm_content)</p>
+</div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><ul>
+<li>параметры</li>
+</ul>
+</div>
+</div></div>
+</div>
+<a id="method_setAdvBottomPanel"></a><div class="element clickable method public method_setAdvBottomPanel" data-toggle="collapse" data-target=".method_setAdvBottomPanel .collapse">
+<h2>Добавить content на дополнительную панель внизу страницы.</h2>
+<pre>setAdvBottomPanel($content) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Примеры: файловый менеджер, фотоальбом.</p></div>
+<table class="table table-bordered"><tr>
+<th>var</th>
+<td></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$content</h4></div>
+</div></div>
+</div>
+<a id="method_setBottomPanel"></a><div class="element clickable method public method_setBottomPanel" data-toggle="collapse" data-target=".method_setBottomPanel .collapse">
+<h2>Добавить content на панель вверху страницы.</h2>
+<pre>setBottomPanel(string $content, int $num) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Пример: кнопки пользователи, события, чаты</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$num</h4>
+<code>int</code><ul>
+<li>порядковый номер</li>
+</ul>
+</div>
+</div></div>
+</div>
+<a id="method_setContent"></a><div class="element clickable method public method_setContent" data-toggle="collapse" data-target=".method_setContent .collapse">
+<h2>Добавить "специальный" content после верхнего меню
+Пример: кнопка добавить файл с компьютера</h2>
+<pre>setContent(string $content) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_setDescription"></a><div class="element clickable method public method_setDescription" data-toggle="collapse" data-target=".method_setDescription .collapse">
+<h2>Добавить &lt;meta name="description" content="" /&gt;</h2>
+<pre>setDescription(string $text) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_setKeywords"></a><div class="element clickable method public method_setKeywords" data-toggle="collapse" data-target=".method_setKeywords .collapse">
+<h2>Добавить &lt;meta name="keywords" content="" /&gt;</h2>
+<pre>setKeywords(string $text) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_setLeftContent"></a><div class="element clickable method public method_setLeftContent" data-toggle="collapse" data-target=".method_setLeftContent .collapse">
+<h2>Добавить content в правую панель</h2>
+<pre>setLeftContent(string $text) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_setMainContent"></a><div class="element clickable method public method_setMainContent" data-toggle="collapse" data-target=".method_setMainContent .collapse">
+<h2>Добавить контент в главную часть страницы</h2>
+<pre>setMainContent(string $text) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_setTitle"></a><div class="element clickable method public method_setTitle" data-toggle="collapse" data-target=".method_setTitle .collapse">
+<h2>Добавить &lt;title&gt;&lt;/title&gt;</h2>
+<pre>setTitle(string $text) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a id="method_showPage"></a><div class="element clickable method public method_showPage" data-toggle="collapse" data-target=".method_showPage .collapse">
+<h2>Показать всю страницу</h2>
+<pre>showPage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_registry"> </a><div class="element clickable property public property_registry" data-toggle="collapse" data-target=".property_registry .collapse">
+<h2>$registry</h2>
+<pre>$registry </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Singleton::$$registry</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_rightBlock"> </a><div class="element clickable property public property_rightBlock" data-toggle="collapse" data-target=".property_rightBlock .collapse">
+<h2>Контент правого блока</h2>
+<pre>$rightBlock : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_description"> </a><div class="element clickable property protected property_description" data-toggle="collapse" data-target=".property_description .collapse">
+<h2>&lt;meta name="description" content="" /&gt;</h2>
+<pre>$description : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_keywords"> </a><div class="element clickable property protected property_keywords" data-toggle="collapse" data-target=".property_keywords .collapse">
+<h2>&lt;meta name="keywords" content="" /&gt;</h2>
+<pre>$keywords : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_main"> </a><div class="element clickable property protected property_main" data-toggle="collapse" data-target=".property_main .collapse">
+<h2>Главный шаблон страницы layouts.html
+$this-&gt;registry['layouts']</h2>
+<pre>$main : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_mainContent"> </a><div class="element clickable property protected property_mainContent" data-toggle="collapse" data-target=".property_mainContent .collapse">
+<h2>Содержимое страницы</h2>
+<pre>$mainContent : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_title"> </a><div class="element clickable property protected property_title" data-toggle="collapse" data-target=".property_title .collapse">
+<h2>&lt;title&gt;&lt;/title&gt;</h2>
+<pre>$title : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_twig"> </a><div class="element clickable property protected property_twig" data-toggle="collapse" data-target=".property_twig .collapse">
+<h2>Остальные системные шаблоны
+$this-&gt;registry['templates']</h2>
+<pre>$twig : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_advBottomPanel"> </a><div class="element clickable property private property_advBottomPanel" data-toggle="collapse" data-target=".property_advBottomPanel .collapse">
+<h2>Дополнительная панель внизу страницы.</h2>
+<pre>$advBottomPanel : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Примеры: файловый менеджер, фотоальбом.</p></div></div></div>
+</div>
+<a id="property_bottomPanel"> </a><div class="element clickable property private property_bottomPanel" data-toggle="collapse" data-target=".property_bottomPanel .collapse">
+<h2>Панель вверху страницы.</h2>
+<pre>$bottomPanel : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Пример: кнопки пользователи, события, чаты</p></div></div></div>
+</div>
+<a id="property_bottomPanelRight"> </a><div class="element clickable property private property_bottomPanelRight" data-toggle="collapse" data-target=".property_bottomPanelRight .collapse">
+<h2>Панель вверху страницы, кнопки справа.</h2>
+<pre>$bottomPanelRight : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Пример: буфер обмена</p></div></div></div>
+</div>
+<a id="property_content"> </a><div class="element clickable property private property_content" data-toggle="collapse" data-target=".property_content .collapse">
+<h2>Контент центральной части страницы</h2>
+<pre>$content : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_css"> </a><div class="element clickable property private property_css" data-toggle="collapse" data-target=".property_css .collapse">
+<h2>Массив CSS файлов модулей</h2>
+<pre>$css : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_js"> </a><div class="element clickable property private property_js" data-toggle="collapse" data-target=".property_js .collapse">
+<h2>Массив JS файлов модулей</h2>
+<pre>$js : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-10-16T11:22:01+04:00.<br></footer></div>
+</div>
+</body>
+</html>

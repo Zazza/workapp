@@ -1,0 +1,448 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Otms\Modules\Route\Ajax\Route</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Engine.html"><i class="icon-th"></i> Engine</a></li>
+<li><a href="../namespaces/Otms.html"><i class="icon-th"></i> Otms</a></li>
+<li><a href="../namespaces/app.html"><i class="icon-th"></i> app</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">489</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___call" title="__call :: "><span class="description">__call()
+        </span><pre>__call()</pre></a></li>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addGoto" title="addGoto :: Добавить рендер действия для завершения этапа"><span class="description">Добавить рендер действия для завершения этапа</span><pre>addGoto()</pre></a></li>
+<li class="method public "><a href="#method_addRealRoute" title="addRealRoute :: Переместить черновик БП в реальные БП"><span class="description">Переместить черновик БП в реальные БП</span><pre>addRealRoute()</pre></a></li>
+<li class="method public "><a href="#method_addTask" title="addTask :: Добавить задачу в черновик"><span class="description">Добавить задачу в черновик</span><pre>addTask()</pre></a></li>
+<li class="method public "><a href="#method_addstep" title="addstep :: Добавить этап в конец БП"><span class="description">Добавить этап в конец БП</span><pre>addstep()</pre></a></li>
+<li class="method public "><a href="#method_addstepbefore" title="addstepbefore :: Добавить этап до этапа c ID"><span class="description">Добавить этап до этапа c ID</span><pre>addstepbefore()</pre></a></li>
+<li class="method public "><a href="#method_closeTask" title="closeTask :: Закрыть задачу БП."><span class="description">Закрыть задачу БП.</span><pre>closeTask()</pre></a></li>
+<li class="method public "><a href="#method_delRealRoute" title="delRealRoute :: Удалить БП"><span class="description">Удалить БП</span><pre>delRealRoute()</pre></a></li>
+<li class="method public "><a href="#method_delRoute" title="delRoute :: Удалить черновик БП"><span class="description">Удалить черновик БП</span><pre>delRoute()</pre></a></li>
+<li class="method public "><a href="#method_delTask" title="delTask :: Удалить задачу"><span class="description">Удалить задачу</span><pre>delTask()</pre></a></li>
+<li class="method public "><a href="#method_getDatatype" title="getDatatype :: Получить значения типа данных селективных полей"><span class="description">Получить значения типа данных селективных полей</span><pre>getDatatype()</pre></a></li>
+<li class="method public "><a href="#method_getRealTasks" title="getRealTasks :: Получить все задачи БП"><span class="description">Получить все задачи БП</span><pre>getRealTasks()</pre></a></li>
+<li class="method public "><a href="#method_getTasks" title="getTasks :: Получить все задачи БП (черновик)"><span class="description">Получить все задачи БП (черновик)</span><pre>getTasks()</pre></a></li>
+<li class="method public "><a href="#method_runProcess" title="runProcess :: Запустить БП"><span class="description">Запустить БП</span><pre>runProcess()</pre></a></li>
+<li class="method public "><a href="#method_savebpname" title="savebpname :: Сохранить имя БП"><span class="description">Сохранить имя БП</span><pre>savebpname()</pre></a></li>
+<li class="method public "><a href="#method_setResult" title="setResult :: Показать форму результата для завершения задачи БП (если результат требуется)"><span class="description">Показать форму результата для завершения задачи БП (если результат требуется)</span><pre>setResult()</pre></a></li>
+<li class="method public "><a href="#method_stepremove" title="stepremove :: Удалить этап"><span class="description">Удалить этап</span><pre>stepremove()</pre></a></li>
+<li class="method public "><a href="#method_steprename" title="steprename :: Переименовать этап"><span class="description">Переименовать этап</span><pre>steprename()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="method private inherited"><a href="#method_errorload" title="errorload :: "><span class="description">errorload()
+        </span><pre>errorload()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul><li class="property public inherited"><a href="#property_registry" title="$registry :: "><span class="description">$registry</span><pre>$registry</pre></a></li></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_config" title="$config :: Конфиг модуля"><span class="description">Конфиг модуля</span><pre>$config</pre></a></li>
+<li class="property protected inherited"><a href="#property_module_name" title="$module_name :: Имя модуля"><span class="description">Имя модуля</span><pre>$module_name</pre></a></li>
+<li class="property protected inherited"><a href="#property_module_path" title="$module_path :: Путь к модулю"><span class="description">Путь к модулю</span><pre>$module_path</pre></a></li>
+<li class="property protected inherited"><a href="#property_view" title="$view :: Экземпляр Вида"><span class="description">Экземпляр Вида</span><pre>$view</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Otms\Modules\Route\Ajax\Route"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Otms.html">Otms</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.html">Modules</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.Route.html">Route</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.Route.Ajax.html">Ajax</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Otms.Modules.Route.Ajax.Route.html">Route</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Ajax\Route class</p>
+<div class="details">
+<div class="long_description"><p>Класс наследуемый ajax классами модулей</p></div>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:dmitry.samotoy@gmail.com">Dmitry Samotoy</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___call"></a><div class="element clickable method public method___call" data-toggle="collapse" data-target=".method___call .collapse">
+<h2>__call()
+        </h2>
+<pre>__call($name, $args) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::__call()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($config) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::__construct()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$config</h4></div>
+</div></div>
+</div>
+<a id="method_addGoto"></a><div class="element clickable method public method_addGoto" data-toggle="collapse" data-target=".method_addGoto .collapse">
+<h2>Добавить рендер действия для завершения этапа</h2>
+<pre>addGoto($params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(twig render) - .../goto.tpl</div>
+</div></div>
+</div>
+<a id="method_addRealRoute"></a><div class="element clickable method public method_addRealRoute" data-toggle="collapse" data-target=".method_addRealRoute .collapse">
+<h2>Переместить черновик БП в реальные БП</h2>
+<pre>addRealRoute($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_addTask"></a><div class="element clickable method public method_addTask" data-toggle="collapse" data-target=".method_addTask .collapse">
+<h2>Добавить задачу в черновик</h2>
+<pre>addTask($params) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>- ID новой задачи</div>
+</div></div>
+</div>
+<a id="method_addstep"></a><div class="element clickable method public method_addstep" data-toggle="collapse" data-target=".method_addstep .collapse">
+<h2>Добавить этап в конец БП</h2>
+<pre>addstep($params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>- JSON array</div>
+</div></div>
+</div>
+<a id="method_addstepbefore"></a><div class="element clickable method public method_addstepbefore" data-toggle="collapse" data-target=".method_addstepbefore .collapse">
+<h2>Добавить этап до этапа c ID</h2>
+<pre>addstepbefore($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_closeTask"></a><div class="element clickable method public method_closeTask" data-toggle="collapse" data-target=".method_closeTask .collapse">
+<h2>Закрыть задачу БП.</h2>
+<pre>closeTask($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Записать результат. Перейти к следю действию</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_delRealRoute"></a><div class="element clickable method public method_delRealRoute" data-toggle="collapse" data-target=".method_delRealRoute .collapse">
+<h2>Удалить БП</h2>
+<pre>delRealRoute($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_delRoute"></a><div class="element clickable method public method_delRoute" data-toggle="collapse" data-target=".method_delRoute .collapse">
+<h2>Удалить черновик БП</h2>
+<pre>delRoute($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_delTask"></a><div class="element clickable method public method_delTask" data-toggle="collapse" data-target=".method_delTask .collapse">
+<h2>Удалить задачу</h2>
+<pre>delTask($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_getDatatype"></a><div class="element clickable method public method_getDatatype" data-toggle="collapse" data-target=".method_getDatatype .collapse">
+<h2>Получить значения типа данных селективных полей</h2>
+<pre>getDatatype($params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(twig render) - .../datatype.tpl</div>
+</div></div>
+</div>
+<a id="method_getRealTasks"></a><div class="element clickable method public method_getRealTasks" data-toggle="collapse" data-target=".method_getRealTasks .collapse">
+<h2>Получить все задачи БП</h2>
+<pre>getRealTasks($params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>- JSON array $routes->getTasks($rid)</div>
+</div></div>
+</div>
+<a id="method_getTasks"></a><div class="element clickable method public method_getTasks" data-toggle="collapse" data-target=".method_getTasks .collapse">
+<h2>Получить все задачи БП (черновик)</h2>
+<pre>getTasks($params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>- JSON array $routes->getTasks($rid)</div>
+</div></div>
+</div>
+<a id="method_runProcess"></a><div class="element clickable method public method_runProcess" data-toggle="collapse" data-target=".method_runProcess .collapse">
+<h2>Запустить БП</h2>
+<pre>runProcess($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_savebpname"></a><div class="element clickable method public method_savebpname" data-toggle="collapse" data-target=".method_savebpname .collapse">
+<h2>Сохранить имя БП</h2>
+<pre>savebpname($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_setResult"></a><div class="element clickable method public method_setResult" data-toggle="collapse" data-target=".method_setResult .collapse">
+<h2>Показать форму результата для завершения задачи БП (если результат требуется)</h2>
+<pre>setResult($params) : string: \Otms\Modules\Route\Ajax\"null"</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(twig render) - .../formresults.tpl</div>
+<div class="subelement response"><code>\Otms\Modules\Route\Ajax\"null"</code></div>
+</div></div>
+</div>
+<a id="method_stepremove"></a><div class="element clickable method public method_stepremove" data-toggle="collapse" data-target=".method_stepremove .collapse">
+<h2>Удалить этап</h2>
+<pre>stepremove($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_steprename"></a><div class="element clickable method public method_steprename" data-toggle="collapse" data-target=".method_steprename .collapse">
+<h2>Переименовать этап</h2>
+<pre>steprename($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_errorload"></a><div class="element clickable method private method_errorload" data-toggle="collapse" data-target=".method_errorload .collapse">
+<h2>errorload()
+        </h2>
+<pre>errorload($name) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::errorload()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_registry"> </a><div class="element clickable property public property_registry" data-toggle="collapse" data-target=".property_registry .collapse">
+<h2>$registry</h2>
+<pre>$registry </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Singleton::$$registry</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$registry</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_config"> </a><div class="element clickable property protected property_config" data-toggle="collapse" data-target=".property_config .collapse">
+<h2>Конфиг модуля</h2>
+<pre>$config : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$config</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_module_name"> </a><div class="element clickable property protected property_module_name" data-toggle="collapse" data-target=".property_module_name .collapse">
+<h2>Имя модуля</h2>
+<pre>$module_name : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$module_name</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_module_path"> </a><div class="element clickable property protected property_module_path" data-toggle="collapse" data-target=".property_module_path .collapse">
+<h2>Путь к модулю</h2>
+<pre>$module_path : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$module_path</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_view"> </a><div class="element clickable property protected property_view" data-toggle="collapse" data-target=".property_view .collapse">
+<h2>Экземпляр Вида</h2>
+<pre>$view : object</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$view</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-10-16T11:22:02+04:00.<br></footer></div>
+</div>
+</body>
+</html>

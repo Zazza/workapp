@@ -1,0 +1,600 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Otms\System\Model\Logs</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Engine.html"><i class="icon-th"></i> Engine</a></li>
+<li><a href="../namespaces/Otms.html"><i class="icon-th"></i> Otms</a></li>
+<li><a href="../namespaces/app.html"><i class="icon-th"></i> app</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">489</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method_Pager" title="Pager :: Пейджер"><span class="description">Пейджер</span><pre>Pager()</pre></a></li>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addLastDashId" title="addLastDashId :: Обновить ID последнего события"><span class="description">Обновить ID последнего события</span><pre>addLastDashId()</pre></a></li>
+<li class="method public "><a href="#method_addUsersEvent" title="addUsersEvent :: Создание события для dashboard (вверху страницы) нужному пользователю"><span class="description">Создание события для dashboard (вверху страницы) нужному пользователю</span><pre>addUsersEvent()</pre></a></li>
+<li class="method public inherited"><a href="#method_editDate" title="editDate :: Форматирует дату в соответствии с локалью"><span class="description">Форматирует дату в соответствии с локалью</span><pre>editDate()</pre></a></li>
+<li class="method public "><a href="#method_getHistory" title="getHistory :: Получить весь лог для OID"><span class="description">Получить весь лог для OID</span><pre>getHistory()</pre></a></li>
+<li class="method public "><a href="#method_getHistoryFromId" title="getHistoryFromId :: Получить лог по ID"><span class="description">Получить лог по ID</span><pre>getHistoryFromId()</pre></a></li>
+<li class="method public "><a href="#method_getLastDashId" title="getLastDashId :: Получить ID последнего события"><span class="description">Получить ID последнего события</span><pre>getLastDashId()</pre></a></li>
+<li class="method public inherited"><a href="#method_getTemplate" title="getTemplate :: Получение реального имени файла в ФС для шаблона"><span class="description">Получение реального имени файла в ФС для шаблона</span><pre>getTemplate()</pre></a></li>
+<li class="method public inherited"><a href="#method_initPause" title="initPause :: Инициализирует механизм антифлуда"><span class="description">Инициализирует механизм антифлуда</span><pre>initPause()</pre></a></li>
+<li class="method public "><a href="#method_issetHistory" title="issetHistory :: Проверка существования в существующих логах объекта (задачи и т.д.)"><span class="description">Проверка существования в существующих логах объекта (задачи и т.д.)</span><pre>issetHistory()</pre></a></li>
+<li class="method public "><a href="#method_set" title="set :: Сохранить событие (лог)"><span class="description">Сохранить событие (лог)</span><pre>set()</pre></a></li>
+<li class="method public inherited"><a href="#method_setPage" title="setPage :: Установка выбранной страницы"><span class="description">Установка выбранной страницы</span><pre>setPage()</pre></a></li>
+<li class="method public "><a href="#method_setUSerEvent" title="setUSerEvent :: Добавляет событие в БД
+Нужно для addUsersEvent"><span class="description">Добавляет событие в БД
+Нужно для addUsersEvent</span><pre>setUSerEvent()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="method protected inherited"><a href="#method_render" title="render :: Twig render"><span class="description">Twig render</span><pre>render()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public inherited"><a href="#property_curPage" title="$curPage :: Переменные для пейджера"><span class="description">Переменные для пейджера</span><pre>$curPage</pre></a></li>
+<li class="property public inherited"><a href="#property_limit" title="$limit :: Переменные для пейджера"><span class="description">Переменные для пейджера</span><pre>$limit</pre></a></li>
+<li class="property public inherited"><a href="#property_links" title="$links :: Переменные для пейджера"><span class="description">Переменные для пейджера</span><pre>$links</pre></a></li>
+<li class="property public inherited"><a href="#property_maxPage" title="$maxPage :: Переменные для пейджера"><span class="description">Переменные для пейджера</span><pre>$maxPage</pre></a></li>
+<li class="property public inherited"><a href="#property_pager" title="$pager :: Переменные для пейджера"><span class="description">Переменные для пейджера</span><pre>$pager</pre></a></li>
+<li class="property public inherited"><a href="#property_pause" title="$pause :: Антифлуд"><span class="description">Антифлуд</span><pre>$pause</pre></a></li>
+<li class="property public inherited"><a href="#property_pause_time" title="$pause_time :: Время задержки в секундах для механизма антифлуда"><span class="description">Время задержки в секундах для механизма антифлуда</span><pre>$pause_time</pre></a></li>
+<li class="property public inherited"><a href="#property_registry" title="$registry :: "><span class="description">$registry</span><pre>$registry</pre></a></li>
+<li class="property public inherited"><a href="#property_sep" title="$sep :: Переменные для пейджера"><span class="description">Переменные для пейджера</span><pre>$sep</pre></a></li>
+<li class="property public inherited"><a href="#property_startRow" title="$startRow :: Переменные для пейджера"><span class="description">Переменные для пейджера</span><pre>$startRow</pre></a></li>
+<li class="property public inherited"><a href="#property_totalPage" title="$totalPage :: Переменные для пейджера"><span class="description">Переменные для пейджера</span><pre>$totalPage</pre></a></li>
+<li class="property public "><a href="#property_uid" title="$uid :: ID пользователя"><span class="description">ID пользователя</span><pre>$uid</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="property protected inherited"><a href="#property_memcached" title="$memcached :: Экземпляр memcached"><span class="description">Экземпляр memcached</span><pre>$memcached</pre></a></li></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="property private inherited"><a href="#property_num" title="$num :: Переменные для пейджера"><span class="description">Переменные для пейджера</span><pre>$num</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Otms\System\Model\Logs"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Otms.html">Otms</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.System.html">System</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.System.Model.html">Model</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Otms.System.Model.Logs.html">Logs</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Logs Model class</p>
+<div class="details">
+<div class="long_description"><p>Обеспечивает функицонирование подсистемы логирования</p></div>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:dmitry.samotoy@gmail.com">Dmitry Samotoy</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_Pager"></a><div class="element clickable method public method_Pager" data-toggle="collapse" data-target=".method_Pager .collapse">
+<h2>Пейджер</h2>
+<pre>Pager() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::Pager()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::__construct()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_addLastDashId"></a><div class="element clickable method public method_addLastDashId" data-toggle="collapse" data-target=".method_addLastDashId .collapse">
+<h2>Обновить ID последнего события</h2>
+<pre>addLastDashId(int $id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>int</code><ul>
+<li>ID события</li>
+</ul>
+</div>
+</div></div>
+</div>
+<a id="method_addUsersEvent"></a><div class="element clickable method public method_addUsersEvent" data-toggle="collapse" data-target=".method_addUsersEvent .collapse">
+<h2>Создание события для dashboard (вверху страницы) нужному пользователю</h2>
+<pre>addUsersEvent(int $eid, int $oid, $type, int $uid) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$eid</h4>
+<code>int</code><ul>
+<li>ID события</li>
+</ul>
+</div>
+<div class="subelement argument">
+<h4>$oid</h4>
+<code>int</code><ul>
+<li>ID (объекта, задачи и т.д.)</li>
+</ul>
+</div>
+<div class="subelement argument"><h4>$type</h4></div>
+<div class="subelement argument">
+<h4>$uid</h4>
+<code>int</code><ul>
+<li>ID пользователя</li>
+</ul>
+</div>
+</div></div>
+</div>
+<a id="method_editDate"></a><div class="element clickable method public method_editDate" data-toggle="collapse" data-target=".method_editDate .collapse">
+<h2>Форматирует дату в соответствии с локалью</h2>
+<pre>editDate(\Engine\string(date) $date) : \Engine\string(date)</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::editDate()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$date</h4>
+<code>\Engine\string(date)</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Engine\string(date)</code></div>
+</div></div>
+</div>
+<a id="method_getHistory"></a><div class="element clickable method public method_getHistory" data-toggle="collapse" data-target=".method_getHistory .collapse">
+<h2>Получить весь лог для OID</h2>
+<pre>getHistory($type, int $oid) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$type</h4></div>
+<div class="subelement argument">
+<h4>$oid</h4>
+<code>int</code><ul>
+<li>ID (объекта, задачи и т.д.)</li>
+</ul>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getHistoryFromId"></a><div class="element clickable method public method_getHistoryFromId" data-toggle="collapse" data-target=".method_getHistoryFromId .collapse">
+<h2>Получить лог по ID</h2>
+<pre>getHistoryFromId(int $id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>int</code><ul>
+<li>ID события</li>
+</ul>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getLastDashId"></a><div class="element clickable method public method_getLastDashId" data-toggle="collapse" data-target=".method_getLastDashId .collapse">
+<h2>Получить ID последнего события</h2>
+<pre>getLastDashId() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_getTemplate"></a><div class="element clickable method public method_getTemplate" data-toggle="collapse" data-target=".method_getTemplate .collapse">
+<h2>Получение реального имени файла в ФС для шаблона</h2>
+<pre>getTemplate(string $template) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::getTemplate()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$template</h4>
+<code>string</code><p>(пример: fm_content)</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(пример: fm/content.tpl)</div>
+</div></div>
+</div>
+<a id="method_initPause"></a><div class="element clickable method public method_initPause" data-toggle="collapse" data-target=".method_initPause .collapse">
+<h2>Инициализирует механизм антифлуда</h2>
+<pre>initPause(string $type) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::initPause()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><ul>
+<li>для определения для чего используется антифлуд пример: initPause("task")</li>
+</ul>
+</div>
+</div></div>
+</div>
+<a id="method_issetHistory"></a><div class="element clickable method public method_issetHistory" data-toggle="collapse" data-target=".method_issetHistory .collapse">
+<h2>Проверка существования в существующих логах объекта (задачи и т.д.)</h2>
+<pre>issetHistory($type, int $oid) : TRUE: FALSE</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$type</h4></div>
+<div class="subelement argument">
+<h4>$oid</h4>
+<code>int</code><ul>
+<li>ID (объекта, задачи и т.д.)</li>
+</ul>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>TRUE</code>- существует</div>
+<div class="subelement response">
+<code>FALSE</code>- не существует</div>
+</div></div>
+</div>
+<a id="method_set"></a><div class="element clickable method public method_set" data-toggle="collapse" data-target=".method_set .collapse">
+<h2>Сохранить событие (лог)</h2>
+<pre>set($type, string $event, int $oid, array $data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$type</h4></div>
+<div class="subelement argument">
+<h4>$event</h4>
+<code>string</code><ul>
+<li>текст события</li>
+</ul>
+</div>
+<div class="subelement argument">
+<h4>$oid</h4>
+<code>int</code><ul>
+<li>ID (объекта, задачи и т.д.)</li>
+</ul>
+</div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><ul>
+<li>данные для хранений связанные с данным логом, нужны для работы "истории" Например: изменение в задаче - хранит предыдущее состояние задачи</li>
+</ul>
+</div>
+</div></div>
+</div>
+<a id="method_setPage"></a><div class="element clickable method public method_setPage" data-toggle="collapse" data-target=".method_setPage .collapse">
+<h2>Установка выбранной страницы</h2>
+<pre>setPage(int $page) : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::setPage()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_setUSerEvent"></a><div class="element clickable method public method_setUSerEvent" data-toggle="collapse" data-target=".method_setUSerEvent .collapse">
+<h2>Добавляет событие в БД
+Нужно для addUsersEvent</h2>
+<pre>setUSerEvent(int $eid, int $uid) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$eid</h4>
+<code>int</code><ul>
+<li>ID события</li>
+</ul>
+</div>
+<div class="subelement argument">
+<h4>$uid</h4>
+<code>int</code><ul>
+<li>ID пользователя</li>
+</ul>
+</div>
+</div></div>
+</div>
+<a id="method_render"></a><div class="element clickable method protected method_render" data-toggle="collapse" data-target=".method_render .collapse">
+<h2>Twig render</h2>
+<pre>render(\Engine\unknown_type $name, array $params) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::render()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>\Engine\unknown_type</code><p>(пример: fm_content)</p>
+</div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><ul>
+<li>параметры</li>
+</ul>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_curPage"> </a><div class="element clickable property public property_curPage" data-toggle="collapse" data-target=".property_curPage .collapse">
+<h2>Переменные для пейджера</h2>
+<pre>$curPage : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Текущая страница</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$curPage</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_limit"> </a><div class="element clickable property public property_limit" data-toggle="collapse" data-target=".property_limit .collapse">
+<h2>Переменные для пейджера</h2>
+<pre>$limit : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Кол-во выводимых статей</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$limit</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_links"> </a><div class="element clickable property public property_links" data-toggle="collapse" data-target=".property_links .collapse">
+<h2>Переменные для пейджера</h2>
+<pre>$links : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Постоянная ссылка</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$links</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_maxPage"> </a><div class="element clickable property public property_maxPage" data-toggle="collapse" data-target=".property_maxPage .collapse">
+<h2>Переменные для пейджера</h2>
+<pre>$maxPage : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Последняя страница пейджера</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$maxPage</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_pager"> </a><div class="element clickable property public property_pager" data-toggle="collapse" data-target=".property_pager .collapse">
+<h2>Переменные для пейджера</h2>
+<pre>$pager : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Массив кнопок пейджера</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$pager</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_pause"> </a><div class="element clickable property public property_pause" data-toggle="collapse" data-target=".property_pause .collapse">
+<h2>Антифлуд</h2>
+<pre>$pause : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$pause</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_pause_time"> </a><div class="element clickable property public property_pause_time" data-toggle="collapse" data-target=".property_pause_time .collapse">
+<h2>Время задержки в секундах для механизма антифлуда</h2>
+<pre>$pause_time : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$pause_time</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_registry"> </a><div class="element clickable property public property_registry" data-toggle="collapse" data-target=".property_registry .collapse">
+<h2>$registry</h2>
+<pre>$registry </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Singleton::$$registry</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$registry</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_sep"> </a><div class="element clickable property public property_sep" data-toggle="collapse" data-target=".property_sep .collapse">
+<h2>Переменные для пейджера</h2>
+<pre>$sep : \Engine\char</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Разделитель</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$sep</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_startRow"> </a><div class="element clickable property public property_startRow" data-toggle="collapse" data-target=".property_startRow .collapse">
+<h2>Переменные для пейджера</h2>
+<pre>$startRow : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Номер записей на текущей странице
+Пример: 80-100, $startRow = 80</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$startRow</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_totalPage"> </a><div class="element clickable property public property_totalPage" data-toggle="collapse" data-target=".property_totalPage .collapse">
+<h2>Переменные для пейджера</h2>
+<pre>$totalPage : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Полное количество страниц</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$totalPage</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_uid"> </a><div class="element clickable property public property_uid" data-toggle="collapse" data-target=".property_uid .collapse">
+<h2>ID пользователя</h2>
+<pre>$uid : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_memcached"> </a><div class="element clickable property protected property_memcached" data-toggle="collapse" data-target=".property_memcached .collapse">
+<h2>Экземпляр memcached</h2>
+<pre>$memcached : object</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$memcached</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_num"> </a><div class="element clickable property private property_num" data-toggle="collapse" data-target=".property_num .collapse">
+<h2>Переменные для пейджера</h2>
+<pre>$num : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Кол-во выводимых страниц в педжере</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Model::$$num</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-10-16T11:22:02+04:00.<br></footer></div>
+</div>
+</body>
+</html>

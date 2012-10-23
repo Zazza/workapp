@@ -1,0 +1,514 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Otms\Modules\Objects\Helper\Functions</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Engine.html"><i class="icon-th"></i> Engine</a></li>
+<li><a href="../namespaces/Otms.html"><i class="icon-th"></i> Otms</a></li>
+<li><a href="../namespaces/app.html"><i class="icon-th"></i> app</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">489</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___call" title="__call :: "><span class="description">__call()
+        </span><pre>__call()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addAdvanced" title="addAdvanced :: "><span class="description">addAdvanced()
+        </span><pre>addAdvanced()</pre></a></li>
+<li class="method public "><a href="#method_addForm" title="addForm :: "><span class="description">addForm()
+        </span><pre>addForm()</pre></a></li>
+<li class="method public "><a href="#method_addObject" title="addObject :: "><span class="description">addObject()
+        </span><pre>addObject()</pre></a></li>
+<li class="method public "><a href="#method_addObjectFormInfo" title="addObjectFormInfo :: "><span class="description">addObjectFormInfo()
+        </span><pre>addObjectFormInfo()</pre></a></li>
+<li class="method public "><a href="#method_addTags" title="addTags :: "><span class="description">addTags()
+        </span><pre>addTags()</pre></a></li>
+<li class="method public "><a href="#method_changeTags" title="changeTags :: "><span class="description">changeTags()
+        </span><pre>changeTags()</pre></a></li>
+<li class="method public "><a href="#method_delAdvanced" title="delAdvanced :: "><span class="description">delAdvanced()
+        </span><pre>delAdvanced()</pre></a></li>
+<li class="method public "><a href="#method_editAdvanced" title="editAdvanced :: "><span class="description">editAdvanced()
+        </span><pre>editAdvanced()</pre></a></li>
+<li class="method public "><a href="#method_editForm" title="editForm :: "><span class="description">editForm()
+        </span><pre>editForm()</pre></a></li>
+<li class="method public "><a href="#method_editObject" title="editObject :: "><span class="description">editObject()
+        </span><pre>editObject()</pre></a></li>
+<li class="method public "><a href="#method_editObjectFormInfo" title="editObjectFormInfo :: "><span class="description">editObjectFormInfo()
+        </span><pre>editObjectFormInfo()</pre></a></li>
+<li class="method public "><a href="#method_getAdvanced" title="getAdvanced :: "><span class="description">getAdvanced()
+        </span><pre>getAdvanced()</pre></a></li>
+<li class="method public "><a href="#method_getAdvancedInfo" title="getAdvancedInfo :: "><span class="description">getAdvancedInfo()
+        </span><pre>getAdvancedInfo()</pre></a></li>
+<li class="method public "><a href="#method_getFidFromFname" title="getFidFromFname :: "><span class="description">getFidFromFname()
+        </span><pre>getFidFromFname()</pre></a></li>
+<li class="method public "><a href="#method_getForm" title="getForm :: "><span class="description">getForm()
+        </span><pre>getForm()</pre></a></li>
+<li class="method public "><a href="#method_getFormName" title="getFormName :: "><span class="description">getFormName()
+        </span><pre>getFormName()</pre></a></li>
+<li class="method public "><a href="#method_getForms" title="getForms :: "><span class="description">getForms()
+        </span><pre>getForms()</pre></a></li>
+<li class="method public "><a href="#method_getNumAdvancedInfo" title="getNumAdvancedInfo :: "><span class="description">getNumAdvancedInfo()
+        </span><pre>getNumAdvancedInfo()</pre></a></li>
+<li class="method public "><a href="#method_getOidFromUniqId" title="getOidFromUniqId :: "><span class="description">getOidFromUniqId()
+        </span><pre>getOidFromUniqId()</pre></a></li>
+<li class="method public "><a href="#method_getTags" title="getTags :: "><span class="description">getTags()
+        </span><pre>getTags()</pre></a></li>
+<li class="method public "><a href="#method_renderObject" title="renderObject :: "><span class="description">renderObject()
+        </span><pre>renderObject()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="method private inherited"><a href="#method_errorload" title="errorload :: "><span class="description">errorload()
+        </span><pre>errorload()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul><li class="property public inherited"><a href="#property_registry" title="$registry :: "><span class="description">$registry</span><pre>$registry</pre></a></li></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_config" title="$config :: Конфиг модуля"><span class="description">Конфиг модуля</span><pre>$config</pre></a></li>
+<li class="property protected inherited"><a href="#property_module_name" title="$module_name :: Имя модуля"><span class="description">Имя модуля</span><pre>$module_name</pre></a></li>
+<li class="property protected inherited"><a href="#property_module_path" title="$module_path :: Путь к модулю"><span class="description">Путь к модулю</span><pre>$module_path</pre></a></li>
+<li class="property protected inherited"><a href="#property_view" title="$view :: Экземпляр Вида"><span class="description">Экземпляр Вида</span><pre>$view</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="property private "><a href="#property_ai" title="$ai :: "><span class="description">$ai</span><pre>$ai</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Otms\Modules\Objects\Helper\Functions"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Otms.html">Otms</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.html">Modules</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.Objects.html">Objects</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.Objects.Helper.html">Helper</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Otms.Modules.Objects.Helper.Functions.html">Functions</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Singleton class</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:dmitry.samotoy@gmail.com">Dmitry Samotoy</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___call"></a><div class="element clickable method public method___call" data-toggle="collapse" data-target=".method___call .collapse">
+<h2>__call()
+        </h2>
+<pre>__call($name, $args) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Functions::__call()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($config) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$config</h4></div>
+</div></div>
+</div>
+<a id="method_addAdvanced"></a><div class="element clickable method public method_addAdvanced" data-toggle="collapse" data-target=".method_addAdvanced .collapse">
+<h2>addAdvanced()
+        </h2>
+<pre>addAdvanced($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_addForm"></a><div class="element clickable method public method_addForm" data-toggle="collapse" data-target=".method_addForm .collapse">
+<h2>addForm()
+        </h2>
+<pre>addForm($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_addObject"></a><div class="element clickable method public method_addObject" data-toggle="collapse" data-target=".method_addObject .collapse">
+<h2>addObject()
+        </h2>
+<pre>addObject($param) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$param</h4></div>
+</div></div>
+</div>
+<a id="method_addObjectFormInfo"></a><div class="element clickable method public method_addObjectFormInfo" data-toggle="collapse" data-target=".method_addObjectFormInfo .collapse">
+<h2>addObjectFormInfo()
+        </h2>
+<pre>addObjectFormInfo($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_addTags"></a><div class="element clickable method public method_addTags" data-toggle="collapse" data-target=".method_addTags .collapse">
+<h2>addTags()
+        </h2>
+<pre>addTags($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_changeTags"></a><div class="element clickable method public method_changeTags" data-toggle="collapse" data-target=".method_changeTags .collapse">
+<h2>changeTags()
+        </h2>
+<pre>changeTags($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_delAdvanced"></a><div class="element clickable method public method_delAdvanced" data-toggle="collapse" data-target=".method_delAdvanced .collapse">
+<h2>delAdvanced()
+        </h2>
+<pre>delAdvanced($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_editAdvanced"></a><div class="element clickable method public method_editAdvanced" data-toggle="collapse" data-target=".method_editAdvanced .collapse">
+<h2>editAdvanced()
+        </h2>
+<pre>editAdvanced($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_editForm"></a><div class="element clickable method public method_editForm" data-toggle="collapse" data-target=".method_editForm .collapse">
+<h2>editForm()
+        </h2>
+<pre>editForm($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_editObject"></a><div class="element clickable method public method_editObject" data-toggle="collapse" data-target=".method_editObject .collapse">
+<h2>editObject()
+        </h2>
+<pre>editObject($param) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$param</h4></div>
+</div></div>
+</div>
+<a id="method_editObjectFormInfo"></a><div class="element clickable method public method_editObjectFormInfo" data-toggle="collapse" data-target=".method_editObjectFormInfo .collapse">
+<h2>editObjectFormInfo()
+        </h2>
+<pre>editObjectFormInfo($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_getAdvanced"></a><div class="element clickable method public method_getAdvanced" data-toggle="collapse" data-target=".method_getAdvanced .collapse">
+<h2>getAdvanced()
+        </h2>
+<pre>getAdvanced($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_getAdvancedInfo"></a><div class="element clickable method public method_getAdvancedInfo" data-toggle="collapse" data-target=".method_getAdvancedInfo .collapse">
+<h2>getAdvancedInfo()
+        </h2>
+<pre>getAdvancedInfo($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_getFidFromFname"></a><div class="element clickable method public method_getFidFromFname" data-toggle="collapse" data-target=".method_getFidFromFname .collapse">
+<h2>getFidFromFname()
+        </h2>
+<pre>getFidFromFname($param) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$param</h4></div>
+</div></div>
+</div>
+<a id="method_getForm"></a><div class="element clickable method public method_getForm" data-toggle="collapse" data-target=".method_getForm .collapse">
+<h2>getForm()
+        </h2>
+<pre>getForm($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_getFormName"></a><div class="element clickable method public method_getFormName" data-toggle="collapse" data-target=".method_getFormName .collapse">
+<h2>getFormName()
+        </h2>
+<pre>getFormName($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_getForms"></a><div class="element clickable method public method_getForms" data-toggle="collapse" data-target=".method_getForms .collapse">
+<h2>getForms()
+        </h2>
+<pre>getForms() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getNumAdvancedInfo"></a><div class="element clickable method public method_getNumAdvancedInfo" data-toggle="collapse" data-target=".method_getNumAdvancedInfo .collapse">
+<h2>getNumAdvancedInfo()
+        </h2>
+<pre>getNumAdvancedInfo($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_getOidFromUniqId"></a><div class="element clickable method public method_getOidFromUniqId" data-toggle="collapse" data-target=".method_getOidFromUniqId .collapse">
+<h2>getOidFromUniqId()
+        </h2>
+<pre>getOidFromUniqId($param) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$param</h4></div>
+</div></div>
+</div>
+<a id="method_getTags"></a><div class="element clickable method public method_getTags" data-toggle="collapse" data-target=".method_getTags .collapse">
+<h2>getTags()
+        </h2>
+<pre>getTags($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_renderObject"></a><div class="element clickable method public method_renderObject" data-toggle="collapse" data-target=".method_renderObject .collapse">
+<h2>renderObject()
+        </h2>
+<pre>renderObject($param) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$param</h4></div>
+</div></div>
+</div>
+<a id="method_errorload"></a><div class="element clickable method private method_errorload" data-toggle="collapse" data-target=".method_errorload .collapse">
+<h2>errorload()
+        </h2>
+<pre>errorload($name, $args) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Functions::errorload()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_registry"> </a><div class="element clickable property public property_registry" data-toggle="collapse" data-target=".property_registry .collapse">
+<h2>$registry</h2>
+<pre>$registry </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Singleton::$$registry</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Functions::$$registry</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_config"> </a><div class="element clickable property protected property_config" data-toggle="collapse" data-target=".property_config .collapse">
+<h2>Конфиг модуля</h2>
+<pre>$config : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Functions::$$config</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_module_name"> </a><div class="element clickable property protected property_module_name" data-toggle="collapse" data-target=".property_module_name .collapse">
+<h2>Имя модуля</h2>
+<pre>$module_name : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Functions::$$module_name</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_module_path"> </a><div class="element clickable property protected property_module_path" data-toggle="collapse" data-target=".property_module_path .collapse">
+<h2>Путь к модулю</h2>
+<pre>$module_path : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Functions::$$module_path</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_view"> </a><div class="element clickable property protected property_view" data-toggle="collapse" data-target=".property_view .collapse">
+<h2>Экземпляр Вида</h2>
+<pre>$view : object</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Functions::$$view</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_ai"> </a><div class="element clickable property private property_ai" data-toggle="collapse" data-target=".property_ai .collapse">
+<h2>$ai</h2>
+<pre>$ai </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-10-16T11:22:01+04:00.<br></footer></div>
+</div>
+</body>
+</html>

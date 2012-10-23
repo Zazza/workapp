@@ -1,0 +1,493 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Otms\Modules\Mail\Ajax\Mail</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Engine.html"><i class="icon-th"></i> Engine</a></li>
+<li><a href="../namespaces/Otms.html"><i class="icon-th"></i> Otms</a></li>
+<li><a href="../namespaces/app.html"><i class="icon-th"></i> app</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">489</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___call" title="__call :: "><span class="description">__call()
+        </span><pre>__call()</pre></a></li>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addContact" title="addContact :: Сохранить email в сессии для связи с объектом (контактом)"><span class="description">Сохранить email в сессии для связи с объектом (контактом)</span><pre>addContact()</pre></a></li>
+<li class="method public "><a href="#method_addTaskFromMail" title="addTaskFromMail :: Создать задачу из письма"><span class="description">Создать задачу из письма</span><pre>addTaskFromMail()</pre></a></li>
+<li class="method public "><a href="#method_checkMboxes" title="checkMboxes :: Проверка новой почты в mailboxe"><span class="description">Проверка новой почты в mailboxe</span><pre>checkMboxes()</pre></a></li>
+<li class="method public "><a href="#method_clearFolder" title="clearFolder :: Удалить все письма в папке"><span class="description">Удалить все письма в папке</span><pre>clearFolder()</pre></a></li>
+<li class="method public "><a href="#method_delMail" title="delMail :: Удалить письмо"><span class="description">Удалить письмо</span><pre>delMail()</pre></a></li>
+<li class="method public "><a href="#method_delMailDir" title="delMailDir :: Удалить папку для писем"><span class="description">Удалить папку для писем</span><pre>delMailDir()</pre></a></li>
+<li class="method public "><a href="#method_delMailOut" title='delMailOut :: Удалить письмо из папки "Отправленное"'><span class="description">Удалить письмо из папки "Отправленное"</span><pre>delMailOut()</pre></a></li>
+<li class="method public "><a href="#method_delMailbox" title="delMailbox :: Удалить mailbox"><span class="description">Удалить mailbox</span><pre>delMailbox()</pre></a></li>
+<li class="method public "><a href="#method_delMails" title="delMails :: Удалить письма"><span class="description">Удалить письма</span><pre>delMails()</pre></a></li>
+<li class="method public "><a href="#method_delMailsOut" title='delMailsOut :: Удалить письма из папки "Отправленное"'><span class="description">Удалить письма из папки "Отправленное"</span><pre>delMailsOut()</pre></a></li>
+<li class="method public "><a href="#method_delSort" title="delSort :: Удалить сортировку"><span class="description">Удалить сортировку</span><pre>delSort()</pre></a></li>
+<li class="method public "><a href="#method_getMail" title="getMail :: Вернуть письмо"><span class="description">Вернуть письмо</span><pre>getMail()</pre></a></li>
+<li class="method public "><a href="#method_getMailOut" title='getMailOut :: Вернуть письмо из папки "Отправленное"'><span class="description">Вернуть письмо из папки "Отправленное"</span><pre>getMailOut()</pre></a></li>
+<li class="method public "><a href="#method_getMailboxes" title="getMailboxes :: Получить все mailboxes текущего пользователя"><span class="description">Получить все mailboxes текущего пользователя</span><pre>getMailboxes()</pre></a></li>
+<li class="method public "><a href="#method_getSign" title="getSign :: Получить подпись в mailbox для нового письма"><span class="description">Получить подпись в mailbox для нового письма</span><pre>getSign()</pre></a></li>
+<li class="method public "><a href="#method_sendMailComment" title="sendMailComment :: Отправить комментарий к задаче письмом"><span class="description">Отправить комментарий к задаче письмом</span><pre>sendMailComment()</pre></a></li>
+<li class="method public "><a href="#method_setDefault" title="setDefault :: Назначить mailbox по умолчанию для новых писем"><span class="description">Назначить mailbox по умолчанию для новых писем</span><pre>setDefault()</pre></a></li>
+<li class="method public "><a href="#method_setRead" title="setRead :: Пометить все письма в папке, как прочитанные"><span class="description">Пометить все письма в папке, как прочитанные</span><pre>setRead()</pre></a></li>
+<li class="method public "><a href="#method_writeMail" title="writeMail :: Написать письмо выбранным объектам (контактам)"><span class="description">Написать письмо выбранным объектам (контактам)</span><pre>writeMail()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="method private inherited"><a href="#method_errorload" title="errorload :: "><span class="description">errorload()
+        </span><pre>errorload()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul><li class="property public inherited"><a href="#property_registry" title="$registry :: "><span class="description">$registry</span><pre>$registry</pre></a></li></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_config" title="$config :: Конфиг модуля"><span class="description">Конфиг модуля</span><pre>$config</pre></a></li>
+<li class="property protected inherited"><a href="#property_module_name" title="$module_name :: Имя модуля"><span class="description">Имя модуля</span><pre>$module_name</pre></a></li>
+<li class="property protected inherited"><a href="#property_module_path" title="$module_path :: Путь к модулю"><span class="description">Путь к модулю</span><pre>$module_path</pre></a></li>
+<li class="property protected inherited"><a href="#property_view" title="$view :: Экземпляр Вида"><span class="description">Экземпляр Вида</span><pre>$view</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Otms\Modules\Mail\Ajax\Mail"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Otms.html">Otms</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.html">Modules</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.Mail.html">Mail</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.Mail.Ajax.html">Ajax</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Otms.Modules.Mail.Ajax.Mail.html">Mail</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Ajax\Mail class</p>
+<div class="details">
+<div class="long_description"><p>Класс наследуемый ajax классами модулей</p></div>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:dmitry.samotoy@gmail.com">Dmitry Samotoy</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___call"></a><div class="element clickable method public method___call" data-toggle="collapse" data-target=".method___call .collapse">
+<h2>__call()
+        </h2>
+<pre>__call($name, $args) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::__call()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($config) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::__construct()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$config</h4></div>
+</div></div>
+</div>
+<a id="method_addContact"></a><div class="element clickable method public method_addContact" data-toggle="collapse" data-target=".method_addContact .collapse">
+<h2>Сохранить email в сессии для связи с объектом (контактом)</h2>
+<pre>addContact(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["email"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_addTaskFromMail"></a><div class="element clickable method public method_addTaskFromMail" data-toggle="collapse" data-target=".method_addTaskFromMail .collapse">
+<h2>Создать задачу из письма</h2>
+<pre>addTaskFromMail($params) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>$tid - ID новой задачи</div>
+</div></div>
+</div>
+<a id="method_checkMboxes"></a><div class="element clickable method public method_checkMboxes" data-toggle="collapse" data-target=".method_checkMboxes .collapse">
+<h2>Проверка новой почты в mailboxe</h2>
+<pre>checkMboxes(array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["mbox"]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>"true"|"false"</div>
+</div></div>
+</div>
+<a id="method_clearFolder"></a><div class="element clickable method public method_clearFolder" data-toggle="collapse" data-target=".method_clearFolder .collapse">
+<h2>Удалить все письма в папке</h2>
+<pre>clearFolder($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_delMail"></a><div class="element clickable method public method_delMail" data-toggle="collapse" data-target=".method_delMail .collapse">
+<h2>Удалить письмо</h2>
+<pre>delMail(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>int $params["mid"] - ID нужного письма</p>
+</div>
+</div></div>
+</div>
+<a id="method_delMailDir"></a><div class="element clickable method public method_delMailDir" data-toggle="collapse" data-target=".method_delMailDir .collapse">
+<h2>Удалить папку для писем</h2>
+<pre>delMailDir($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_delMailOut"></a><div class="element clickable method public method_delMailOut" data-toggle="collapse" data-target=".method_delMailOut .collapse">
+<h2>Удалить письмо из папки "Отправленное"</h2>
+<pre>delMailOut(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>int $params["mid"] - ID нужного письма</p>
+</div>
+</div></div>
+</div>
+<a id="method_delMailbox"></a><div class="element clickable method public method_delMailbox" data-toggle="collapse" data-target=".method_delMailbox .collapse">
+<h2>Удалить mailbox</h2>
+<pre>delMailbox($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_delMails"></a><div class="element clickable method public method_delMails" data-toggle="collapse" data-target=".method_delMails .collapse">
+<h2>Удалить письма</h2>
+<pre>delMails(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["json"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_delMailsOut"></a><div class="element clickable method public method_delMailsOut" data-toggle="collapse" data-target=".method_delMailsOut .collapse">
+<h2>Удалить письма из папки "Отправленное"</h2>
+<pre>delMailsOut(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["json"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_delSort"></a><div class="element clickable method public method_delSort" data-toggle="collapse" data-target=".method_delSort .collapse">
+<h2>Удалить сортировку</h2>
+<pre>delSort($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_getMail"></a><div class="element clickable method public method_getMail" data-toggle="collapse" data-target=".method_getMail .collapse">
+<h2>Вернуть письмо</h2>
+<pre>getMail(array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>int $params["mid"] - ID нужного письма</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(json array)
+   string $row["data"] - .../mail/mail.tpl
+   boolean $row["new"] - флаг нового письма</div>
+</div></div>
+</div>
+<a id="method_getMailOut"></a><div class="element clickable method public method_getMailOut" data-toggle="collapse" data-target=".method_getMailOut .collapse">
+<h2>Вернуть письмо из папки "Отправленное"</h2>
+<pre>getMailOut(array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>int $params["mid"] - ID нужного письма</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(json array)
+   string $row["data"] - .../mail/mailout.tpl</div>
+</div></div>
+</div>
+<a id="method_getMailboxes"></a><div class="element clickable method public method_getMailboxes" data-toggle="collapse" data-target=".method_getMailboxes .collapse">
+<h2>Получить все mailboxes текущего пользователя</h2>
+<pre>getMailboxes() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(json array)</div>
+</div></div>
+</div>
+<a id="method_getSign"></a><div class="element clickable method public method_getSign" data-toggle="collapse" data-target=".method_getSign .collapse">
+<h2>Получить подпись в mailbox для нового письма</h2>
+<pre>getSign($params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_sendMailComment"></a><div class="element clickable method public method_sendMailComment" data-toggle="collapse" data-target=".method_sendMailComment .collapse">
+<h2>Отправить комментарий к задаче письмом</h2>
+<pre>sendMailComment(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["email"] int $params["cid"] - ID комментария</p>
+</div>
+</div></div>
+</div>
+<a id="method_setDefault"></a><div class="element clickable method public method_setDefault" data-toggle="collapse" data-target=".method_setDefault .collapse">
+<h2>Назначить mailbox по умолчанию для новых писем</h2>
+<pre>setDefault($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_setRead"></a><div class="element clickable method public method_setRead" data-toggle="collapse" data-target=".method_setRead .collapse">
+<h2>Пометить все письма в папке, как прочитанные</h2>
+<pre>setRead($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_writeMail"></a><div class="element clickable method public method_writeMail" data-toggle="collapse" data-target=".method_writeMail .collapse">
+<h2>Написать письмо выбранным объектам (контактам)</h2>
+<pre>writeMail($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_errorload"></a><div class="element clickable method private method_errorload" data-toggle="collapse" data-target=".method_errorload .collapse">
+<h2>errorload()
+        </h2>
+<pre>errorload($name) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::errorload()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_registry"> </a><div class="element clickable property public property_registry" data-toggle="collapse" data-target=".property_registry .collapse">
+<h2>$registry</h2>
+<pre>$registry </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Singleton::$$registry</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$registry</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_config"> </a><div class="element clickable property protected property_config" data-toggle="collapse" data-target=".property_config .collapse">
+<h2>Конфиг модуля</h2>
+<pre>$config : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$config</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_module_name"> </a><div class="element clickable property protected property_module_name" data-toggle="collapse" data-target=".property_module_name .collapse">
+<h2>Имя модуля</h2>
+<pre>$module_name : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$module_name</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_module_path"> </a><div class="element clickable property protected property_module_path" data-toggle="collapse" data-target=".property_module_path .collapse">
+<h2>Путь к модулю</h2>
+<pre>$module_path : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$module_path</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_view"> </a><div class="element clickable property protected property_view" data-toggle="collapse" data-target=".property_view .collapse">
+<h2>Экземпляр Вида</h2>
+<pre>$view : object</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$view</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-10-16T11:22:01+04:00.<br></footer></div>
+</div>
+</body>
+</html>

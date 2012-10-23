@@ -1,0 +1,935 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Otms\Modules\Photo\Ajax\Photo</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Engine.html"><i class="icon-th"></i> Engine</a></li>
+<li><a href="../namespaces/Otms.html"><i class="icon-th"></i> Otms</a></li>
+<li><a href="../namespaces/app.html"><i class="icon-th"></i> app</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">489</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___call" title="__call :: "><span class="description">__call()
+        </span><pre>__call()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addDirRight" title="addDirRight :: Сохранить права доступа для директории"><span class="description">Сохранить права доступа для директории</span><pre>addDirRight()</pre></a></li>
+<li class="method public "><a href="#method_addFileRight" title="addFileRight :: Сохранить права доступа для файла"><span class="description">Сохранить права доступа для файла</span><pre>addFileRight()</pre></a></li>
+<li class="method public "><a href="#method_addFileText" title="addFileText :: Добавить текстовую заметку к файлу"><span class="description">Добавить текстовую заметку к файлу</span><pre>addFileText()</pre></a></li>
+<li class="method public "><a href="#method_admin" title='admin :: Перейти в просмотр ФС в режиме "администратор"'><span class="description">Перейти в просмотр ФС в режиме "администратор"</span><pre>admin()</pre></a></li>
+<li class="method public "><a href="#method_copyFiles" title="copyFiles :: Скопировать файлы и директории"><span class="description">Скопировать файлы и директории</span><pre>copyFiles()</pre></a></li>
+<li class="method public "><a href="#method_createDir" title="createDir :: Создать директорию"><span class="description">Создать директорию</span><pre>createDir()</pre></a></li>
+<li class="method public "><a href="#method_delDesc" title="delDesc :: Удалить выделение на фотографии"><span class="description">Удалить выделение на фотографии</span><pre>delDesc()</pre></a></li>
+<li class="method public "><a href="#method_delFavorite" title="delFavorite :: Удалить из сессии сортировки избранное"><span class="description">Удалить из сессии сортировки избранное</span><pre>delFavorite()</pre></a></li>
+<li class="method public "><a href="#method_delSort" title="delSort :: Очистить все сортирвки"><span class="description">Очистить все сортирвки</span><pre>delSort()</pre></a></li>
+<li class="method public "><a href="#method_delSortSel" title="delSortSel :: Удалить из сессии сортировки - тег"><span class="description">Удалить из сессии сортировки - тег</span><pre>delSortSel()</pre></a></li>
+<li class="method public "><a href="#method_delSortTag" title="delSortTag :: Удалить из сессии сортировки - название выбранного участка"><span class="description">Удалить из сессии сортировки - название выбранного участка</span><pre>delSortTag()</pre></a></li>
+<li class="method public "><a href="#method_delTag" title="delTag :: Удалить тег"><span class="description">Удалить тег</span><pre>delTag()</pre></a></li>
+<li class="method public "><a href="#method_deldir" title="deldir :: Пометить директорию как удалённая"><span class="description">Пометить директорию как удалённая</span><pre>deldir()</pre></a></li>
+<li class="method public "><a href="#method_deldirreal" title="deldirreal :: Реальное удаление директории"><span class="description">Реальное удаление директории</span><pre>deldirreal()</pre></a></li>
+<li class="method public "><a href="#method_delfile" title="delfile :: Пометить файл как удалённый"><span class="description">Пометить файл как удалённый</span><pre>delfile()</pre></a></li>
+<li class="method public "><a href="#method_delfilereal" title="delfilereal :: Реальное удаление файла"><span class="description">Реальное удаление файла</span><pre>delfilereal()</pre></a></li>
+<li class="method public "><a href="#method_dirRename" title="dirRename :: Переименовать директорию"><span class="description">Переименовать директорию</span><pre>dirRename()</pre></a></li>
+<li class="method public "><a href="#method_favorite" title="favorite :: Добавить/удалить из избранного"><span class="description">Добавить/удалить из избранного</span><pre>favorite()</pre></a></li>
+<li class="method public "><a href="#method_fileRename" title="fileRename :: Переименовать файл"><span class="description">Переименовать файл</span><pre>fileRename()</pre></a></li>
+<li class="method public "><a href="#method_files" title="files :: Просмотр файлов в текущей директории"><span class="description">Просмотр файлов в текущей директории</span><pre>files()</pre></a></li>
+<li class="method public "><a href="#method_getCurDirName" title="getCurDirName :: Получить имя текущей директории"><span class="description">Получить имя текущей директории</span><pre>getCurDirName()</pre></a></li>
+<li class="method public "><a href="#method_getDesc" title="getDesc :: Получить все выделенные области на фотографии и их описания"><span class="description">Получить все выделенные области на фотографии и их описания</span><pre>getDesc()</pre></a></li>
+<li class="method public "><a href="#method_getDirName" title="getDirName :: Вернуть имя директории"><span class="description">Вернуть имя директории</span><pre>getDirName()</pre></a></li>
+<li class="method public "><a href="#method_getDirParams" title="getDirParams :: Получить параметры директории по ID"><span class="description">Получить параметры директории по ID</span><pre>getDirParams()</pre></a></li>
+<li class="method public "><a href="#method_getFavorite" title="getFavorite :: Добавить к сессии сортировки избранное"><span class="description">Добавить к сессии сортировки избранное</span><pre>getFavorite()</pre></a></li>
+<li class="method public "><a href="#method_getFileName" title="getFileName :: Вернуть MD5 файла по его имени"><span class="description">Вернуть MD5 файла по его имени</span><pre>getFileName()</pre></a></li>
+<li class="method public "><a href="#method_getFileParamsFromMd5" title="getFileParamsFromMd5 :: Получить параметры файла по MD5"><span class="description">Получить параметры файла по MD5</span><pre>getFileParamsFromMd5()</pre></a></li>
+<li class="method public "><a href="#method_getFileParamsFromName" title="getFileParamsFromName :: Получить параметры файла по его имени"><span class="description">Получить параметры файла по его имени</span><pre>getFileParamsFromName()</pre></a></li>
+<li class="method public "><a href="#method_getNotes" title="getNotes :: Получить текстовые записи к фотографии"><span class="description">Получить текстовые записи к фотографии</span><pre>getNotes()</pre></a></li>
+<li class="method public "><a href="#method_getNumNotes" title="getNumNotes :: Получить количество текстовых записей к фотографии"><span class="description">Получить количество текстовых записей к фотографии</span><pre>getNumNotes()</pre></a></li>
+<li class="method public "><a href="#method_getTotalSize" title="getTotalSize :: Возвращает суммарный размер файлов в текущей директории"><span class="description">Возвращает суммарный размер файлов в текущей директории</span><pre>getTotalSize()</pre></a></li>
+<li class="method public "><a href="#method_getTree" title="getTree :: Показать файловое дерево"><span class="description">Показать файловое дерево</span><pre>getTree()</pre></a></li>
+<li class="method public "><a href="#method_getUserFileChmod" title="getUserFileChmod :: return $this-&gt;_getUserFileChmod()"><span class="description">return $this-&gt;_getUserFileChmod()</span><pre>getUserFileChmod()</pre></a></li>
+<li class="method public "><a href="#method_getUsersChmod" title="getUsersChmod :: Вернуть права доступа на файл"><span class="description">Вернуть права доступа на файл</span><pre>getUsersChmod()</pre></a></li>
+<li class="method public "><a href="#method_getUsersDirChmod" title="getUsersDirChmod :: Вернуть права доступа на директорию"><span class="description">Вернуть права доступа на директорию</span><pre>getUsersDirChmod()</pre></a></li>
+<li class="method public "><a href="#method_getfinfo" title="getfinfo :: Получить полную информацию о файле для контекстного меню файла"><span class="description">Получить полную информацию о файле для контекстного меню файла</span><pre>getfinfo()</pre></a></li>
+<li class="method public "><a href="#method_issetFile" title="issetFile :: Проверка существования файла, если файл существует возможности его перезаписи"><span class="description">Проверка существования файла, если файл существует возможности его перезаписи</span><pre>issetFile()</pre></a></li>
+<li class="method public "><a href="#method_moveFiles" title="moveFiles :: Переместить файлы и директории"><span class="description">Переместить файлы и директории</span><pre>moveFiles()</pre></a></li>
+<li class="method public "><a href="#method_restore" title="restore :: Восстановить помеченные как удалённые файлы и директории"><span class="description">Восстановить помеченные как удалённые файлы и директории</span><pre>restore()</pre></a></li>
+<li class="method public "><a href="#method_setDesc" title="setDesc :: Добавить выделение участка на фотографии с описанием"><span class="description">Добавить выделение участка на фотографии с описанием</span><pre>setDesc()</pre></a></li>
+<li class="method public "><a href="#method_setSel" title="setSel :: Добавить к сессии сортировки - название выбранного участка"><span class="description">Добавить к сессии сортировки - название выбранного участка</span><pre>setSel()</pre></a></li>
+<li class="method public "><a href="#method_setTag" title="setTag :: Добавить к сессии сортировки - тег"><span class="description">Добавить к сессии сортировки - тег</span><pre>setTag()</pre></a></li>
+<li class="method public "><a href="#method_shDirRight" title="shDirRight :: Показать права доступа на директорию"><span class="description">Показать права доступа на директорию</span><pre>shDirRight()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="method private "><a href="#method__getUserDirChmod" title="_getUserDirChmod :: Получить права доступа на директорию"><span class="description">Получить права доступа на директорию</span><pre>_getUserDirChmod()</pre></a></li>
+<li class="method private "><a href="#method__getUserFileChmod" title="_getUserFileChmod :: Получить права доступа на файл"><span class="description">Получить права доступа на файл</span><pre>_getUserFileChmod()</pre></a></li>
+<li class="method private inherited"><a href="#method_errorload" title="errorload :: "><span class="description">errorload()
+        </span><pre>errorload()</pre></a></li>
+<li class="method private "><a href="#method_print_array" title="print_array :: Рекурсивная функция для построения дерева пользователей"><span class="description">Рекурсивная функция для построения дерева пользователей</span><pre>print_array()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul><li class="property public inherited"><a href="#property_registry" title="$registry :: "><span class="description">$registry</span><pre>$registry</pre></a></li></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_config" title="$config :: Конфиг модуля"><span class="description">Конфиг модуля</span><pre>$config</pre></a></li>
+<li class="property protected inherited"><a href="#property_module_name" title="$module_name :: Имя модуля"><span class="description">Имя модуля</span><pre>$module_name</pre></a></li>
+<li class="property protected inherited"><a href="#property_module_path" title="$module_path :: Путь к модулю"><span class="description">Путь к модулю</span><pre>$module_path</pre></a></li>
+<li class="property protected inherited"><a href="#property_view" title="$view :: Экземпляр Вида"><span class="description">Экземпляр Вида</span><pre>$view</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property__access_fname" title="$_access_fname :: Файл для действия над ним"><span class="description">Файл для действия над ним</span><pre>$_access_fname</pre></a></li>
+<li class="property private "><a href="#property__access_md5" title="$_access_md5 :: MD5 файла для действия над ним"><span class="description">MD5 файла для действия над ним</span><pre>$_access_md5</pre></a></li>
+<li class="property private "><a href="#property__config" title="$_config :: Настройки модуля"><span class="description">Настройки модуля</span><pre>$_config</pre></a></li>
+<li class="property private "><a href="#property__curdir" title="$_curdir :: Текущая директория"><span class="description">Текущая директория</span><pre>$_curdir</pre></a></li>
+<li class="property private "><a href="#property__dir" title="$_dir :: Содержит параметры директории"><span class="description">Содержит параметры директории</span><pre>$_dir</pre></a></li>
+<li class="property private "><a href="#property__file" title="$_file :: Содержит параметры файла"><span class="description">Содержит параметры файла</span><pre>$_file</pre></a></li>
+<li class="property private "><a href="#property__mfile" title="$_mfile :: new Model\Photofile($config)"><span class="description">new Model\Photofile($config)</span><pre>$_mfile</pre></a></li>
+<li class="property private "><a href="#property__mphoto" title="$_mphoto :: new Model\Photo()"><span class="description">new Model\Photo()</span><pre>$_mphoto</pre></a></li>
+<li class="property private "><a href="#property__muser" title="$_muser :: new User()"><span class="description">new User()</span><pre>$_muser</pre></a></li>
+<li class="property private "><a href="#property__tree" title="$_tree :: Дерево диреткорий"><span class="description">Дерево диреткорий</span><pre>$_tree</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Otms\Modules\Photo\Ajax\Photo"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Otms.html">Otms</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.html">Modules</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.Photo.html">Photo</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.Photo.Ajax.html">Ajax</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Otms.Modules.Photo.Ajax.Photo.html">Photo</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Ajax\Photo class</p>
+<div class="details">
+<div class="long_description"><p>Основной для Photo класс, т.к. все действия в нём вызываются AJAX</p></div>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:dmitry.samotoy@gmail.com">Dmitry Samotoy</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___call"></a><div class="element clickable method public method___call" data-toggle="collapse" data-target=".method___call .collapse">
+<h2>__call()
+        </h2>
+<pre>__call($name, $args) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::__call()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($config) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$config</h4></div>
+</div></div>
+</div>
+<a id="method_addDirRight"></a><div class="element clickable method public method_addDirRight" data-toggle="collapse" data-target=".method_addDirRight .collapse">
+<h2>Сохранить права доступа для директории</h2>
+<pre>addDirRight(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["json"] string $params["did"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_addFileRight"></a><div class="element clickable method public method_addFileRight" data-toggle="collapse" data-target=".method_addFileRight .collapse">
+<h2>Сохранить права доступа для файла</h2>
+<pre>addFileRight(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["json"] string $params["md5"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_addFileText"></a><div class="element clickable method public method_addFileText" data-toggle="collapse" data-target=".method_addFileText .collapse">
+<h2>Добавить текстовую заметку к файлу</h2>
+<pre>addFileText(array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["text"] string $params["md5"]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(twig render) .../fm/ftext.tpl</div>
+</div></div>
+</div>
+<a id="method_admin"></a><div class="element clickable method public method_admin" data-toggle="collapse" data-target=".method_admin .collapse">
+<h2>Перейти в просмотр ФС в режиме "администратор"</h2>
+<pre>admin() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$this->files()</div>
+</div></div>
+</div>
+<a id="method_copyFiles"></a><div class="element clickable method public method_copyFiles" data-toggle="collapse" data-target=".method_copyFiles .collapse">
+<h2>Скопировать файлы и директории</h2>
+<pre>copyFiles(array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>array $params["file"] array $params["dir"]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>json $row["count"] = $this->_mfile->countBuffer()</div>
+</div></div>
+</div>
+<a id="method_createDir"></a><div class="element clickable method public method_createDir" data-toggle="collapse" data-target=".method_createDir .collapse">
+<h2>Создать директорию</h2>
+<pre>createDir(array $params) : string: string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["dirName"]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$this->files()</div>
+<div class="subelement response">
+<code>string</code>"error"</div>
+</div></div>
+</div>
+<a id="method_delDesc"></a><div class="element clickable method public method_delDesc" data-toggle="collapse" data-target=".method_delDesc .collapse">
+<h2>Удалить выделение на фотографии</h2>
+<pre>delDesc($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_delFavorite"></a><div class="element clickable method public method_delFavorite" data-toggle="collapse" data-target=".method_delFavorite .collapse">
+<h2>Удалить из сессии сортировки избранное</h2>
+<pre>delFavorite() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_delSort"></a><div class="element clickable method public method_delSort" data-toggle="collapse" data-target=".method_delSort .collapse">
+<h2>Очистить все сортирвки</h2>
+<pre>delSort() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_delSortSel"></a><div class="element clickable method public method_delSortSel" data-toggle="collapse" data-target=".method_delSortSel .collapse">
+<h2>Удалить из сессии сортировки - тег</h2>
+<pre>delSortSel($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_delSortTag"></a><div class="element clickable method public method_delSortTag" data-toggle="collapse" data-target=".method_delSortTag .collapse">
+<h2>Удалить из сессии сортировки - название выбранного участка</h2>
+<pre>delSortTag($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_delTag"></a><div class="element clickable method public method_delTag" data-toggle="collapse" data-target=".method_delTag .collapse">
+<h2>Удалить тег</h2>
+<pre>delTag($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_deldir"></a><div class="element clickable method public method_deldir" data-toggle="collapse" data-target=".method_deldir .collapse">
+<h2>Пометить директорию как удалённая</h2>
+<pre>deldir(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>int $params["did"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_deldirreal"></a><div class="element clickable method public method_deldirreal" data-toggle="collapse" data-target=".method_deldirreal .collapse">
+<h2>Реальное удаление директории</h2>
+<pre>deldirreal(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>int $params["did"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_delfile"></a><div class="element clickable method public method_delfile" data-toggle="collapse" data-target=".method_delfile .collapse">
+<h2>Пометить файл как удалённый</h2>
+<pre>delfile(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["fname"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_delfilereal"></a><div class="element clickable method public method_delfilereal" data-toggle="collapse" data-target=".method_delfilereal .collapse">
+<h2>Реальное удаление файла</h2>
+<pre>delfilereal(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["fname"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_dirRename"></a><div class="element clickable method public method_dirRename" data-toggle="collapse" data-target=".method_dirRename .collapse">
+<h2>Переименовать директорию</h2>
+<pre>dirRename(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>int $params["did"] string $params["name"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_favorite"></a><div class="element clickable method public method_favorite" data-toggle="collapse" data-target=".method_favorite .collapse">
+<h2>Добавить/удалить из избранного</h2>
+<pre>favorite($params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_fileRename"></a><div class="element clickable method public method_fileRename" data-toggle="collapse" data-target=".method_fileRename .collapse">
+<h2>Переименовать файл</h2>
+<pre>fileRename($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_files"></a><div class="element clickable method public method_files" data-toggle="collapse" data-target=".method_files .collapse">
+<h2>Просмотр файлов в текущей директории</h2>
+<pre>files() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(html twig render) .../fm/content.tpl</div>
+</div></div>
+</div>
+<a id="method_getCurDirName"></a><div class="element clickable method public method_getCurDirName" data-toggle="collapse" data-target=".method_getCurDirName .collapse">
+<h2>Получить имя текущей директории</h2>
+<pre>getCurDirName() : string | NULL</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>NULL</code>
+</div>
+</div></div>
+</div>
+<a id="method_getDesc"></a><div class="element clickable method public method_getDesc" data-toggle="collapse" data-target=".method_getDesc .collapse">
+<h2>Получить все выделенные области на фотографии и их описания</h2>
+<pre>getDesc($params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(twig render) - .../fm/desc.tpl</div>
+</div></div>
+</div>
+<a id="method_getDirName"></a><div class="element clickable method public method_getDirName" data-toggle="collapse" data-target=".method_getDirName .collapse">
+<h2>Вернуть имя директории</h2>
+<pre>getDirName(array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>int $params["did"]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getDirParams"></a><div class="element clickable method public method_getDirParams" data-toggle="collapse" data-target=".method_getDirParams .collapse">
+<h2>Получить параметры директории по ID</h2>
+<pre>getDirParams(int $did) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$did</h4>
+<code>int</code><p>Результат array $this->_dir</p>
+</div>
+</div></div>
+</div>
+<a id="method_getFavorite"></a><div class="element clickable method public method_getFavorite" data-toggle="collapse" data-target=".method_getFavorite .collapse">
+<h2>Добавить к сессии сортировки избранное</h2>
+<pre>getFavorite() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getFileName"></a><div class="element clickable method public method_getFileName" data-toggle="collapse" data-target=".method_getFileName .collapse">
+<h2>Вернуть MD5 файла по его имени</h2>
+<pre>getFileName(array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["name"]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getFileParamsFromMd5"></a><div class="element clickable method public method_getFileParamsFromMd5" data-toggle="collapse" data-target=".method_getFileParamsFromMd5 .collapse">
+<h2>Получить параметры файла по MD5</h2>
+<pre>getFileParamsFromMd5(string $md5) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$md5</h4>
+<code>string</code><p>Результат array $this->_file</p>
+</div>
+</div></div>
+</div>
+<a id="method_getFileParamsFromName"></a><div class="element clickable method public method_getFileParamsFromName" data-toggle="collapse" data-target=".method_getFileParamsFromName .collapse">
+<h2>Получить параметры файла по его имени</h2>
+<pre>getFileParamsFromName(string $filename) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filename</h4>
+<code>string</code><p>Результат array $this->_file</p>
+</div>
+</div></div>
+</div>
+<a id="method_getNotes"></a><div class="element clickable method public method_getNotes" data-toggle="collapse" data-target=".method_getNotes .collapse">
+<h2>Получить текстовые записи к фотографии</h2>
+<pre>getNotes($params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(twig render) - .../fm/ftext.tpl</div>
+</div></div>
+</div>
+<a id="method_getNumNotes"></a><div class="element clickable method public method_getNumNotes" data-toggle="collapse" data-target=".method_getNumNotes .collapse">
+<h2>Получить количество текстовых записей к фотографии</h2>
+<pre>getNumNotes($params) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_getTotalSize"></a><div class="element clickable method public method_getTotalSize" data-toggle="collapse" data-target=".method_getTotalSize .collapse">
+<h2>Возвращает суммарный размер файлов в текущей директории</h2>
+<pre>getTotalSize() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getTree"></a><div class="element clickable method public method_getTree" data-toggle="collapse" data-target=".method_getTree .collapse">
+<h2>Показать файловое дерево</h2>
+<pre>getTree() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(twig render) .../block/left.tpl</div>
+</div></div>
+</div>
+<a id="method_getUserFileChmod"></a><div class="element clickable method public method_getUserFileChmod" data-toggle="collapse" data-target=".method_getUserFileChmod .collapse">
+<h2>return $this-&gt;_getUserFileChmod()</h2>
+<pre>getUserFileChmod() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getUsersChmod"></a><div class="element clickable method public method_getUsersChmod" data-toggle="collapse" data-target=".method_getUsersChmod .collapse">
+<h2>Вернуть права доступа на файл</h2>
+<pre>getUsersChmod(array $params) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["md5"]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getUsersDirChmod"></a><div class="element clickable method public method_getUsersDirChmod" data-toggle="collapse" data-target=".method_getUsersDirChmod .collapse">
+<h2>Вернуть права доступа на директорию</h2>
+<pre>getUsersDirChmod(array $params) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>int $params["did"]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getfinfo"></a><div class="element clickable method public method_getfinfo" data-toggle="collapse" data-target=".method_getfinfo .collapse">
+<h2>Получить полную информацию о файле для контекстного меню файла</h2>
+<pre>getfinfo(array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["fname"]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(html twig render) .../fm/content.tpl</div>
+</div></div>
+</div>
+<a id="method_issetFile"></a><div class="element clickable method public method_issetFile" data-toggle="collapse" data-target=".method_issetFile .collapse">
+<h2>Проверка существования файла, если файл существует возможности его перезаписи</h2>
+<pre>issetFile(array $params) : string: string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>string $params["file"]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>"0"</div>
+<div class="subelement response">
+<code>string</code>"1"</div>
+</div></div>
+</div>
+<a id="method_moveFiles"></a><div class="element clickable method public method_moveFiles" data-toggle="collapse" data-target=".method_moveFiles .collapse">
+<h2>Переместить файлы и директории</h2>
+<pre>moveFiles() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$this->files()</div>
+</div></div>
+</div>
+<a id="method_restore"></a><div class="element clickable method public method_restore" data-toggle="collapse" data-target=".method_restore .collapse">
+<h2>Восстановить помеченные как удалённые файлы и директории</h2>
+<pre>restore(array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>array $params["file"] array $params["dir"]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$this->files()</div>
+</div></div>
+</div>
+<a id="method_setDesc"></a><div class="element clickable method public method_setDesc" data-toggle="collapse" data-target=".method_setDesc .collapse">
+<h2>Добавить выделение участка на фотографии с описанием</h2>
+<pre>setDesc($params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(twig render) - .../fm/desc.tpl</div>
+</div></div>
+</div>
+<a id="method_setSel"></a><div class="element clickable method public method_setSel" data-toggle="collapse" data-target=".method_setSel .collapse">
+<h2>Добавить к сессии сортировки - название выбранного участка</h2>
+<pre>setSel($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_setTag"></a><div class="element clickable method public method_setTag" data-toggle="collapse" data-target=".method_setTag .collapse">
+<h2>Добавить к сессии сортировки - тег</h2>
+<pre>setTag($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_shDirRight"></a><div class="element clickable method public method_shDirRight" data-toggle="collapse" data-target=".method_shDirRight .collapse">
+<h2>Показать права доступа на директорию</h2>
+<pre>shDirRight(array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>int $params["did"]</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>(twig render) .../fm/dtree.tpl</div>
+</div></div>
+</div>
+<a id="method__getUserDirChmod"></a><div class="element clickable method private method__getUserDirChmod" data-toggle="collapse" data-target=".method__getUserDirChmod .collapse">
+<h2>Получить права доступа на директорию</h2>
+<pre>_getUserDirChmod($curdir) : string: string: \Otms\Modules\Photo\Ajax\int:</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$curdir</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>"-1" - ошибка</div>
+<div class="subelement response">
+<code>string</code>"2" - полный доступ</div>
+<div class="subelement response">
+<code>\Otms\Modules\Photo\Ajax\int:</code>0 - доступа нет
+   1 - только чтение
+   2 - полный доступ</div>
+</div></div>
+</div>
+<a id="method__getUserFileChmod"></a><div class="element clickable method private method__getUserFileChmod" data-toggle="collapse" data-target=".method__getUserFileChmod .collapse">
+<h2>Получить права доступа на файл</h2>
+<pre>_getUserFileChmod() : string: string: \Otms\Modules\Photo\Ajax\int:</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>"-1" - ошибка</div>
+<div class="subelement response">
+<code>string</code>"2" - полный доступ</div>
+<div class="subelement response">
+<code>\Otms\Modules\Photo\Ajax\int:</code>0 - доступа нет
+   1 - только чтение
+   2 - полный доступ</div>
+</div></div>
+</div>
+<a id="method_errorload"></a><div class="element clickable method private method_errorload" data-toggle="collapse" data-target=".method_errorload .collapse">
+<h2>errorload()
+        </h2>
+<pre>errorload($name) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::errorload()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+</div></div>
+</div>
+<a id="method_print_array"></a><div class="element clickable method private method_print_array" data-toggle="collapse" data-target=".method_print_array .collapse">
+<h2>Рекурсивная функция для построения дерева пользователей</h2>
+<pre>print_array(array $arr) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$arr</h4>
+<code>array</code><p>Результат в string $this->_tree</p>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_registry"> </a><div class="element clickable property public property_registry" data-toggle="collapse" data-target=".property_registry .collapse">
+<h2>$registry</h2>
+<pre>$registry </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Singleton::$$registry</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$registry</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_config"> </a><div class="element clickable property protected property_config" data-toggle="collapse" data-target=".property_config .collapse">
+<h2>Конфиг модуля</h2>
+<pre>$config : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$config</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_module_name"> </a><div class="element clickable property protected property_module_name" data-toggle="collapse" data-target=".property_module_name .collapse">
+<h2>Имя модуля</h2>
+<pre>$module_name : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$module_name</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_module_path"> </a><div class="element clickable property protected property_module_path" data-toggle="collapse" data-target=".property_module_path .collapse">
+<h2>Путь к модулю</h2>
+<pre>$module_path : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$module_path</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_view"> </a><div class="element clickable property protected property_view" data-toggle="collapse" data-target=".property_view .collapse">
+<h2>Экземпляр Вида</h2>
+<pre>$view : object</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$view</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property__access_fname"> </a><div class="element clickable property private property__access_fname" data-toggle="collapse" data-target=".property__access_fname .collapse">
+<h2>Файл для действия над ним</h2>
+<pre>$_access_fname : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__access_md5"> </a><div class="element clickable property private property__access_md5" data-toggle="collapse" data-target=".property__access_md5 .collapse">
+<h2>MD5 файла для действия над ним</h2>
+<pre>$_access_md5 : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__config"> </a><div class="element clickable property private property__config" data-toggle="collapse" data-target=".property__config .collapse">
+<h2>Настройки модуля</h2>
+<pre>$_config : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__curdir"> </a><div class="element clickable property private property__curdir" data-toggle="collapse" data-target=".property__curdir .collapse">
+<h2>Текущая директория</h2>
+<pre>$_curdir : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__dir"> </a><div class="element clickable property private property__dir" data-toggle="collapse" data-target=".property__dir .collapse">
+<h2>Содержит параметры директории</h2>
+<pre>$_dir : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__file"> </a><div class="element clickable property private property__file" data-toggle="collapse" data-target=".property__file .collapse">
+<h2>Содержит параметры файла</h2>
+<pre>$_file : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__mfile"> </a><div class="element clickable property private property__mfile" data-toggle="collapse" data-target=".property__mfile .collapse">
+<h2>new Model\Photofile($config)</h2>
+<pre>$_mfile : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__mphoto"> </a><div class="element clickable property private property__mphoto" data-toggle="collapse" data-target=".property__mphoto .collapse">
+<h2>new Model\Photo()</h2>
+<pre>$_mphoto : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__muser"> </a><div class="element clickable property private property__muser" data-toggle="collapse" data-target=".property__muser .collapse">
+<h2>new User()</h2>
+<pre>$_muser : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__tree"> </a><div class="element clickable property private property__tree" data-toggle="collapse" data-target=".property__tree .collapse">
+<h2>Дерево диреткорий</h2>
+<pre>$_tree : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-10-16T11:22:02+04:00.<br></footer></div>
+</div>
+</body>
+</html>

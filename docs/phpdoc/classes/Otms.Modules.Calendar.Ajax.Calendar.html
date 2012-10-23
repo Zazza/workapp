@@ -1,0 +1,488 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Otms\Modules\Calendar\Ajax\Calendar</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Engine.html"><i class="icon-th"></i> Engine</a></li>
+<li><a href="../namespaces/Otms.html"><i class="icon-th"></i> Otms</a></li>
+<li><a href="../namespaces/app.html"><i class="icon-th"></i> app</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">489</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___call" title="__call :: "><span class="description">__call()
+        </span><pre>__call()</pre></a></li>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addReservs" title="addReservs :: Добавить бронь"><span class="description">Добавить бронь</span><pre>addReservs()</pre></a></li>
+<li class="method public "><a href="#method_delReserv" title="delReserv :: Удалить бронь"><span class="description">Удалить бронь</span><pre>delReserv()</pre></a></li>
+<li class="method public "><a href="#method_delSelected" title="delSelected :: Удалить выделенные брони (несколько)
+URL: http://domen.com/calendar/reservs/
+Пример в ."><span class="description">Удалить выделенные брони (несколько)
+URL: http://domen.com/calendar/reservs/
+Пример в .</span><pre>delSelected()</pre></a></li>
+<li class="method public "><a href="#method_editReservs" title="editReservs :: Правка существующей брони"><span class="description">Правка существующей брони</span><pre>editReservs()</pre></a></li>
+<li class="method public "><a href="#method_getDateReservs" title="getDateReservs :: Получить список броней для нужной даты"><span class="description">Получить список броней для нужной даты</span><pre>getDateReservs()</pre></a></li>
+<li class="method public "><a href="#method_getMonth" title="getMonth :: Получить задачи и брони за нужный месяц"><span class="description">Получить задачи и брони за нужный месяц</span><pre>getMonth()</pre></a></li>
+<li class="method public "><a href="#method_getMonthAll" title="getMonthAll :: Получить ID всех задач сгрупированных по типам за нужный месяц для нужного UID
+Шаблоны: ."><span class="description">Получить ID всех задач сгрупированных по типам за нужный месяц для нужного UID
+Шаблоны: .</span><pre>getMonthAll()</pre></a></li>
+<li class="method public "><a href="#method_getReserv" title="getReserv :: Получить инфу о броне"><span class="description">Получить инфу о броне</span><pre>getReserv()</pre></a></li>
+<li class="method public "><a href="#method_getReservsShow" title="getReservsShow :: Вывод броней на требуемую дату"><span class="description">Вывод броней на требуемую дату</span><pre>getReservsShow()</pre></a></li>
+<li class="method public "><a href="#method_setCalDate" title='setCalDate :: Выбор года и месяца на календаре
+$_SESSION["cal"]'><span class="description">Выбор года и месяца на календаре
+$_SESSION["cal"]</span><pre>setCalDate()</pre></a></li>
+<li class="method public "><a href="#method_setCalTask" title='setCalTask :: Выбор типа задач: где я ответственный, где я автор
+$_SESSION["cal"]'><span class="description">Выбор типа задач: где я ответственный, где я автор
+$_SESSION["cal"]</span><pre>setCalTask()</pre></a></li>
+<li class="method public "><a href="#method_showDateReservText" title="showDateReservText :: Получить информаицю по броне
+Шаблон: ."><span class="description">Получить информаицю по броне
+Шаблон: .</span><pre>showDateReservText()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="method private "><a href="#method__getDateReservText" title="_getDateReservText :: Получить информацию по броне
+Шаблон: ."><span class="description">Получить информацию по броне
+Шаблон: .</span><pre>_getDateReservText()</pre></a></li>
+<li class="method private "><a href="#method__getMonthOid" title="_getMonthOid :: Получить ID всех забранированных ресурсов за нужный месяц
+Шаблон: ."><span class="description">Получить ID всех забранированных ресурсов за нужный месяц
+Шаблон: .</span><pre>_getMonthOid()</pre></a></li>
+<li class="method private inherited"><a href="#method_errorload" title="errorload :: "><span class="description">errorload()
+        </span><pre>errorload()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul><li class="property public inherited"><a href="#property_registry" title="$registry :: "><span class="description">$registry</span><pre>$registry</pre></a></li></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_config" title="$config :: Конфиг модуля"><span class="description">Конфиг модуля</span><pre>$config</pre></a></li>
+<li class="property protected inherited"><a href="#property_module_name" title="$module_name :: Имя модуля"><span class="description">Имя модуля</span><pre>$module_name</pre></a></li>
+<li class="property protected inherited"><a href="#property_module_path" title="$module_path :: Путь к модулю"><span class="description">Путь к модулю</span><pre>$module_path</pre></a></li>
+<li class="property protected inherited"><a href="#property_view" title="$view :: Экземпляр Вида"><span class="description">Экземпляр Вида</span><pre>$view</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="property private "><a href="#property__reserv" title="$_reserv :: Объект new Reserv()"><span class="description">Объект new Reserv()</span><pre>$_reserv</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Otms\Modules\Calendar\Ajax\Calendar"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Otms.html">Otms</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.html">Modules</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.Calendar.html">Calendar</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.Modules.Calendar.Ajax.html">Ajax</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Otms.Modules.Calendar.Ajax.Calendar.html">Calendar</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Ajax\Calendar class</p>
+<div class="details">
+<div class="long_description"><p>Класс наследуемый ajax классами модулей</p></div>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:dmitry.samotoy@gmail.com">Dmitry Samotoy</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___call"></a><div class="element clickable method public method___call" data-toggle="collapse" data-target=".method___call .collapse">
+<h2>__call()
+        </h2>
+<pre>__call($name, $args) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::__call()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($config) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::__construct()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$config</h4></div>
+</div></div>
+</div>
+<a id="method_addReservs"></a><div class="element clickable method public method_addReservs" data-toggle="collapse" data-target=".method_addReservs .collapse">
+<h2>Добавить бронь</h2>
+<pre>addReservs(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["oid"] $params["reservstart"] $params["reservstarttime"] $params["reservend"] $params["reservendtime"] $params["repeat"] $params["repeat_num"] $params["repeat_period"] $params["repeat_cont_num"] $params["repeat_cont_period"] Отобразит: date - ошибка в дате object - объект не задан collision - пересечение с другой броней</p>
+</div>
+</div></div>
+</div>
+<a id="method_delReserv"></a><div class="element clickable method public method_delReserv" data-toggle="collapse" data-target=".method_delReserv .collapse">
+<h2>Удалить бронь</h2>
+<pre>delReserv(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["id"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_delSelected"></a><div class="element clickable method public method_delSelected" data-toggle="collapse" data-target=".method_delSelected .collapse">
+<h2>Удалить выделенные брони (несколько)
+URL: http://domen.com/calendar/reservs/
+Пример в .</h2>
+<pre>delSelected(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>../reservs.tpl</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>params["json"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_editReservs"></a><div class="element clickable method public method_editReservs" data-toggle="collapse" data-target=".method_editReservs .collapse">
+<h2>Правка существующей брони</h2>
+<pre>editReservs(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["id"] $params["oid"] $params["reservstart"] $params["reservstarttime"] $params["reservend"] $params["reservendtime"] $params["repeat"] $params["repeat_num"] $params["repeat_period"] $params["repeat_cont_num"] $params["repeat_cont_period"] Отобразит: collision - пересечение с другой броней</p>
+</div>
+</div></div>
+</div>
+<a id="method_getDateReservs"></a><div class="element clickable method public method_getDateReservs" data-toggle="collapse" data-target=".method_getDateReservs .collapse">
+<h2>Получить список броней для нужной даты</h2>
+<pre>getDateReservs(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["date"] (формат: Ymd) $params["oid"] $params["uid"] если нет $this->registry["ui"]["id"] Отобразит string</p>
+</div>
+</div></div>
+</div>
+<a id="method_getMonth"></a><div class="element clickable method public method_getMonth" data-toggle="collapse" data-target=".method_getMonth .collapse">
+<h2>Получить задачи и брони за нужный месяц</h2>
+<pre>getMonth(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$cal["month"] $cal["year"] Отобразит JSON массив</p>
+</div>
+</div></div>
+</div>
+<a id="method_getMonthAll"></a><div class="element clickable method public method_getMonthAll" data-toggle="collapse" data-target=".method_getMonthAll .collapse">
+<h2>Получить ID всех задач сгрупированных по типам за нужный месяц для нужного UID
+Шаблоны: .</h2>
+<pre>getMonthAll(int $year, int $month, int $uid) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>../cal/close.tpl .../cal/time.tpl .../cal/iter.tpl .../cal/noiter.tpl .../cal/reserv.tpl .../cal/block.tpl</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$year</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$month</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$uid</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getReserv"></a><div class="element clickable method public method_getReserv" data-toggle="collapse" data-target=".method_getReserv .collapse">
+<h2>Получить инфу о броне</h2>
+<pre>getReserv(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["id"] Отобразит JSON array</p>
+</div>
+</div></div>
+</div>
+<a id="method_getReservsShow"></a><div class="element clickable method public method_getReservsShow" data-toggle="collapse" data-target=".method_getReservsShow .collapse">
+<h2>Вывод броней на требуемую дату</h2>
+<pre>getReservsShow(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["date"] Отобразит string</p>
+</div>
+</div></div>
+</div>
+<a id="method_setCalDate"></a><div class="element clickable method public method_setCalDate" data-toggle="collapse" data-target=".method_setCalDate .collapse">
+<h2>Выбор года и месяца на календаре
+$_SESSION["cal"]</h2>
+<pre>setCalDate(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$cal["month"] $cal["year"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_setCalTask"></a><div class="element clickable method public method_setCalTask" data-toggle="collapse" data-target=".method_setCalTask .collapse">
+<h2>Выбор типа задач: где я ответственный, где я автор
+$_SESSION["cal"]</h2>
+<pre>setCalTask(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$cal["type"] = 0, 1</p>
+</div>
+</div></div>
+</div>
+<a id="method_showDateReservText"></a><div class="element clickable method public method_showDateReservText" data-toggle="collapse" data-target=".method_showDateReservText .collapse">
+<h2>Получить информаицю по броне
+Шаблон: .</h2>
+<pre>showDateReservText(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>../rwin.tpl</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["id"] - ID брони $params["wid"] - ID окна, для кнопки закрытия Отобразит string</p>
+</div>
+</div></div>
+</div>
+<a id="method__getDateReservText"></a><div class="element clickable method private method__getDateReservText" data-toggle="collapse" data-target=".method__getDateReservText .collapse">
+<h2>Получить информацию по броне
+Шаблон: .</h2>
+<pre>_getDateReservText(array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>../ralert.tpl</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["id"] - ID брони</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method__getMonthOid"></a><div class="element clickable method private method__getMonthOid" data-toggle="collapse" data-target=".method__getMonthOid .collapse">
+<h2>Получить ID всех забранированных ресурсов за нужный месяц
+Шаблон: .</h2>
+<pre>_getMonthOid(int $year, int $month) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>../cal/reserv.tpl</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$year</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$month</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_errorload"></a><div class="element clickable method private method_errorload" data-toggle="collapse" data-target=".method_errorload .collapse">
+<h2>errorload()
+        </h2>
+<pre>errorload($name) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::errorload()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_registry"> </a><div class="element clickable property public property_registry" data-toggle="collapse" data-target=".property_registry .collapse">
+<h2>$registry</h2>
+<pre>$registry </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Singleton::$$registry</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$registry</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_config"> </a><div class="element clickable property protected property_config" data-toggle="collapse" data-target=".property_config .collapse">
+<h2>Конфиг модуля</h2>
+<pre>$config : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$config</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_module_name"> </a><div class="element clickable property protected property_module_name" data-toggle="collapse" data-target=".property_module_name .collapse">
+<h2>Имя модуля</h2>
+<pre>$module_name : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$module_name</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_module_path"> </a><div class="element clickable property protected property_module_path" data-toggle="collapse" data-target=".property_module_path .collapse">
+<h2>Путь к модулю</h2>
+<pre>$module_path : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$module_path</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_view"> </a><div class="element clickable property protected property_view" data-toggle="collapse" data-target=".property_view .collapse">
+<h2>Экземпляр Вида</h2>
+<pre>$view : object</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Modules\Ajax::$$view</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property__reserv"> </a><div class="element clickable property private property__reserv" data-toggle="collapse" data-target=".property__reserv .collapse">
+<h2>Объект new Reserv()</h2>
+<pre>$_reserv : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-10-16T11:22:02+04:00.<br></footer></div>
+</div>
+</body>
+</html>

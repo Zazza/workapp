@@ -1,0 +1,375 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Otms\System\Ajax\Users</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Engine.html"><i class="icon-th"></i> Engine</a></li>
+<li><a href="../namespaces/Otms.html"><i class="icon-th"></i> Otms</a></li>
+<li><a href="../namespaces/app.html"><i class="icon-th"></i> app</a></li>
+<li><a href="../namespaces/global.html"><i class="icon-th"></i> global</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">489</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___call" title="__call :: "><span class="description">__call()
+        </span><pre>__call()</pre></a></li>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addTree" title="addTree :: Создать группу (2 уровень)"><span class="description">Создать группу (2 уровень)</span><pre>addTree()</pre></a></li>
+<li class="method public "><a href="#method_delCat" title="delCat :: Переименовать группу (2 уровень)"><span class="description">Переименовать группу (2 уровень)</span><pre>delCat()</pre></a></li>
+<li class="method public "><a href="#method_delGroup" title="delGroup :: Удалить группу (1 уровень)"><span class="description">Удалить группу (1 уровень)</span><pre>delGroup()</pre></a></li>
+<li class="method public "><a href="#method_delUser" title="delUser :: Удалить пользователя"><span class="description">Удалить пользователя</span><pre>delUser()</pre></a></li>
+<li class="method public "><a href="#method_editCat" title="editCat :: "><span class="description">editCat()
+        </span><pre>editCat()</pre></a></li>
+<li class="method public "><a href="#method_getCatName" title="getCatName :: Получить имя группы (2 уровень)"><span class="description">Получить имя группы (2 уровень)</span><pre>getCatName()</pre></a></li>
+<li class="method public "><a href="#method_getTree" title="getTree :: Вывести дерево группы по его ID"><span class="description">Вывести дерево группы по его ID</span><pre>getTree()</pre></a></li>
+<li class="method public "><a href="#method_getUI" title="getUI :: Вывести инофрмацию о пользователе."><span class="description">Вывести инофрмацию о пользователе.</span><pre>getUI()</pre></a></li>
+<li class="method public "><a href="#method_getUser" title="getUser :: Сформировать форму, с выбранными пользователем, группой или всеми и скрытыми полями."><span class="description">Сформировать форму, с выбранными пользователем, группой или всеми и скрытыми полями.</span><pre>getUser()</pre></a></li>
+<li class="method public "><a href="#method_getUserList" title="getUserList :: "><span class="description">getUserList()
+        </span><pre>getUserList()</pre></a></li>
+<li class="method public "><a href="#method_sendMsg" title="sendMsg :: Отправка сообщения"><span class="description">Отправка сообщения</span><pre>sendMsg()</pre></a></li>
+<li class="method public "><a href="#method_setSet" title="setSet :: Обновить set (настройка пользователя) по ключу"><span class="description">Обновить set (настройка пользователя) по ключу</span><pre>setSet()</pre></a></li>
+<li class="method public "><a href="#method_spam" title="spam :: Подписать текущего пользователя на задачу"><span class="description">Подписать текущего пользователя на задачу</span><pre>spam()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="method private inherited"><a href="#method_errorload" title="errorload :: "><span class="description">errorload()
+        </span><pre>errorload()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul><li class="property public inherited"><a href="#property_registry" title="$registry :: "><span class="description">$registry</span><pre>$registry</pre></a></li></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected inherited"><a href="#property_memcached" title="$memcached :: Экземпляр memcached"><span class="description">Экземпляр memcached</span><pre>$memcached</pre></a></li>
+<li class="property protected inherited"><a href="#property_view" title="$view :: Экземпляр Вида"><span class="description">Экземпляр Вида</span><pre>$view</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Otms\System\Ajax\Users"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Otms.html">Otms</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.System.html">System</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Otms.System.Ajax.html">Ajax</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Otms.System.Ajax.Users.html">Users</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Users Ajax class</p>
+<div class="details">
+<div class="long_description"><p>Для работы с пользовательскими данными</p></div>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:dmitry.samotoy@gmail.com">Dmitry Samotoy</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___call"></a><div class="element clickable method public method___call" data-toggle="collapse" data-target=".method___call .collapse">
+<h2>__call()
+        </h2>
+<pre>__call($name, $args) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Ajax::__call()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Ajax::__construct()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_addTree"></a><div class="element clickable method public method_addTree" data-toggle="collapse" data-target=".method_addTree .collapse">
+<h2>Создать группу (2 уровень)</h2>
+<pre>addTree(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["pid"] - (parent) group ID</p>
+</div>
+</div></div>
+</div>
+<a id="method_delCat"></a><div class="element clickable method public method_delCat" data-toggle="collapse" data-target=".method_delCat .collapse">
+<h2>Переименовать группу (2 уровень)</h2>
+<pre>delCat(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["id"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_delGroup"></a><div class="element clickable method public method_delGroup" data-toggle="collapse" data-target=".method_delGroup .collapse">
+<h2>Удалить группу (1 уровень)</h2>
+<pre>delGroup($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_delUser"></a><div class="element clickable method public method_delUser" data-toggle="collapse" data-target=".method_delUser .collapse">
+<h2>Удалить пользователя</h2>
+<pre>delUser($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_editCat"></a><div class="element clickable method public method_editCat" data-toggle="collapse" data-target=".method_editCat .collapse">
+<h2>editCat()
+        </h2>
+<pre>editCat(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a id="method_getCatName"></a><div class="element clickable method public method_getCatName" data-toggle="collapse" data-target=".method_getCatName .collapse">
+<h2>Получить имя группы (2 уровень)</h2>
+<pre>getCatName(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["id"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_getTree"></a><div class="element clickable method public method_getTree" data-toggle="collapse" data-target=".method_getTree .collapse">
+<h2>Вывести дерево группы по его ID</h2>
+<pre>getTree(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["pid"] - (parent) group ID</p>
+</div>
+</div></div>
+</div>
+<a id="method_getUI"></a><div class="element clickable method public method_getUI" data-toggle="collapse" data-target=".method_getUI .collapse">
+<h2>Вывести инофрмацию о пользователе.</h2>
+<pre>getUI(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Шаблон: userInfo.tpl</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>$params["uid"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_getUser"></a><div class="element clickable method public method_getUser" data-toggle="collapse" data-target=".method_getUser .collapse">
+<h2>Сформировать форму, с выбранными пользователем, группой или всеми и скрытыми полями.</h2>
+<pre>getUser($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Необходимо для выбора ответственных в задаче</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_getUserList"></a><div class="element clickable method public method_getUserList" data-toggle="collapse" data-target=".method_getUserList .collapse">
+<h2>getUserList()
+        </h2>
+<pre>getUserList() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_sendMsg"></a><div class="element clickable method public method_sendMsg" data-toggle="collapse" data-target=".method_sendMsg .collapse">
+<h2>Отправка сообщения</h2>
+<pre>sendMsg(array $param) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$param</h4>
+<code>array</code><p>$param["msg"] $param["uid"]</p>
+</div>
+</div></div>
+</div>
+<a id="method_setSet"></a><div class="element clickable method public method_setSet" data-toggle="collapse" data-target=".method_setSet .collapse">
+<h2>Обновить set (настройка пользователя) по ключу</h2>
+<pre>setSet(array $param) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$param</h4>
+<code>array</code><p>$param["key"] - ключ $param["type"] - тип данных $param["val"] - значение $param["bool"] - flag, TRUE или FALSE Пример: key: bu [{"gr":{"OTMS":"1"}}, где gr - тип данных, OTMS - $param["val"], 1 - $param["bool"]]</p>
+</div>
+</div></div>
+</div>
+<a id="method_spam"></a><div class="element clickable method public method_spam" data-toggle="collapse" data-target=".method_spam .collapse">
+<h2>Подписать текущего пользователя на задачу</h2>
+<pre>spam($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$params</h4></div>
+</div></div>
+</div>
+<a id="method_errorload"></a><div class="element clickable method private method_errorload" data-toggle="collapse" data-target=".method_errorload .collapse">
+<h2>errorload()
+        </h2>
+<pre>errorload($name) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Ajax::errorload()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_registry"> </a><div class="element clickable property public property_registry" data-toggle="collapse" data-target=".property_registry .collapse">
+<h2>$registry</h2>
+<pre>$registry </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Singleton::$$registry</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Engine\Ajax::$$registry</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_memcached"> </a><div class="element clickable property protected property_memcached" data-toggle="collapse" data-target=".property_memcached .collapse">
+<h2>Экземпляр memcached</h2>
+<pre>$memcached : object</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Ajax::$$memcached</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_view"> </a><div class="element clickable property protected property_view" data-toggle="collapse" data-target=".property_view .collapse">
+<h2>Экземпляр Вида</h2>
+<pre>$view : object</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Engine\Ajax::$$view</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-10-16T11:22:02+04:00.<br></footer></div>
+</div>
+</body>
+</html>
