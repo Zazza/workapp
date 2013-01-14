@@ -1,7 +1,10 @@
 # WorkApp
 
-[Demo](http://workapp.ru)
-Login and Password: alena/fateeva
+[Demo](http://tushkan.com/demo/workapp/)
+
+Login and Password: demo/demo
+
+Site: [http://tushkan.com/projects/workapp/](http://tushkan.com/projects/workapp/)
 
 ## Requirements
 PHP > 5.2
@@ -17,4 +20,6 @@ Database dump: /sql/workapp.sql
 Login and Password: workapp/workapp
 
 ## License
-See COPYING file
+GPL
+
+See [COPYING](https://github.com/Zazza/workapp/blob/master/COPYING) file
