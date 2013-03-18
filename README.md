@@ -1,4 +1,5 @@
 # WorkApp
+(works on version 2.0 are resumed)
 
 [Demo](http://tushkan.com/demo/workapp/)
 
