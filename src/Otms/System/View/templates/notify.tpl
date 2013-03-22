@@ -4,7 +4,7 @@
 
 <tr>
     <td>
-        <a href="{{ registry.sitename }}{{ registry.uri }}task/{{ part.id }}/">Задача №{{ part.id }}</a>
+        <a href="{{ registry.sitename }}{{ registry.uri }}task/{{ part.id }}/">Task №{{ part.id }}</a>
     </td>
 </tr>
 

@@ -17,7 +17,7 @@ class Tasks extends Find {
 
 	public function index() {
 
-        $this->view->setTitle("Поиск");
+        $this->view->setTitle("Search");
         
         $this->view->setLeftContent($this->view->render("left_find", array("num" => $this->numFind)));
        

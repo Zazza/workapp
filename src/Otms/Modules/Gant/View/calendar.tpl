@@ -1,21 +1,21 @@
 <div id="gantC">
 <form class="form-inline" style="overflow: hidden;">
 <div style="float: left;">
-	<input class="btn" style="width: 70px;" onclick="calReset()" value="сбросить" />
+	<input class="btn" style="width: 70px;" onclick="calReset()" value="remove" />
 	
 	<div style="margin-left: 10px; position: relative; bottom: 4px;" class="btn-group">
-		<input type="button" class="btn btn-info" value="Задачи" onclick="document.location.href = '{{ registry.uri }}gant/'" />
-		<input type="button" class="btn btn-info" value="Брони" onclick="document.location.href = '{{ registry.uri }}gant/?reservs'" />
+		<input type="button" class="btn btn-info" value="Tasks" onclick="document.location.href = '{{ registry.uri }}gant/'" />
+		<input type="button" class="btn btn-info" value="Reservations" onclick="document.location.href = '{{ registry.uri }}gant/?reservs'" />
 	</div>
 </div>
 
 
 <div style="float: right;">
 <select id="gantlimit">
-	<option value="10" {% if limit == 10 %}selected="selected"{% endif %}>10 дней</option>
-	<option value="30" {% if limit == 30 %}selected="selected"{% endif %}>30 дней</option>
+	<option value="10" {% if limit == 10 %}selected="selected"{% endif %}>10 days</option>
+	<option value="30" {% if limit == 30 %}selected="selected"{% endif %}>30 days</option>
 	</select>
-	<input class="btn" style="width: 70px;" onclick="calLimit()" value="применить" />
+	<input class="btn" style="width: 70px;" onclick="calLimit()" value="apply" />
 </div>
 </form>
 
@@ -112,7 +112,7 @@ $(".rtip").live("click", function() {
     	data: data,
     	async: false,
     	success: function(res) {
-    		$("#" + id).popover({placement: 'top', title: 'Просмотр броней', content: res });
+    		$("#" + id).popover({placement: 'top', title: 'Viewing reservation', content: res });
     		$("#" + id).popover('show');
     	}
     });

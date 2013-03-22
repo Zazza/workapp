@@ -16,7 +16,7 @@ use Otms\System\Model\Validate;
 class Profile extends Controller {
 
 	public function index() {
-		$this->view->setTitle("Учётная запись");
+		$this->view->setTitle("Account");
 
 		$ui = new Ui();
 

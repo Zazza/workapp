@@ -22,7 +22,7 @@ use Otms\Modules\Objects\Model\Template;
 class Lists extends Objects {
 
 	public function index() {
-		$this->view->setTitle("Просмотр");
+		$this->view->setTitle("View");
 		
 		$this->view->setLeftContent($this->view->render("left_objects", array()));
 

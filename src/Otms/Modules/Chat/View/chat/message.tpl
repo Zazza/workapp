@@ -1,7 +1,7 @@
 <div style="overflow: hidden; margin-bottom: 10px">
 
 <div style="float: left; text-align: center; margin: 5px 10px 0 0">
-	<img class="avatar" id="ava" src="{{ author.avatar }}" alt="аватар" />
+	<img class="avatar" id="ava" src="{{ author.avatar }}" alt="avatar" />
 </div>
 
 <div style="margin-left: 70px">

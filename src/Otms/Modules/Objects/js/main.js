@@ -15,17 +15,17 @@ function showInfo(id) {
 		url: url + "ajax/objects/",
 		data: data,
 		success: function(res) {
-			$('<div title="Информация" style="text-align: left">' + res + '</div>').dialog({ width: 700 });
+			$('<div title="Information" style="text-align: left">' + res + '</div>').dialog({ width: 700 });
 		}
 	});
 }
 
 function delAdvConfirm(oaid) {
-    $('<div title="Удаление записи">Удалить?</div>').dialog({
+    $('<div title="Deleting record">Delete?</div>').dialog({
             modal: true,
         buttons: {
-                    "Нет": function() { $(this).dialog("close"); },
-                    "Да": function() { delAdv(oaid); $(this).dialog("close"); }
+                    "No": function() { $(this).dialog("close"); },
+                    "Yes": function() { delAdv(oaid); $(this).dialog("close"); }
             },
             width: 240
     });
@@ -44,11 +44,11 @@ function delAdv(oaid) {
 }
 
 function delTemplateConfirm(id) {
-	$('<div title="Удаление шаблона">Удалить?</div>').dialog({
+	$('<div title="Deleting templates">Delete?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Нет": function() { $(this).dialog("close"); },
-			"Да": function() { delTemplate(id); $(this).dialog("close"); }
+			"No": function() { $(this).dialog("close"); },
+			"Yes": function() { delTemplate(id); $(this).dialog("close"); }
 		},
 		width: 240
 	});
@@ -74,18 +74,18 @@ function getInfo(id) {
 		url: url + "ajax/objects/",
 		data: data,
 		success: function(res) {
-       	   $('<div title="Информация">' + res + '</div>').dialog({ width: 600, height: 600 });
+       	   $('<div title="Information">' + res + '</div>').dialog({ width: 600, height: 600 });
 		}
 	});
 }
 
 
 function delFormConfirm(id) {
-	$('<div title="Удаление формы">Удалить?</div>').dialog({
+	$('<div title="Deleting form">Delete?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Нет": function() { $(this).dialog("close"); },
-			"Да": function() { delForm(id); $(this).dialog("close"); }
+			"No": function() { $(this).dialog("close"); },
+			"Yes": function() { delForm(id); $(this).dialog("close"); }
 		},
 		width: 280
 	});

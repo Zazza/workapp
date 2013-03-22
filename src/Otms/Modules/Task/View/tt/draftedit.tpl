@@ -3,7 +3,7 @@
 <input type="hidden" name="tid" value="{{ data.0.id }}" />
 
 <div style="margin: 10px 0">
-	<div id="btaskname"><a href="#" class="btn" onclick="shTaskName()"><i class="icon-star"></i>Название задачи</a></div>
+	<div id="btaskname"><a href="#" class="btn" onclick="shTaskName()"><i class="icon-star"></i>Task name</a></div>
 	<div id="dtaskname" {% if data.0.name %}style="display: block"{% endif %}><input id="titletask" type="text" name="taskname" value="{{ data.0.name }}" /></div>
 </div>
 
@@ -12,7 +12,7 @@
 	<div style="overflow: hidden">
 		<a class="btn" style="float: left" onclick="fromBuffer()">
 		<i class="icon-trash"></i>
-		Из буфера
+		From buffer
 		</a>
 		
 		<div id="arfiles" style="padding-left: 120px">
@@ -20,10 +20,10 @@
 	</div>
 
 	<p>
-	Прикреплённые файлы
+	Attach files
 	<a class="btn btn-mini" onclick="flushAttaches()">
 		<i class="icon-remove"></i>
-		очистить
+		remove
 	</a>
 	</p>
 	<div id="attach_files" style="margin-top: 10px"></div>
@@ -45,13 +45,13 @@
 <!-- /tabs -->
 
 <p style="margin-top: 30px">
-<input type="submit" class="btn" name="submit" value="Изменить черновик" style="margin-right: 10px" />
-<input type="submit" class="btn" name="createtask" value="Создать задачу" />
+<input type="submit" class="btn" name="submit" value="Change draft" style="margin-right: 10px" />
+<input type="submit" class="btn" name="createtask" value="Create task" />
 </p>
 
 </form>
 
-<div id="usersDialog" title="Выбор пользователей" style="text-align: left"></div>
+<div id="usersDialog" title="Select users" style="text-align: left"></div>
 
 <script type="text/javascript">
 $('#wysihtml5').wysihtml5();

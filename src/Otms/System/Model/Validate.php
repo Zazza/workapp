@@ -31,10 +31,10 @@ class Validate extends Model {
         $err = null;
         
 		if ($email == null) {
-			$err = "E-mail не может быть пустым!";
+			$err = "E-mail can't be empty!";
 		} else {
     		if ( !preg_match( '/^([\.0-9a-zA-Z_-]+@([a-zA-Z_-][0-9a-zA-Z_-]+\.)+[a-zA-Z]+)$/', $email ) ) {
-    			$err = "E-mail введён не верно!";
+    			$err = "E-mail wrong!";
     		}
         }
         
@@ -55,12 +55,12 @@ class Validate extends Model {
 	        $err = null;
 	
 			if ( !preg_match( '/^[0-9A-Za-z_-]{4,31}$/', $login ) ) {
-				$err = 'Логин должен состоять из символов английского алфавита, быть длиной не менее 4 и не более 31 символов! Из специальных символов разрешается использовать символы: "-", "_"';
+				$err = 'Login has to consist of symbols of the English alphabet, to be not less than 4 and no more than 31 symbols long! From special symbols it is allowed to use symbols: "-", "_"';
 			}
 	        
 	        if ($err == null) {
 	            if ($user->issetLogin($login)) {
-	                $err = "Пользователь с таким логином уже зарегистрирован!";
+	                $err = "The user with such login is already registered!";
 	            }
 	        }
 	
@@ -81,7 +81,7 @@ class Validate extends Model {
         $err = null;
         
         if ( !preg_match( '/^[0-9A-Za-z_-]{6,31}$/', $password ) ) {
-			$err = 'Пароль должен состоять из символов английского алфавита, быть длиной не менее 6 и не более 31 символов! Из специальных символов разрешается использовать символы: "-", "_"';
+			$err = 'The password has to consist of symbols of the English alphabet, to be not less than 6 and no more than 31 symbols long! From special symbols it is allowed to use symbols: "-", "_"';
 		}
         
         if ($err != null) {
@@ -100,7 +100,7 @@ class Validate extends Model {
         $err = null;
         
         if ( !preg_match( '/^[0-9A-Za-zА-Яа-я_-]{1,128}$/ui', $name ) ) {
-			$err = 'Поле "Имя" должно содержать от 1 до 128 символов. Из специальных символов разрешается использовать символы: "-", "_"';
+			$err = 'The field "Name" has to contain from 1 to 128 symbols. From special symbols it is allowed to use symbols: "-", "_"';
 		}
 
         if ($err != null) {
@@ -119,7 +119,7 @@ class Validate extends Model {
         $err = null;
         
         if ( !preg_match( '/^[0-9A-Za-zА-Яа-я_-]{1,128}$/ui', $soname ) ) {
-			$err = 'Поле "Фамилия" должно содержать от 1 до 128 символов. Из специальных символов разрешается использовать символы: "-", "_"';
+			$err = 'The field "Surname" has to contain from 1 to 128 symbols. From special symbols it is allowed to use symbols: "-", "_"';
 		}
         
         if ($err != null) {

@@ -22,7 +22,7 @@ use Otms\Modules\Objects\Model;
 class Sub extends Objects {
 
 	public function index() {
-		$this->view->setTitle("Просмотр объектов");
+		$this->view->setTitle("View objects");
 		
 		$this->view->setLeftContent($this->view->render("left_objects", array()));
 

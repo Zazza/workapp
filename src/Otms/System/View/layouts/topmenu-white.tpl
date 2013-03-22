@@ -38,8 +38,8 @@
 						
 						<ul class="dropdown-menu" style="text-align: left;">
 							<li><div id="userParam"></div></li>
-							<li><a href="{{ registry.uri }}profile/"><i class="icon-user"></i> Профиль</a></li>
-							<li><a href="{{ registry.uri }}logout/" title="выход"><i class="icon-off"></i> выход</a></li>
+							<li><a href="{{ registry.uri }}profile/"><i class="icon-user"></i> Profile</a></li>
+							<li><a href="{{ registry.uri }}logout/" title="выход"><i class="icon-off"></i> logout</a></li>
 						</ul>
 					</li>
 

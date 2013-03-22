@@ -1,5 +1,5 @@
 {% if not notcheckall %}
-<p style="font-size: 11px"><label class="checkbox"><input type="checkbox" name="rall" value="1" id="rall" />Выбрать всех</label></p>
+<p style="font-size: 11px"><label class="checkbox"><input type="checkbox" name="rall" value="1" id="rall" />Select all</label></p>
 {% endif %}
 
 <div id="us">

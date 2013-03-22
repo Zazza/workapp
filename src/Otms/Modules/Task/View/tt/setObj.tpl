@@ -4,7 +4,7 @@
 {{ val }}
 {% endfor %}
 </div>
-<div class="btn btn-mini" style="cursor: pointer" onclick="selObj{{ id }}()"><img src="{{ registry.uri }}img/enter.png" alt="" style="vertical-align: middle; margin-right: 5px">выбрать</div>
+<div class="btn btn-mini" style="cursor: pointer" onclick="selObj{{ id }}()"><img src="{{ registry.uri }}img/enter.png" alt="" style="vertical-align: middle; margin-right: 5px">select</div>
 </div>
 <script type="text/javascript">
 function selObj{{ id }}() {

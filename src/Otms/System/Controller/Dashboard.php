@@ -14,7 +14,7 @@ use Otms\System\Model;
 
 class Dashboard extends Controller {
 	public function index() {
-		$this->view->setTitle("События");
+		$this->view->setTitle("Events");
 		
 		$dashboard = new Model\Dashboard();
 		
@@ -51,7 +51,7 @@ class Dashboard extends Controller {
 		$listevents = $dashboard->getEvents();
 		
 		if (count($listevents) == 0) {
-			$list = "Событий нет";
+			$list = "Events are absent";
 		}
 
 		foreach($listevents as $event) {

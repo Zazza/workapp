@@ -28,12 +28,12 @@ class Folder extends Mail {
 
 		if (isset($_POST["edit_submit"])) {
 			
-			$this->view->setTitle("Правка");
+			$this->view->setTitle("Edit");
 			
 			$err = array();
 			$str = htmlspecialchars($_POST["folder"]);
 			$strlen = mb_strlen($_POST["folder"]);
-			if ( ($strlen < 1) or ($strlen > 64) ) { $err[] = "Название папки должно быть от 1 до 64 символов"; }
+			if ( ($strlen < 1) or ($strlen > 64) ) { $err[] = "Folder name must be from 1 to 64 characters"; }
 			
 			if (count($err) == 0) {
 				$mailClass->editFolder($_GET["id"], $str);
@@ -45,12 +45,12 @@ class Folder extends Mail {
 		
 		} elseif (isset($_POST["submit"])) {
 			
-			$this->view->setTitle("Новая папка");
+			$this->view->setTitle("New folder");
 
 			$err = array();
 			$str = htmlspecialchars($_POST["folder"]);
 			$strlen = mb_strlen($_POST["folder"]);
-			if ( ($strlen < 1) or ($strlen > 64) ) { $err[] = "Название папки должно быть от 1 до 64 символов"; }
+			if ( ($strlen < 1) or ($strlen > 64) ) { $err[] = "Folder name must be from 1 to 64 characters"; }
 			
 			if (count($err) == 0) {
 				$mailClass->addFolder($str);
@@ -62,7 +62,7 @@ class Folder extends Mail {
 		} else {
 			if (isset($_GET["id"])) {
 				
-				$this->view->setTitle("Правка");
+				$this->view->setTitle("Edit");
 				
 				foreach($this->folders as $part) {
 					if ($part["id"] == $_GET["id"]) {
@@ -72,7 +72,7 @@ class Folder extends Mail {
 				$this->view->mail_editfolder(array("folder" => $folder));
 			} else {
 				
-				$this->view->setTitle("Новая папка");
+				$this->view->setTitle("New folder");
 				
 				$this->view->mail_folder(array("folders" => $this->folders));
 			}

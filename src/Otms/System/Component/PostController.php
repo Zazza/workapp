@@ -59,7 +59,7 @@ class PostController extends Singleton {
 		$dash["notify"] = $dashboard->getnumEventsVar();
 			
 		if (count($dash["events"]) == 0) {
-			$dash["events"] = "<p id='emptyEvents'>Новых событий нет</p>";
+			$dash["events"] = "<p id='emptyEvents'>New events are absent</p>";
 		}
 			
 		if (isset($this->registry["module_chat"])) {

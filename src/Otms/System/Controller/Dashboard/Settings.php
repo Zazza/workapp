@@ -14,7 +14,7 @@ use Otms\System\Model;
 
 class Settings extends Controller {
 	public function index() {
-		$this->view->setTitle("Настройки уведомлений");
+		$this->view->setTitle("Notice settings");
 		
 		$dashboard = new Model\Dashboard();
 		

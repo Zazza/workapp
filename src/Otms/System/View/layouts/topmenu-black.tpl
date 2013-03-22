@@ -31,7 +31,7 @@
 					<li class="dropdown">
 						<a  onclick="userParam()" class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding: 0">
 							<div style="margin-right: 15px; float: left">
-								<img class="avatar" style="border: 1px solid #555; max-height: 30px; max-width: 30px" src="{{ registry.ui.avatar }}" alt="аватар" />
+								<img class="avatar" style="border: 1px solid #555; max-height: 30px; max-width: 30px" src="{{ registry.ui.avatar }}" alt="avatar" />
 							</div>
 							<div style="float: left; margin: 1px 15px 0 0; line-height: 16px; font-size: 11px;">
 								<b>{{ registry.ui.name }}<br />{{ registry.ui.soname }}</b>
@@ -42,8 +42,8 @@
 						
 						<ul class="dropdown-menu" style="text-align: left;">
 							<li><div id="userParam"></div></li>
-							<li><a href="{{ registry.uri }}profile/"><i class="icon-user"></i> Профиль</a></li>
-							<li><a href="{{ registry.uri }}logout/" title="выход"><i class="icon-off"></i> выход</a></li>
+							<li><a href="{{ registry.uri }}profile/"><i class="icon-user"></i> Profile</a></li>
+							<li><a href="{{ registry.uri }}logout/" title="выход"><i class="icon-off"></i> logout</a></li>
 						</ul>
 					</li>
 

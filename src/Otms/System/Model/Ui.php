@@ -210,19 +210,19 @@ class Ui extends Model {
 		$avatar = "ava" . $this->registry["ui"]["id"] . "_" . $file["name"];
 	
 		if ($file["name"] == "") {
-			$err .= "<li style='margin: 5px; list-style: disc inside none'>Необходимо выбрать файл для загрузки</li>";
+			$err .= "<li style='margin: 5px; list-style: disc inside none'>It is necessary to choose the file to load</li>";
 		}
 	
 		if (mb_strlen($file["name"]) > 16) {
-			$err .= "<li style='margin: 5px; list-style: disc inside none'>Имя файла должно быть короче 16 символов</li>";
+			$err .= "<li style='margin: 5px; list-style: disc inside none'>File name must be shorter than 16 symbols</li>";
 		};
 	
 		if($file["size"] > 1024*100) {
-			$err .= "<li style='margin: 5px; list-style: disc inside none'>Размер файла не должен превышать 100 килобайт</li>";
+			$err .= "<li style='margin: 5px; list-style: disc inside none'>File size shouldn't exceed 100 kb</li>";
 		}
 	
 		if($file['type'] != "image/gif" and $file['type'] != "image/jpeg" and $file['type'] != "image/x-png" and $file['type'] != "image/png") {
-			$err .= "<li style='margin: 5px; list-style: disc inside none'>Изображение должно быть в формате GIF, PNG или JPEG</li>";
+			$err .= "<li style='margin: 5px; list-style: disc inside none'>The image must be GIF, PNG or JPEG format</li>";
 		}
 	
 		if (count($err) == 0) {

@@ -12,38 +12,38 @@
 <form method="post" action="{{ registry.uri }}mail/sort/">
 {% endif %}
 
-<h3><b>Сортировать по:</b></h3>
+<h3><b>Sort on:</b></h3>
 
-<p>Поле "От кого"</p>
+<p>Field "from whom"</p>
 <p>
 	<input type="checkbox" name="checkbox_from" />
 	<input type="text" name="from" value="{{ mail.0.email }}" style="width: 280px" />
 </p>
 
-<p>Поле "Кому"</p>
+<p>Field "to whom"</p>
 <p>
 	<input type="checkbox" name="checkbox_to" />
 	<input type="text" name="to" value="{{ mail.0.to }}" style="width: 280px" />
 </p>
 
-<p>Поле "Тема" (содержит текст)</p>
+<p>Field "Theme" (contains text)</p>
 <p>
 	<input type="checkbox" name="checkbox_subject" />
 	<input type="text" name="subject" value="{{ mail.0.subject }}" style="width: 280px" />
 </p>
 
-<h3 style="margin-top: 30px"><b>Действие:</b></h3>
+<h3 style="margin-top: 30px"><b>Action:</b></h3>
 
 <p>
 {% if not folders %}
 	<a class="btn btn-mini" href="{{ registry.uri }}mail/folder/">
 	<i class="icon-folder-open"></i>
-	Создать папку
+	Create folder
 	</a>
 {% else %}
 	<label class="radio inline">
 	<input type="radio" class="mail_action" name="mail_action" checked="checked" value="move" />
-	Переместить в
+	Move in
 	</label>
 	<select name="folder">
 		{% for part in folders %}
@@ -56,14 +56,14 @@
 <p style="margin-top: 10px">
 <label class="radio inline">
 	<input type="radio" class="mail_action" name="mail_action" value="remove" />
-	удалить
+	delete
 </label>
 </p>
 
 <p style="margin-top: 10px">
 <label class="radio inline">
 	<input type="radio" class="mail_action" name="mail_action" value="task" />
-	создать задачу
+	create task
 </label>
 </p>
 
@@ -72,7 +72,7 @@
 </div>
 
 <p style="margin-top: 20px">
-	<input type="submit" class="btn" name="submit" value="Создать сортировку" />
+	<input type="submit" class="btn" name="submit" value="Create sorting" />
 </p>
 
 </form>

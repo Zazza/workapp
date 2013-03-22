@@ -22,7 +22,7 @@ class Users extends Controller {
 		while(list($key, $val) = each($arr)) {
 			if (!is_array($val)) {
 				if ($val == null) {
-					$val = "пусто";
+					$val = "empty";
 				}
 	
 				$this->tree .= "<ul><li><div style='margin: 0 0 0 10px'>" . $val . "</div></li></ul>";
@@ -49,7 +49,7 @@ class Users extends Controller {
 	public function index() {
         if ($this->registry["ui"]["admin"]) {
 
-			$this->view->setTitle("Управление пользователями");
+			$this->view->setTitle("Management of users");
 			
 			$this->view->setLeftContent($this->view->render("left_users", array()));
 

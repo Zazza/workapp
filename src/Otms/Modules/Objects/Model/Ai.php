@@ -158,11 +158,11 @@ class Ai extends Model {
 
     	$data = $this->getAdvanced($oaid);
     	
-    	$string = "Правка информации у объекта <a href='" . $this->registry["uri"] . "objects/" . $data["oid"] . "/'>" . $data["oid"] . "</a>";
+    	$string = "Edit object info <a href='" . $this->registry["uri"] . "objects/" . $data["oid"] . "/'>" . $data["oid"] . "</a>";
     	
     	
-    	$obj["Название"] = $title;
-    	$obj["Текст"] = $text;
+    	$obj["Title"] = $title;
+    	$obj["Text"] = $text;
     	
     	$this->registry["logs"]->set("info", $string, $oaid, $obj);
     }
@@ -208,10 +208,10 @@ class Ai extends Model {
             
             $data = $this->getAdvanced($oaid);
             
-    		$string = "Добавление информации объекту <a href='" . $this->registry["uri"] . "objects/" . $data["oid"] . "/'>" . $data["oid"] . "</a>";
+    		$string = "Add object info <a href='" . $this->registry["uri"] . "objects/" . $data["oid"] . "/'>" . $data["oid"] . "</a>";
     	
-    		$obj["Название"] = $title;
-    		$obj["Текст"] = $text;
+    		$obj["Title"] = $title;
+    		$obj["Text"] = $text;
     	
     		$this->registry["logs"]->set("info", $string, $oaid, $obj);
     		
@@ -228,12 +228,12 @@ class Ai extends Model {
     	$data = $this->getAdvanced($oaid);
     	
     	if ($data["oid"] == 0) {
-    		$string = "Удаление информации";
+    		$string = "Delete info";
     	} else {
-    		$string = "Удаление информации у объекта <a href='" . $this->registry["uri"] . "objects/" . $data["oid"] . "/'>" . $data["oid"] . "</a>";
+    		$string = "Delete object info <a href='" . $this->registry["uri"] . "objects/" . $data["oid"] . "/'>" . $data["oid"] . "</a>";
     	}
     	
-    	$obj["Название"] = $data["title"];
+    	$obj["Title"] = $data["title"];
     	
     	$log_text = null;
     	if ($post = json_decode($data["val"])) {
@@ -244,7 +244,7 @@ class Ai extends Model {
     		$log_text = $data["val"];
     	}
     	
-    	$obj["Текст"] = $log_text;
+    	$obj["Text"] = $log_text;
     	
     	$this->registry["logs"]->set("info", $string, $oaid, $obj);
     	
@@ -620,10 +620,10 @@ class Ai extends Model {
             
 		$data = $this->getAdvanced($oaid);
             
-		$string = "Добавление информации объекту <a href='" . $this->registry["uri"] . "objects/" . $data["oid"] . "/'>" . $data["oid"] . "</a>";
+		$string = "Add object info <a href='" . $this->registry["uri"] . "objects/" . $data["oid"] . "/'>" . $data["oid"] . "</a>";
     	
-		$obj["Название"] = $title;
-		$obj["Текст"] = $log_text;
+		$obj["Title"] = $title;
+		$obj["Text"] = $log_text;
     	
 		$this->registry["logs"]->set("info", $string, $oaid, $obj);
     		
@@ -657,7 +657,7 @@ class Ai extends Model {
     	$param = array(":oid" => $row[0]["oid"], ":text" => $text, ":uid" => $this->registry["ui"]["id"]);
     	$res->execute($param);
     	
-    	$string = "Правка информации у объекта <a href='" . $this->registry["uri"] . "objects/" . $row[0]["oid"] . "/'>" . $row[0]["oid"] . "</a>";
+    	$string = "Add object info <a href='" . $this->registry["uri"] . "objects/" . $row[0]["oid"] . "/'>" . $row[0]["oid"] . "</a>";
     	
     	$sql = "SELECT `title` FROM objects_advanced WHERE id = :id LIMIT 1";
     	 
@@ -666,13 +666,13 @@ class Ai extends Model {
     	$res->execute($param);
     	$title = $res->fetchAll(PDO::FETCH_ASSOC);
     	
-    	$obj["Название"] = $title[0]["title"];
+    	$obj["Title"] = $title[0]["title"];
     	
     	$log_text = null;
     	foreach($post as $key=>$val) {
     		$log_text .= "<b>" . $key . "</b>: " . $val . " ";
     	}
-    	$obj["Текст"] = $log_text;
+    	$obj["Text"] = $log_text;
     	 
     	$this->registry["logs"]->set("info", $string, $oaid, $obj);
     }

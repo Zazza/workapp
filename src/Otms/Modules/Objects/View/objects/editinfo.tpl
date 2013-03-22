@@ -1,14 +1,14 @@
-<h3>Информация:</h3>
+<h3>Information:</h3>
 
-<p>Название: <input type="text" name="title" id="title" style="width: 300px" value="{{ ai.adv.title }}" /></p>
+<p>Title: <input type="text" name="title" id="title" style="width: 300px" value="{{ ai.adv.title }}" /></p>
 
 <div id="text_area">
     <textarea id="wysihtml5" name="textfield" style="width: 700px; height: 300px">{{ ai.adv.val }}</textarea>
 </div>
 
-<p>Теги: <input type="text" name="tags" id="tags" style="width: 300px" value="{{ ai.tags }}" /></p>
+<p>Tags: <input type="text" name="tags" id="tags" style="width: 300px" value="{{ ai.tags }}" /></p>
 
-<div style="clear: both; padding-top: 10px"><input type="button" onclick="editAI()" value="Изменить" /></div>
+<div style="clear: both; padding-top: 10px"><input type="button" onclick="editAI()" value="Change" /></div>
 
 <script type="text/javascript">
 $('#wysihtml5').wysihtml5();

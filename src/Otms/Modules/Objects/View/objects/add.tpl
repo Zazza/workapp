@@ -1,4 +1,4 @@
-<h3>Новый объект</h3>
+<h3>New object</h3>
 
 <form method="post" action="{{ registry.uri }}objects/add/{{ pname }}/">
 
@@ -6,14 +6,14 @@
 <p style="margin: 10px 0">
 <img border="0" src="{{ registry.uri }}img/plus-button.png" alt="" style="vertical-align: middle" />
 <a onclick="addEmail('{{ email }}')" style="cursor: pointer; text-decoration: none">
-<b>Добавить email:</b> {{ email }}
+<b>Add email:</b> {{ email }}
 </a>
 </p>
 {% else %}
 <p style="margin: 10px 0">
 <img border="0" src="{{ registry.uri }}img/plus-button.png" alt="" style="vertical-align: middle" />
 <a onclick="addEmail('')" style="cursor: pointer; text-decoration: none">
-<b>Добавить email</b>
+<b>Add email</b>
 </a>
 </p>
 {% endif %}

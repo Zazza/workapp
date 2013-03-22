@@ -5,9 +5,9 @@
 <div style="margin-bottom: 10px; padding: 0 10px">
 
 <div style="overflow: hidden; text-align: right">
-{% if data.0.close == 1 %}<div class="taskstatus">[завершено]</div>{% endif %}
-{% if data.0.secure == 1 %}<div class="taskstatus">[приватная]</div>{% endif %}
-{% if data.0.type == "1" and data.0.expire %}<div class="taskstatus">[просроченная]</div>{% endif %}
+{% if data.0.close == 1 %}<div class="taskstatus">[complete]</div>{% endif %}
+{% if data.0.secure == 1 %}<div class="taskstatus">[private]</div>{% endif %}
+{% if data.0.type == "1" and data.0.expire %}<div class="taskstatus">[expired]</div>{% endif %}
 </div>
 
 
@@ -16,39 +16,39 @@
 {% if data.0.mail_id == 0 %}
 <span style="overflow: hidden">
 <div style="float: left; text-align: center; margin-right: 10px">
-	<img class="avatar" id="ava" src="{{ author.avatar }}" alt="аватар" />
+	<img class="avatar" id="ava" src="{{ author.avatar }}" alt="avatar" />
 </div>
 </span>
 {% else %}
 <span style="overflow: hidden">
 <div style="float: left; margin-right: 10px">
-	<img class="avatar" id="ava" src="{{ registry.uri }}img/noavatar.gif" alt="аватар" />
+	<img class="avatar" id="ava" src="{{ registry.uri }}img/noavatar.gif" alt="avatar" />
 </div>
 </span>
 {% endif %}
 
 <div style="float: left;">
 	<div style="clear: both; font-size: 12px">
-		<span class="grSub">Автор: </span>
+		<span class="grSub">Author: </span>
 		{% if data.0.remote_id != 0 %}
-		{{ author.soname }} {{ author.name }} (группа {{ author.gname }})
+		{{ author.soname }} {{ author.name }} (group {{ author.gname }})
 		{% else %}
 		<a style="cursor: pointer" onclick="getUserInfo('{{ author.id }}')">{{ author.soname }} {{ author.name }}</a>
 		{% endif %}
 	</div>
 	
 	<div style="clear: both; font-size: 12px">
-		<span class="grSub">Дата: </span>{{ data.0.start }}
+		<span class="grSub">Date: </span>{{ data.0.start }}
 	</div>
 	
 	<div style="font-size: 12px; padding-bottom: 3px;">
-		<span class="grSub">Группа: </span>{{ data.0.group }}
+		<span class="grSub">Group: </span>{{ data.0.group }}
 	</div>
 	
 		<ul class="nav nav-pills" style="margin-bottom: 0">
 		<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-				Ответственные
+				Responsible
 				<b class="caret"></b>
 			</a>
 			<ul class="dropdown-menu">
@@ -58,7 +58,7 @@
 		
 		<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-				Сроки
+				Periods
 				<b class="caret"></b>
 			</a>
 			<ul class="dropdown-menu">
@@ -69,7 +69,7 @@
 		{% if data.0.chid %}
 		<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-				Вложенные задачи
+				Subtask
 				<b class="caret"></b>
 			</a>
 			<ul class="dropdown-menu">
@@ -88,7 +88,7 @@
 		{% if obj %}
 		<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-				Объект
+				Object
 				<b class="caret"></b>
 			</a>
 			<ul class="dropdown-menu">
@@ -107,7 +107,7 @@
 <div style="float: right; text-align: right">
 
 	{% if data.0.cid %}
-	<span class="title">(подзадача для </span><a class="title" style="color: #048" href="{{ registry.uri }}task/show/{{ data.0.cid }}/">№{{ data.0.cid }}</a><span class="title">) </span>
+	<span class="title">(subtask for </span><a class="title" style="color: #048" href="{{ registry.uri }}task/show/{{ data.0.cid }}/">№{{ data.0.cid }}</a><span class="title">) </span>
 	{% endif %}
 
 	{% if type != "draft" %}
@@ -205,17 +205,17 @@
 	
 	<div class="btn-group" style="margin-top: 10px; float: left">
 	
-	<a class="btn" style="text-decoration: none" href="{{ registry.uri }}task/history/{{ data.0.id }}/" title="История">
-	<img src="{{ registry.uri }}img/clock-history.png" alt="История" border="0" />
+	<a class="btn" style="text-decoration: none" href="{{ registry.uri }}task/history/{{ data.0.id }}/" title="History">
+	<img src="{{ registry.uri }}img/clock-history.png" alt="History" border="0" />
 	</a>
 	
 	{% if data.0.close == 0%}
 	{% if data.0.spam != 0 %}
-	<a class="btn" style="cursor: pointer; text-decoration: none" onclick="spam({{ data.0.id }})" title="отписаться от рассылки по задаче">
+	<a class="btn" style="cursor: pointer; text-decoration: none" onclick="spam({{ data.0.id }})" title="unsubscribe">
 	<img src="{{ registry.uri }}img/mail--minus.png" />
 	</span>
 	{% else %}
-	<a class="btn" style="cursor: pointer; text-decoration: none" onclick="spam({{ data.0.id }})" title="подписаться на рассылку по задаче">
+	<a class="btn" style="cursor: pointer; text-decoration: none" onclick="spam({{ data.0.id }})" title="subscribe">
 	<img src="{{ registry.uri }}img/mail--plus.png" alt="" />
 	</a>
 	{% endif %}
@@ -224,25 +224,25 @@
 	{% if data.0.close == 0 %}
 	
 	{% if registry.ui.id == data.0.who or registry.ui.admin %}
-	<a class="btn" href="{{ registry.uri }}task/edit/{{ data.0.id }}/" title="Правка">
+	<a class="btn" href="{{ registry.uri }}task/edit/{{ data.0.id }}/" title="Edit">
 	<img src="{{ registry.uri }}img/edititem.gif" />
 	</a>
 	{% endif %}
 	
 	{% if registry.ui.id == data.0.who or registry.ui.admin %}
-	<a class="btn" href="{{ registry.uri }}task/add/?sub={{ data.0.id }}" title="Создать подзадачу">
+	<a class="btn" href="{{ registry.uri }}task/add/?sub={{ data.0.id }}" title="Create subtask">
 	<img src="{{ registry.uri }}img/plus-button.png" />
 	</a>
 	{% endif %}
 	
 	{% if not data.0.route %}
 		{% if registry.ui.id == data.0.who or registry.ui.admin %}
-		<a class="btn" onclick="closeTask({{ data.0.id }})" title="Завершить">
+		<a class="btn" onclick="closeTask({{ data.0.id }})" title="Close">
 		<img src="{{ registry.uri }}img/inbox-download.png" />
 		</a>
 		{% endif %}
 	{% else %}
-		<a class="btn btn-success" onclick="setResult({{ data.0.id }})" title="Продолжить">
+		<a class="btn btn-success" onclick="setResult({{ data.0.id }})" title="Continue">
 		<img src="{{ registry.uri }}img/node-select-next.png" />
 		</a>
 	{% endif %}
@@ -256,12 +256,12 @@
 	
 	<a class="btn" style="cursor: pointer; text-decoration: none" href="{{ registry.uri }}task/draftedit/{{ data.0.id }}/">
 	<img src="{{ registry.uri }}img/edititem.gif" />
-	Правка
+	Edit
 	</a>
 	
 	<a class="btn" style="cursor: pointer; text-decoration: none" onclick="delDraftConfirm({{ data.0.id }})">
 	<img src="{{ registry.uri }}img/inbox-download.png" />
-	Удалить
+	Delete
 	</a>
 	
 	</div>

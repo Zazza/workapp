@@ -22,7 +22,7 @@ use Otms\Modules\Filemanager\Model;
 class Filemanager extends Controller {
 
 	public function index() {
-		$this->view->setTitle("Файловый менеджер");
+		$this->view->setTitle("Filemanager");
 		
 		$file = new Model\File($this->config);
 		$file->showTree(0);

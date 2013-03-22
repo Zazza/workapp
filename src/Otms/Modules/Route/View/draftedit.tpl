@@ -1,19 +1,19 @@
 <div class="input-append">
-	Название: <input type="text" name="bpname" id="bpname" value="{{  route.0.name  }}" style="margin-bottom: 0" /><button type="button" class="btn" onclick="saveBPName()">Сохранить название</button>
+	Name: <input type="text" name="bpname" id="bpname" value="{{  route.0.name  }}" style="margin-bottom: 0" /><button type="button" class="btn" onclick="saveBPName()">Save name</button>
 </div>
 
 <div class="btn-group" style="margin: 10px 0">
-	<a onclick="addStep()" class="btn">+ этап в конец маршрута</a>
-	<a onclick="addRealRoute()" class="btn">в маршруты</a>
+	<a onclick="addStep()" class="btn">+ step in route end</a>
+	<a onclick="addRealRoute()" class="btn">in routes</a>
 </div>
 
-<div class="newRoute beginRoute alert alert-success">Начало</div>
+<div class="newRoute beginRoute alert alert-success">Start</div>
 <div id="appendRoute">
 
 <div id="subTable">
-	<div class="st_substep">Этап</div>
-	<div class="st_step">Задачи</div>
-	<div class="st_stepaction">Действия</div>
+	<div class="st_substep">Step</div>
+	<div class="st_step">Tasks</div>
+	<div class="st_stepaction">Actions</div>
 </div>
 	
 {% for part in steps %}
@@ -28,7 +28,7 @@
 	<div style="margin-bottom: 10px">
 	{{ action.ifdataval }} {{ action.ifcon }} {{ action.ifval }}
 	<br />
-	<b>Переход:</b> {{ action.gotoval }}
+	<b>Go to:</b> {{ action.gotoval }}
 	</div>
 	{% endfor %}
 	</div>
@@ -36,41 +36,41 @@
 </div>
 {% endfor %}
 </div>
-<div class="newRoute endRoute alert alert-error">Конец</div>
+<div class="newRoute endRoute alert alert-error">End</div>
 
 <!-- SUBSTEP CONTEXT MENU -->
 <div class="contextMenu" id="subStepMenu" style="display: none">
 	<ul class="cm">
-		<li id="substep_addbefore"><i class="icon-plus"></i>&nbsp;этап&nbsp;ДО</li>
-		<li id="substep_rename"><i class="icon-pencil"></i>&nbsp;Переименовать</li>
-		<li id="substep_remove"><i class="icon-minus"></i>&nbsp;Удалить</li>
+		<li id="substep_addbefore"><i class="icon-plus"></i>&nbsp;step&nbsp;before</li>
+		<li id="substep_rename"><i class="icon-pencil"></i>&nbsp;Rename</li>
+		<li id="substep_remove"><i class="icon-minus"></i>&nbsp;Delete</li>
 	</ul>
 </div>
 
 <!-- ACTION CONTEXT MENU -->
 <div class="contextMenu" id="actionMenu" style="display: none">
 	<ul class="cm">
-		<li id="substep_action"><i class="icon-random"></i>&nbsp;Действие</li>
+		<li id="substep_action"><i class="icon-random"></i>&nbsp;Actoin</li>
 	</ul>
 </div>
 
 <!-- TASK CONTEXT MENU -->
 <div class="contextMenu" id="taskMenu" style="display: none">
 	<ul class="cm">
-		<li id="task_edit"><i class="icon-pencil"></i>&nbsp;Изменить</li>
-		<li id="task_remove"><i class="icon-minus"></i>&nbsp;Удалить</li>
+		<li id="task_edit"><i class="icon-pencil"></i>&nbsp;Edit</li>
+		<li id="task_remove"><i class="icon-minus"></i>&nbsp;Delete</li>
 	</ul>
 </div>
 
 <!-- STEP CONTEXT MENU -->
 <div class="contextMenu" id="stepMenu" style="display: none">
 	<ul class="cm">
-		<li id="task_add"><i class="icon-plus"></i>&nbsp;задача</li>
+		<li id="task_add"><i class="icon-plus"></i>&nbsp;task</li>
 	</ul>
 </div>
 
-<div title="Переименовать" id="renameStep" style="display: none"><input type="text" id="sname" /></div>
-<div title="Задача" id="ftask" style="display: none; text-align: left">{{ formtask }}</div>
+<div title="Rename" id="renameStep" style="display: none"><input type="text" id="sname" /></div>
+<div title="Task" id="ftask" style="display: none; text-align: left">{{ formtask }}</div>
 
 <script type="text/javascript">
 contextMenu();
@@ -83,7 +83,7 @@ $.ajax({
 	success: function(res) {
 		var taskname = "";
 		$.each(res, function(key, val) {
-			taskname = "Без названия";
+			taskname = "No name";
 			if (val["task"]) {
 				$.each(val["task"], function(param, value) {
 					if (param == "taskname") {
@@ -150,8 +150,8 @@ function addStep(){
 		}
 	});
 
-	$("#appendRoute").append('<div class="newRoute newStep" id="step_' + step_id + '"><div class="substep">Новый этап</div><div class="step"></div></div>');
-	$("#step_" + step_id + " .step").append("<div class='info stask' id='task_" + tid + "'>Пустая задача<div>");
+	$("#appendRoute").append('<div class="newRoute newStep" id="step_' + step_id + '"><div class="substep">New step</div><div class="step"></div></div>');
+	$("#step_" + step_id + " .step").append("<div class='info stask' id='task_" + tid + "'>Empty task<div>");
 	contextMenu();
 	taskContext();
 }
@@ -173,7 +173,7 @@ function subStepRename(id) {
 	$("#sname").val($("#" + id + " .substep").text());
 	$("#renameStep").dialog({
 	    buttons: {
-	    	"Переименовать": function() {
+	    	"Rename": function() {
 				$("#" + id + " .substep").text($("#sname").val());
 				
 				$.ajax({
@@ -184,7 +184,7 @@ function subStepRename(id) {
 				
 				$(this).dialog("close");
 			},
-			"Закрыть": function() { $(this).dialog("close"); }
+			"Close": function() { $(this).dialog("close"); }
 		},
 		width: 250,
 		height: 150
@@ -192,13 +192,13 @@ function subStepRename(id) {
 }
 
 function taskRemoveConfirm(tid) {
-	$("<div title='Удаление задачи'>Вы действительно хотите удалить задачу?</div>").dialog({
+	$("<div title='Delete task'>You really want to delete task?</div>").dialog({
 	    buttons: {
-	    	"Да": function() {
+	    	"Yes": function() {
 	    		taskRemove(tid);
 				$(this).dialog("close");
 			},
-			"Нет": function() { $(this).dialog("close"); }
+			"No": function() { $(this).dialog("close"); }
 		},
 		width: 250,
 		height: 150
@@ -231,7 +231,7 @@ function taskAdd(id) {
 		}
 	});
 
-	$("#" + id + " .step").append("<div class='info stask' id='task_" + new_tid + "'>Пустая задача<div>");
+	$("#" + id + " .step").append("<div class='info stask' id='task_" + new_tid + "'>Empty task<div>");
 	
 	taskContext();
 }

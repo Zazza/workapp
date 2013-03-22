@@ -1,4 +1,4 @@
-<p><b>Выберите пользователей</b></p>
+<p><b>Select users</b></p>
 
 <div id="taskUsers">
 
@@ -22,7 +22,7 @@ function setTaskUsers() {
 	        	var id = str.substr(2);
 	            $("#addedusers").append('<p style="font-size: 11px; margin-right: 10px">' + $("#hg" + id).attr("title") + '<input type="hidden" name="gruser[]" value="' + id + '" /></p>');
 	        } else if (str.indexOf("rall") == 0) {
-	        	$("#addedusers").append('<p style="font-size: 11px; margin-right: 10px">Все<input type="hidden" name="rall" value="1" /></p>');
+	        	$("#addedusers").append('<p style="font-size: 11px; margin-right: 10px">All<input type="hidden" name="rall" value="1" /></p>');
 	        }
 		}
 	});

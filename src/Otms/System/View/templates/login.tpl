@@ -53,7 +53,7 @@ html, body {
 
 
 <div style="color: red; padding: 10px 4px; width: 200px; height: 20px; margin: 0 auto">
-{% if err %}Неверный логин/пароль{% endif %}
+{% if err %}Incorrect login/password{% endif %}
 </div>
 
 
@@ -63,15 +63,15 @@ html, body {
 <form action="{{ registry.url }}" method="post" style="margin-bottom: 0">
 
 <div class="p control-group {% if err %}error{% endif %}">
-	<div class="pn">Логин</div>
+	<div class="pn">Login</div>
 	<div style="float: left"><input id="" type="text" name="login" /></div>
 </div>
 <div class="p control-group {% if err %}error{% endif %}">
-	<div class="pn">Пароль</div>
+	<div class="pn">Password</div>
 	<div style="float: left"><input type="password" name="password" /></div>
 </div>
 <div class="p" style="text-align: right; margin-top: 10px">
-<input class="btn btn-info" type="submit" name="submit" value="Войти" />
+<input class="btn btn-info" type="submit" name="submit" value="Enter" />
 </div>
 </form>
 </div>

@@ -69,17 +69,17 @@ class Fa extends Ajax {
      */
     function handleUpload($uploadDirectory, $_thumbPath) {		 
         if (!is_writable($uploadDirectory)){
-            return array('error' => "Ошибка сервера. Запись в директорию невозможен! " . $this->abspDir);
+            return array('error' => "Write error " . $this->abspDir);
         }
         
         if (!$this->file){
-            return array('error' => 'Нет файлов для загрузки');
+            return array('error' => 'File list is empty');
         }
         
         $size = $this->file->getSize();
 
         if ($size == 0) {
-            return array('error' => 'Пустой файл или директория');
+            return array('error' => 'Null file');
         }
         
         if ($size > $this->registry["fa"]["sizeLimit"]) {
@@ -93,7 +93,7 @@ class Fa extends Ajax {
 				$tsize = round($tsize / 1024, 2) . " Мб";
 			};
 			
-            return array('error' => 'Файл слишком большой! Установлен лимит на максимальный размер загружаемого файла: ' . $tsize);
+            return array('error' => 'File very big! Limit: ' . $tsize);
         }
         
         $this->file->getName();
@@ -101,8 +101,8 @@ class Fa extends Ajax {
         if ($this->file->save()) {
             return array('success'=> true);
         } else {
-            return array('error'=> 'Не получается сохранить файл.' .
-                'Загрузка отменена, ошибка сервера');
+            return array('error'=> 'Error.' .
+                'Cancel ,error');
         }
         
     }

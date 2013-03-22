@@ -1,4 +1,4 @@
-<p><b>Выберите пользователей</b></p>
+<p><b>Select users</b></p>
 
 <div id="taskOnlyUsers">
 

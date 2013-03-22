@@ -3,7 +3,7 @@
 <div class="emailhead">
 
 <div style="background-color: #DFE4EA; border-bottom: 1px solid #FFF; padding: 4px 7px">
-<span style="margin-right: 10px"><b>Тема:</b> {{ mail.0.subject }}</span>
+<span style="margin-right: 10px"><b>Theme:</b> {{ mail.0.subject }}</span>
 </div>
 
 <div style="background-color: #DFE4EA; padding: 6px 4px; border-bottom: 1px solid #FFF">

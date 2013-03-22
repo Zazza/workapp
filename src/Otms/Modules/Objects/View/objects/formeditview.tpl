@@ -1,14 +1,14 @@
- <h3>Правка вида шаблона формы</h3>
+ <h3>Edit type template of form</h3>
  
 <ul class="nav nav-tabs">
-	<li><a href="{{ registry.uri }}objects/forms/edit/?id={{ tid }}">Шаблон формы</a></li>
-	<li class="active"><a href="{{ registry.uri }}objects/forms/editview/?id={{ tid }}">Вид формы</a></li>
+	<li><a href="{{ registry.uri }}objects/forms/edit/?id={{ tid }}">Form template</a></li>
+	<li class="active"><a href="{{ registry.uri }}objects/forms/editview/?id={{ tid }}">Form view</a></li>
 </ul>
 
 <div style="overflow: hidden" id="tview">
-	<ul id="firstSort" class="otherlist"><p style="text-align: center">1 колонка</p></ul>
-	<ul id="secondSort" class="otherlist"><p style="text-align: center">2 колонка</p></ul>
-	<ul id="thirdSort" class="otherlist"><p style="text-align: center">3 колонка</p></ul>
+	<ul id="firstSort" class="otherlist"><p style="text-align: center">1 column</p></ul>
+	<ul id="secondSort" class="otherlist"><p style="text-align: center">2 column</p></ul>
+	<ul id="thirdSort" class="otherlist"><p style="text-align: center">3 column</p></ul>
 </div>
 
 <div id="tViewSave" title="Сохранение" style="display: none">

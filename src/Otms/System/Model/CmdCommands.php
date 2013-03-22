@@ -284,7 +284,7 @@ class CmdCommands extends Model {
 			} else { $status = "<span style='color: red'>offline</span>";
 			}
 			
-			$this->result = "<b>Статус: </b> " . $status;
+			$this->result = "<b>Status: </b> " . $status;
 		} else {
 			$this->result = "Usage: status login";
 		}
@@ -314,12 +314,12 @@ class CmdCommands extends Model {
 				}
 				
 				$this->result .= "<div>" . $ui["name"] . " " . $ui["soname"] . "</div>";
-				$this->result .= "<div><b>Подпись: </b>" . $ui["signature"] . "</div>";
-				$this->result .= "<div><b>Адрес: </b>" . $ui["adres"] . "</div>";
-				$this->result .= "<div><b>Телефон: </b>" . $ui["phone"] . "</div>";
+				$this->result .= "<div><b>Signature: </b>" . $ui["signature"] . "</div>";
+				$this->result .= "<div><b>Adress: </b>" . $ui["adres"] . "</div>";
+				$this->result .= "<div><b>Phone: </b>" . $ui["phone"] . "</div>";
 				$this->result .= "<div><b>ICQ: </b>" . $ui["icq"] . " " . $ui["skype"] . "</div>";
 				$this->result .= "<div><b>Email: </b>" . $ui["email"] . "</div>";
-				$this->result .= "<div><b>Статус: </b>" . $status . "</div>";
+				$this->result .= "<div><b>Status: </b>" . $status . "</div>";
 			} else {
 				$this->result .= "---";
 			}
@@ -589,7 +589,7 @@ class CmdCommands extends Model {
 			
 			$list = null;
 			if (count($listevents) == 0) {
-				$list = "Событий нет";
+				$list = "Events are absent";
 			}
 
 			foreach($listevents as $event) {	

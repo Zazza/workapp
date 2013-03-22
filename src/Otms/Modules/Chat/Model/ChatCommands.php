@@ -152,7 +152,7 @@ class ChatCommands extends Model {
 				$result[] = $this->args[$i];
 			}
 		
-			$this->result = "<b>[Приватно]</b> <span style='color: green; font-style: italic'>" . implode(" ", $result) . "</span>";
+			$this->result = "<b>[Private]</b> <span style='color: green; font-style: italic'>" . implode(" ", $result) . "</span>";
 		}
 		
 		return false;

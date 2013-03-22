@@ -1,4 +1,4 @@
-<h3>Форма</h3>
+<h3>Form</h3>
 
 <form method="post" action="{{ registry.uri }}objects/setform/edit/?oaid={{ oaid }}">
 
@@ -11,7 +11,7 @@
 	<input type="hidden" name="tid" value="{{ fields.0.id }}" />
 	<input type="hidden" name="ttypeid" value="{{ fields.0.ttypeid }}" />
 	
-	<input type="submit" name="submit" value="Изменить" />
+	<input type="submit" name="submit" value="Change" />
 
 </form>
 

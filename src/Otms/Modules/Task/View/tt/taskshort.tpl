@@ -5,13 +5,13 @@
 <div style="float: left; margin-right: 10px">
 
 <div style="margin-bottom: 5px">
-<a {% if data.0.close == 1 %}class="endtask"{% else %}class="livetask"{% endif %} href="{{ registry.uri }}task/show/{{ data.0.id }}/">Задача {{ data.0.id }}</a>
+<a {% if data.0.close == 1 %}class="endtask"{% else %}class="livetask"{% endif %} href="{{ registry.uri }}task/show/{{ data.0.id }}/">Task {{ data.0.id }}</a>
 </div>
 
 <div style="margin-bottom: 5px">
 <a class="btn btn-mini" onclick="showTaskInfo('{{ data.0.id }}')">
 	<i class="icon-info-sign"></i>
-	информация
+	information
 </a>
 </div>
 

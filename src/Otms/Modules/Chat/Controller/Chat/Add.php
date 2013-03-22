@@ -26,11 +26,11 @@ class Add extends Controller {
 
 		$chat = $this->registry["chat"];
 
-		$this->view->setTitle("Новый чат");
+		$this->view->setTitle("New chat");
 			
 		if (isset($this->get["add"])) {
 			if ($this->get["chatname"] == null) {
-				$name = "чат_" . date("H:i:s Y-m-d");
+				$name = "chat" . date("H:i:s Y-m-d");
 			} else { $name = $this->get["chatname"];
 			}
 			$parts = $this->get;

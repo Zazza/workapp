@@ -760,7 +760,7 @@ class Filemanager extends Ajax {
 		while(list($key, $val) = each($arr)) {
 			if (!is_array($val)) {
 				if ($val == null) {
-					$val = "пусто";
+					$val = "empty";
 				}
 
 				$this->_tree .= "<ul><li><div style='margin: 0 0 0 10px'>" . $val . "</div></li></ul>";
@@ -1109,7 +1109,7 @@ class Filemanager extends Ajax {
     	}
     	
     	if (strlen($clip) > 0) {
-    		$row["buffer"] = "<li style='text-align: center'><a onclick='clearBuffer()' style='cursor: pointer'>очистить</a></li>" . $clip;
+    		$row["buffer"] = "<li style='text-align: center'><a onclick='clearBuffer()' style='cursor: pointer'>clear</a></li>" . $clip;
     	} else {
     		$row["buffer"] = "";
     	}

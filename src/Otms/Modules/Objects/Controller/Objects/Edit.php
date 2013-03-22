@@ -22,7 +22,7 @@ use Otms\Modules\Objects\Model;
 class Edit extends Objects {
 
 	public function index() {
-		$this->view->setTitle("Правка объекта");
+		$this->view->setTitle("Edit object");
 
 		$this->view->setLeftContent($this->view->render("left_objects", array()));
 		

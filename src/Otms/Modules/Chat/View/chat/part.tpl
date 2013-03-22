@@ -2,7 +2,7 @@
 	
 	<div style="float: left">
 		<a style="cursor: pointer" onclick="private('{{ data.login }}')">
-			<img class="avatar" style="border: 1px solid #555; max-height: 40px; max-width: 40px" src="{{ data.avatar }}" alt="аватар" />
+			<img class="avatar" style="border: 1px solid #555; max-height: 40px; max-width: 40px" src="{{ data.avatar }}" alt="avatar" />
 		</a>
 	</div>
 	

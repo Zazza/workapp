@@ -1,9 +1,9 @@
-<div style="margin-bottom: 10px;"><input type="button" class="btn" onclick="delSelectedConfirm()" value="Удалить выделенные" /></div>
+<div style="margin-bottom: 10px;"><input type="button" class="btn" onclick="delSelectedConfirm()" value="Remove allocated" /></div>
 
 <table class="table table-striped table-bordered table-condensed">
 	<th style="width: 40px; text-align: center;"><input type="checkbox" id="selall" style="margin-left: 2px" /></th>
-	<th style="text-align: center; width: 150px;">Дата брони</th>
-	<th style="text-align: center;">Объект</th>
+	<th style="text-align: center; width: 150px;">Reservation date</th>
+	<th style="text-align: center;">Object</th>
 
 	{% for part in list %}
 	<tr class="reservclass" id="r_{{ part.id }}">
@@ -17,8 +17,8 @@
 				</a>
 			
 				<ul class="dropdown-menu">
-					<li><a data-id="{{ part.id }}" class="rc_edit"><img src="{{ registry.uri }}img/edititem.gif" />Правка</a></li>
-					<li><a data-id="{{ part.id }}" class="rc_del"><img src="{{ registry.uri }}img/delete.png" />Удалить</a></li>
+					<li><a data-id="{{ part.id }}" class="rc_edit"><img src="{{ registry.uri }}img/edititem.gif" />Edit</a></li>
+					<li><a data-id="{{ part.id }}" class="rc_del"><img src="{{ registry.uri }}img/delete.png" />Delete</a></li>
 				</ul>
 			</div>
 		</td>
@@ -52,11 +52,11 @@ $("#selall").change( function() {
 });
  
 function delSelectedConfirm() {
-	$('<div title="Предупреждение">Действительно удалить?</div>').dialog({
+	$('<div title="Warning">Really remove?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Нет": function() { $(this).dialog("close"); },
-			"Да": function() { delSelected(); $(this).dialog("close"); }
+			"No": function() { $(this).dialog("close"); },
+			"Yes": function() { delSelected(); $(this).dialog("close"); }
 		},
 		width: 540
 	});
@@ -88,11 +88,11 @@ function delSelected() {
 }
 
 function delReservConfirm(id) {
-	$('<div id="rdelConfirm" title="Предупреждение">Действительно удалить?</div>').dialog({
+	$('<div id="rdelConfirm" title="Warning">Really remove?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Нет": function() { $(this).dialog("close"); },
-			"Да": function() {
+			"No": function() { $(this).dialog("close"); },
+			"Yes": function() {
 				$.ajax({
 					type: "POST",
 					async: false,
@@ -150,10 +150,10 @@ $(".rc_del").click(function() {
 function editReserv(id) {
 	$("#newreserv").dialog({
 		buttons: {
-			"Отмена": function() {
+			"Cancel": function() {
 				$("#newreserv").dialog("close");
 			},
-			"Готово": function() {
+			"Done": function() {
 				if ($("#enddate").attr('checked')) {
 					var ch_end = 1;
 				} else {
@@ -171,7 +171,7 @@ function editReserv(id) {
 			        data: data,
 			        success: function(res) {
 			        	if (res == "collision") {
-			        		$("<div title='Ошибка'>В заданный период времени объект уже забронирован</div>").dialog({width: 220, height: 120});
+			        		$("<div title='Error'>During the set period of time the object is already reserved</div>").dialog({width: 220, height: 120});
 			        	} else {
 		        			$("#newreserv").dialog("close");
 		        			$("#resday").dialog("close");

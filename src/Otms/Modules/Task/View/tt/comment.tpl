@@ -8,7 +8,7 @@
 
 {% if not comment.mail_id %}
 <div style="float: left; text-align: center; margin-right: 10px">
-	<img class="avatar" id="ava" src="{{ comment.ui.avatar }}" alt="аватар" />
+	<img class="avatar" id="ava" src="{{ comment.ui.avatar }}" alt="avatar" />
 	<br />
 	{% if not comment.remote %}
 	{% if comment.ui.status %}
@@ -25,7 +25,7 @@
 	{% elseif data.0.mail_id != 0 %}
 	{% if comment.ui.uid == registry.ui.id %}
 	<p style="text-align: center">
-	<a id="shref{{ comment.id }}" style="cursor: pointer" onclick="sendMailCommentConfirm('{{ data.0.text.0.email }}', '{{ comment.id }}')" title="отправить сообщение">
+	<a id="shref{{ comment.id }}" style="cursor: pointer" onclick="sendMailCommentConfirm('{{ data.0.text.0.email }}', '{{ comment.id }}')" title="send comment">
 	<img id="smail{{ comment.id }}" alt="" src="{{ registry.uri }}img/left/mail-send.png" border="0" />
 	</a>
 	</p>
@@ -34,7 +34,7 @@
 </div>
 {% else %}
 <div style="float: left; margin-right: 10px">
-	<img class="avatar" id="ava" src="{{ registry.uri }}img/noavatar.gif" alt="аватар" />
+	<img class="avatar" id="ava" src="{{ registry.uri }}img/noavatar.gif" alt="avatar" />
 </div>
 {% endif %}
 
@@ -97,7 +97,7 @@
 		{% if comment.remote %}
 			<p style="font-weight: bold">{{ comment.ui.name }} {{ comment.ui.soname }} (группа {{ comment.ui.gname }})</p>
 		{% else %}
-			{# оставить возможность правки задачи из API #}
+			{# leave possibility of editing task from API #}
 			{% if comment.object %}
 			<span style="font-weight: bold">[API]</span>
 			{% endif %}

@@ -2,7 +2,7 @@
 <div style="float: right;">
 	<div class="input-append">
 		<input id="datatypename" class="span7" style="margin: 0" type="text" size="16">
-		<button class="btn" type="button" onclick="addDataType()"><i class="icon-plus"></i> Создать</button>
+		<button class="btn" type="button" onclick="addDataType()"><i class="icon-plus"></i> Create</button>
 	</div>
 </div>
 </div>
@@ -14,12 +14,12 @@
 
 		<a style="float: right" onclick="delDataTypeConfirm('{{ part.id }}')" class="btn">
 			<i class="icon-remove-circle"></i>
-			удалить
+			delete
 		</a>
 		
 		<a style="float: right; margin-right: 5px" href="{{ registry.uri }}settings/datatypes/?action=del&id={{ part.id }}" class="btn">
 			<i class="icon-pencil"></i>
-			правка
+			edit
 		</a>
 	</div>
 	
@@ -46,14 +46,14 @@ function addDataType() {
 }
 
 function delDataTypeConfirm(id) {
-	$('<div title="Удаление">Действительно удалить?<div>').dialog({
+	$('<div title="Delete">Really delete?<div>').dialog({
 		modal: true,
 	    buttons: {
-            "Да": function() {
+            "Yes": function() {
             	delDataType(id);
                 $(this).dialog("close");
             },
-			"Нет": function() {
+			"No": function() {
                  $(this).dialog("close");
             }
 		},

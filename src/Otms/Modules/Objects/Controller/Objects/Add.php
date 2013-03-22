@@ -22,7 +22,7 @@ use Otms\Modules\Objects\Model;
 class Add extends Objects {
 
 	public function index() {
-		$this->view->setTitle("Добавить объект");
+		$this->view->setTitle("Add object");
 		
 		$this->view->setLeftContent($this->view->render("left_objects", array()));
 

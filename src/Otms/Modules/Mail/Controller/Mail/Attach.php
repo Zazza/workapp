@@ -48,8 +48,8 @@ class Attach extends Mail {
 
 					readfile($file);
 				} else {
-					$this->view->setTitle("Файл не найден");
-					$this->view->setMainContent("<p style='text-align: center'>Файл не найден</p>");
+					$this->view->setTitle("File not found");
+					$this->view->setMainContent("<p style='text-align: center'>File not found</p>");
 
 					$this->view->refresh(array("timer" => "1", "url" => "mail/"));
 

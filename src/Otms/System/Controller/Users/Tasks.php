@@ -14,7 +14,7 @@ use Otms\System\Controller\Users;
 class Tasks extends Users {
 
 	public function index() {
-		$this->view->setTitle("Задачи пользователя");
+		$this->view->setTitle("Users tasks");
 			
 		$mtask = $this->registry["task"];
 			
@@ -66,7 +66,7 @@ class Tasks extends Users {
 			if (isset($this->args[1])) {
 				$data = $mtask->getRusersStatFromRid($mtaskSess, $this->args[1]);
 
-				$this->view->setMainContent("<p class='title'><b>Задач: " . $mtask->getOpenNum() . "(" . $mtask->getCloseNum() . ")</b></p>");
+				$this->view->setMainContent("<p class='title'><b>Task: " . $mtask->getOpenNum() . "(" . $mtask->getCloseNum() . ")</b></p>");
 
 				if (!isset($this->args[2]) or ($this->args[2] == "page"))  {
 

@@ -23,7 +23,7 @@ class Admin extends Objects {
 
 	public function index() {
 		if ($this->registry["ui"]["admin"]) {
-			$this->view->setTitle("Управление объектами");
+			$this->view->setTitle("Administration object");
 			
 			$this->view->setLeftContent($this->view->render("left_objects", array()));
 			

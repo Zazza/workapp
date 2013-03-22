@@ -1,11 +1,11 @@
-<h3>Новый комментарий:</h3>
+<h3>New comment:</h3>
 
 <!-- attach -->
 <div style="padding: 4px 10px;">
 	<div style="overflow: hidden">
 		<a class="btn" style="float: left" onclick="fromBuffer()">
 		<i class="icon-trash"></i>
-		Из буфера
+		From buffer
 		</a>
 		
 		<div id="arfiles" style="padding-left: 120px">
@@ -13,10 +13,10 @@
 	</div>
 
 	<p>
-	Прикреплённые файлы
+	Attach files
 	<a class="btn btn-mini" onclick="flushAttaches()">
 		<i class="icon-remove"></i>
-		очистить
+		remove
 	</a>
 	</p>
 	<div id="attach_files" style="margin-top: 10px"></div>
@@ -28,16 +28,16 @@
 </div>
 
 <p>
-<b>Статус:</b>
+<b>Status:</b>
 <select id="status" name="status" style="margin-left: 10px">
-<option value="0">Нет</option>
+<option value="0">None</option>
 {% for part in status %}
 <option value="{{ part.id }}">{{ part.status }}</option>
 {% endfor %}
 </select>
 </p>
 
-<div style="clear: both; margin: 10px 0"><input type="button" class="btn" onclick="addComment()" value="Написать" /></div>
+<div style="clear: both; margin: 10px 0"><input type="button" class="btn" onclick="addComment()" value="Write" /></div>
 
 <script type="text/javascript">
 $('#wysihtml5').wysihtml5();

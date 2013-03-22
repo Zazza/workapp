@@ -25,7 +25,7 @@ class Task extends Controller {
 	function index() {
 		if ($this->registry["ui"]["admin"]) {
 			if (isset($this->get["id"])) {
-				$this->view->setTitle("Правка задачи");
+				$this->view->setTitle("Edit task");
 				
 				$routes = new Model\Route();
 				$data = $routes->getTaskData($this->get["id"]);

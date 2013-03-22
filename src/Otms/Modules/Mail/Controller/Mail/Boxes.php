@@ -22,7 +22,7 @@ use Otms\Modules\Mail\Model;
 class Boxes extends Mail {
 
 	function index() {
-		$this->view->setTitle("Настройки почты");
+		$this->view->setTitle("Mail settings");
 		
 		$this->view->setLeftContent($this->view->render("left_mail", array("folders" => $this->folders, "enableCheck" => $this->enableCheck)));
 		

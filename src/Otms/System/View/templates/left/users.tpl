@@ -3,14 +3,14 @@
 	<li>
 		<a href="{{ registry.uri }}users/">
 		<i class="icon-user"></i>
-		Управление пользователями
+		Administration by users
 		</a>
 	</li>
 	
 	<li>
 		<a href="{{ registry.uri }}users/statistics/">
 		<i class="icon-signal"></i>
-		Статистика
+		Statistics
 		</a>
 	</li>
 

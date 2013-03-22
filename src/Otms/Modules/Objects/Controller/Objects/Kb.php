@@ -31,7 +31,7 @@ class Kb extends Objects {
 		while(list($key, $val) = each($arr)) {
 			if (!is_array($val)) {
 				if ($val == null) {
-					$val = "пусто";
+					$val = "empty";
 				}
 	
 				$this->tree .= "<ul><a style='font-size: 14px;' href='" . $this->registry["uri"] . "objects/kb/?tag=" . $val . "'>" . $val . "</a></ul>";
@@ -57,7 +57,7 @@ class Kb extends Objects {
 		$tpl = new Template();
 
 		if (isset($this->get["history"])) {
-			$this->view->setTitle("История");
+			$this->view->setTitle("History");
 	
 			$tasks = $this->registry["logs"]->getHistory("info", $this->get["history"]);
 	
@@ -86,21 +86,21 @@ class Kb extends Objects {
 				$this->view->ai(array("ai" => $part, "info" => $aiinfo));
 			}
 		} elseif ( (isset($this->args[1])) and ($this->args[1] == "add") ) {
-			$this->view->setTitle("Добавить информацию");
+			$this->view->setTitle("Add info");
 
 			$this->view->kb_add();
 		} else {
-			$this->view->setTitle("Теги");
+			$this->view->setTitle("Tags");
 			
 			$templates = $tpl->getTemplates();
 			$id = count($templates);
 			$templates[$id]["id"] = 0;
-			$templates[$id]["name"] = "Заметки";
+			$templates[$id]["name"] = "Notice";
 			$list = $advinfo->getAi();
 			
 			for($i=0; $i<count($list); $i++) {
 				if ($list[$i]["oid"] == "0") {
-					$list[$i]["name"] = "Заметки";
+					$list[$i]["name"] = "Notice";
 				}
 			}
 

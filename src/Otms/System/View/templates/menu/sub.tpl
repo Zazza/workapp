@@ -1,10 +1,10 @@
 <li class="dropdown">
 	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-	{% if key == "Модули" %}
+	{% if key == "Modules" %}
 	<i class="icon-home icon-white"></i> {{ key }}
-	{% elseif key == "Объекты" %}
+	{% elseif key == "Objects" %}
 	<i class="icon-th-list icon-white"></i> {{ key }}
-	{% elseif key == "Система" %}
+	{% elseif key == "System" %}
 	<i class="icon-cog icon-white"></i> {{ key }}
 	{% endif %}
 	<b class="caret"></b>

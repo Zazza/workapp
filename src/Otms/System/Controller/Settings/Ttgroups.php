@@ -15,7 +15,7 @@ class Ttgroups extends Controller {
 	public function index() {
         if ($this->registry["ui"]["admin"]) {
         	
-        	$this->view->setTitle("Проекты");
+        	$this->view->setTitle("Projects");
         	
         	$this->view->setLeftContent($this->view->render("left_settings", array()));
 

@@ -1,4 +1,4 @@
-<li class="nav-header">Квота:</li>
+<li class="nav-header">Quota:</li>
 
 <div style="padding: 3px 0 1px 0; text-align: left">
 	{{ now }} of {{ quota }}

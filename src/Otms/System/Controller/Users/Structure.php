@@ -16,7 +16,7 @@ class Structure extends Users {
 	public function index() {
 		if ($this->registry["ui"]["admin"]) {
 
-			$this->view->setTitle("Структура");
+			$this->view->setTitle("Structure");
 
 			$this->view->users_subgrouplist();
 		}

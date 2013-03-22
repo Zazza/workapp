@@ -2,39 +2,39 @@
 
 {% if err %}
 <div style="width: 150px; padding: 6px 3px; margin: 10px 0; border: 1px solid red; background-color: #FDD">
-Заполнены не все поля!
+All fields are filled not!
 </div>
 {% endif %}
 
 <div style="overflow: hidden">
 
-<p style="font-size: smaller">SMTP сервер для отправки почтовых сообщений</p>
+<p style="font-size: smaller">SMTP server for sending e-mails</p>
 
 <p>Email</p>
 <p><input type="text" name="email" id="email" value="{{ post.email }}" /></p>
 
 <div>
-	<p style="margin-bottom: 10px"><b>Исходящая почта</b></p>
+	<p style="margin-bottom: 10px"><b>Outgoing mail</b></p>
 	
-	<p>Сервер</p>
+	<p>Server</p>
 	<p><input type="text" name="server" id="server" value="{{ post.server }}" /></p>
 	
-	<p>Аутентификация</p>
+	<p>Authentification</p>
 	<p>
 		<select name="auth" id="auth">
-			<option value="0" {% if post.auth == "0" %}selected="selected"{% endif %}>Не требуется</option>
-			<option value="1" {% if post.auth == "1" %}selected="selected"{% endif %}>Задать логин и пароль</option>
+			<option value="0" {% if post.auth == "0" %}selected="selected"{% endif %}>Not required</option>
+			<option value="1" {% if post.auth == "1" %}selected="selected"{% endif %}>Set login and password</option>
 		</select>
 	</p>
 	
 	<div id="auth_param">
-		<p>Логин</p>
+		<p>Login</p>
 		<p><input type="text" name="login" id="login" value="{{ post.login }}" /></p>
-		<p>Пароль</p>
+		<p>Password</p>
 		<p><input type="password" name="password" id="password" value="{{ post.password }}" /></p>
 	</div>
 	
-	<p>Порт</p>
+	<p>Port</p>
 	<p><input type="text" name="port" id="port" value="{{ post.port }}" /></p>
 	<p>SSL</p>
 	<p>
@@ -47,7 +47,7 @@
 
 </div>
 
-<div style="margin-top: 20px"><input type="submit" name="submit" value="Готово" /></div>
+<div style="margin-top: 20px"><input type="submit" name="submit" value="Done" /></div>
 
 </form>
 

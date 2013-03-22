@@ -25,7 +25,7 @@ class Templates extends Objects {
 	public function index() {
 		if ($this->registry["ui"]["admin"]) {
 
-			$this->view->setTitle("Шаблоны");
+			$this->view->setTitle("Templates");
 
 			$this->view->setLeftContent($this->view->render("left_objects", array()));
 			

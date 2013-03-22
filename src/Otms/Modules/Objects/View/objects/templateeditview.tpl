@@ -1,17 +1,17 @@
- <h3>Правка вида шаблона</h3>
+ <h3>Edit type of template</h3>
  
 <ul class="nav nav-tabs">
-	<li><a href="{{ registry.uri }}objects/templates/edit/{{ tid }}/">Шаблон</a></li>
-	<li class="active"><a href="{{ registry.uri }}objects/templates/editview/{{ tid }}/">Вид</a></li>
+	<li><a href="{{ registry.uri }}objects/templates/edit/{{ tid }}/">Template</a></li>
+	<li class="active"><a href="{{ registry.uri }}objects/templates/editview/{{ tid }}/">Type</a></li>
 </ul>
 
 <div style="overflow: hidden" id="tview">
-	<ul id="firstSort" class="otherlist"><p style="text-align: center">1 колонка</p></ul>
-	<ul id="secondSort" class="otherlist"><p style="text-align: center">2 колонка</p></ul>
-	<ul id="thirdSort" class="otherlist"><p style="text-align: center">3 колонка</p></ul>
+	<ul id="firstSort" class="otherlist"><p style="text-align: center">1 colomn</p></ul>
+	<ul id="secondSort" class="otherlist"><p style="text-align: center">2 colomn</p></ul>
+	<ul id="thirdSort" class="otherlist"><p style="text-align: center">3 colomn</p></ul>
 </div>
 
-<div id="tViewSave" title="Сохранение" style="display: none">
+<div id="tViewSave" title="Save" style="display: none">
     <p style="text-align: center">
         <img src="{{ registry.uri }}img/ajax-loader.gif" alt="ajax-loader.gif" border="0" />
     </p>

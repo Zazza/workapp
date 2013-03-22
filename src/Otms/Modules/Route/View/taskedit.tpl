@@ -3,9 +3,9 @@
 {{ formtask }}
 
 <div class="well" style="margin-top: 10px">
-<h3>Результат:</h3>
+<h3>Result:</h3>
 {% include "result.tpl" %}
 </div>
 
-<input type="submit" name="submit" class="btn" value="Готово" />
+<input type="submit" name="submit" class="btn" value="Done" />
 </form>

@@ -15,7 +15,7 @@ use Otms\System\Model\Settings;
 class Mail extends Controller {
 	public function index() {
 		if ($this->registry["ui"]["admin"]) {
-			$this->view->setTitle("Настройки почты");
+			$this->view->setTitle("Mail settings");
 			
 			$this->view->setLeftContent($this->view->render("left_settings", array()));
 			

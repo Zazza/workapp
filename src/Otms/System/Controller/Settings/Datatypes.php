@@ -15,7 +15,7 @@ use Otms\Modules\Objects\Model\Template;
 class Datatypes extends Controller {
 	public function index() {
 		if ($this->registry["ui"]["admin"]) {
-			$this->view->setTitle("Типы данных");
+			$this->view->setTitle("Data types");
 			
 			$this->view->setLeftContent($this->view->render("left_settings", array()));
 

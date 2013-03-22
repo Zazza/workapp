@@ -78,8 +78,8 @@
 	</ul>
 </div>
 
-<div title="Новая папка" id="diradddialog" style="display: none;">
-	Имя папки:
+<div title="New folder" id="diradddialog" style="display: none;">
+	Name folder:
 	<input type="text" name="dirname" id="fm_dirname" />
 </div>
 

@@ -3,7 +3,7 @@
 <input type="hidden" name="tid" value="{{ data.0.id }}" />
 
 <div class="input-prepend">
-	<span class="add-on"><b>Название задачи:</b></span>
+	<span class="add-on"><b>Task name:</b></span>
 	<input type="text" name="taskname" id="titletask" style="margin-bottom: 0" class="span6" value="{{ data.0.name }}" />
 </div>
 
@@ -11,10 +11,10 @@
 <!-- attach -->
 <div style="overflow: hidden; margin-top: 10px">
 <div class="alert alert-success" style="float: left; width: 500px">
-	<p style="font-weight: bold">Прикреплённые файлы:</p>
+	<p style="font-weight: bold">Attach files:</p>
 	<a class="btn btn-mini btn-info" onclick="flushAttaches()">
 		<i class="icon-remove icon-white"></i>
-		очистить
+		remove
 	</a>
 	<div id="attach_files" style="margin-top: 10px"></div>
 </div>
@@ -41,11 +41,11 @@
 {% include "tt/tabs.tpl" %}
 <!-- /tabs -->
 
-<p style="margin-top: 30px"><input type="submit" name="submit" value="Изменить" /></p>
+<p style="margin-top: 30px"><input type="submit" name="submit" value="Change" /></p>
 
 </form>
 
-<div id="usersDialog" title="Выбор пользователей" style="text-align: left"></div>
+<div id="usersDialog" title="Select users" style="text-align: left"></div>
 
 <script type="text/javascript">
 $('#wysihtml5').wysihtml5();

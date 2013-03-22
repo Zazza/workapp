@@ -2,12 +2,12 @@
 
 <a onclick='repairObjsConfirm()' class="btn btn-danger">
 	<i class="icon-remove icon-white"></i>
-	восстановить
+	recover
 </a>
 
 <a href="{{ registry.uri }}objects/sub/{{ gid }}/" class="btn">
 	<i class="icon-trash"></i>
-	перейти к группе объектов
+	go to object group
 </a>
 
 </div>
@@ -19,8 +19,8 @@
 <tr>
 	<th style="width: 30px"></th>
 	<th style="text-align: center; width: 30px">ID</th>
-	<th>Объект</th>
-	<th>Данные</th>
+	<th>Object</th>
+	<th>Data</th>
 </tr>
 </thead>
 {% for obj in objs %}
@@ -37,9 +37,9 @@
 					</a>
 				
 					<ul class="dropdown-menu">
-						<li><a style="cursor: pointer;" onclick="oc_info({{ obj.0.id }})"><img src="{{ registry.uri }}img/information-button.png" class="cm_img" />Инфо</a></li>
-						<li><a style="cursor: pointer;" onclick="oc_edit({{ obj.0.id }})"><img src="{{ registry.uri }}img/edititem.gif" class="cm_img" />Правка</a></li>
-						<li><a style="cursor: pointer;" onclick="oc_folder({{ obj.0.fdirid }})"><img src="{{ registry.uri }}img/folder.png" class="cm_img" />Файлы</a></li>
+						<li><a style="cursor: pointer;" onclick="oc_info({{ obj.0.id }})"><img src="{{ registry.uri }}img/information-button.png" class="cm_img" />Info</a></li>
+						<li><a style="cursor: pointer;" onclick="oc_edit({{ obj.0.id }})"><img src="{{ registry.uri }}img/edititem.gif" class="cm_img" />Edit</a></li>
+						<li><a style="cursor: pointer;" onclick="oc_folder({{ obj.0.fdirid }})"><img src="{{ registry.uri }}img/folder.png" class="cm_img" />Files</a></li>
 					</ul>
 				</div>
 			</div>
@@ -78,7 +78,7 @@
 
 </div>
 
-<div id="sortObjs" title="Сортировка" style="display: none">
+<div id="sortObjs" title="Sort" style="display: none">
 <form name="setSort" action="{{ registry.uri }}objects/sub/{{ gid }}/" method="post">
 <div style="overflow: hidden; margin-bottom: 20px">
 <div style="float: left">
@@ -89,7 +89,7 @@
 </select>
 </div>
 <div style="float: left">
-<span class="btn" onclick="addSortField()">Добавить</span> 
+<span class="btn" onclick="addSortField()">Add</span> 
 </div>
 </div>
 
@@ -111,11 +111,11 @@ function oc_folder(id) {
 }
 
 function repairObjsConfirm() {
-	$('<div title="Предупреждение">Восстановить выбранные объекты?</div>').dialog({
+	$('<div title="Notice">Recover selected objects?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Нет": function() { $(this).dialog("close"); },
-			"Да": function() { repairObjs(); $(this).dialog("close"); }
+			"No": function() { $(this).dialog("close"); },
+			"Yes": function() { repairObjs(); $(this).dialog("close"); }
 		},
 		width: 540
 	});

@@ -22,7 +22,7 @@ use Otms\Modules\Objects\Model;
 class Forms extends Objects {
 
 	public function index() {
-		$this->view->setTitle("Формы");
+		$this->view->setTitle("Forms");
 		
 		$this->view->setLeftContent($this->view->render("left_objects", array()));
 

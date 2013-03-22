@@ -21,7 +21,7 @@ use Otms\Modules\Objects\Controller\Objects;
 class History extends Objects {
 
 	public function index() {
-		$this->view->setTitle("История");
+		$this->view->setTitle("History");
 		
 		$this->view->setLeftContent($this->view->render("left_objects", array()));
 		

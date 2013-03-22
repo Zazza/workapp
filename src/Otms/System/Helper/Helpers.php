@@ -77,7 +77,7 @@ class Helpers extends Helper {
 	function sendNotify($post, $num) {
 		$text = $this->view->render("notify", array("sitename" => $this->registry["siteName"], "post" => $post));
 
-		$res_post["subject"] = " <<< Задачи на день [" . $num . " задач(а,и)]>>>";
+		$res_post["subject"] = " <<< Day tasks [" . $num . " task]>>>";
 		$res_post["textfield"] = $text;
 		$res_post["to"] = $post[0]["email"];
 
@@ -157,7 +157,7 @@ class Helpers extends Helper {
 		$mailer->FromName = $fromName;
 			
 		if ($post["to"] == null) {
-			$err[] = "Не заданы адресаты";
+			$err[] = "Addressees aren't set";
 		} else {
 			$to = explode(",", $post["to"]);
 			for($i=0; $i<count($to); $i++) {
@@ -200,7 +200,7 @@ class Helpers extends Helper {
 		}
 			
 		if ($post["textfield"] == null) {
-			$err[] = "Пустое письмо";
+			$err[] = "Empty mail";
 		};
 
 		if (count($err) == 0) {

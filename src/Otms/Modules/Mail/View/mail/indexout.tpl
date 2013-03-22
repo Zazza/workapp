@@ -4,12 +4,12 @@
 <div class="btn-group">
 	<button class="btn" onclick="clearFolderConfirm()">
 		<i class="icon-trash icon-gray"></i>
-		Очистить папку
+		Clear folder
 	</button>
 	
 	<button class="btn" onclick="delMailsConfirm()">
 		<i class="icon-remove icon-gray"></i>
-		Удалить помеченные
+		Delete marked
 	</button>
 </div>
 </div>
@@ -57,7 +57,7 @@
 </div>
 
 <span class="btn btn-small" id="mailman" style="margin-bottom: 10px; display: none" onclick="backtolist()">
-	<img alt="назад" src="{{ registry.uri }}img/back.png" style="vertical-align: middle">
+	<img alt="back" src="{{ registry.uri }}img/back.png" style="vertical-align: middle">
 </span>
 
 <div id="mail_body" style="display: none"></div>
@@ -109,11 +109,11 @@ function getMailOut(mid) {
 };
 
 function delMailsConfirm() {
-	$('<div title="Удалить выделенные письма">Удалить?</div>').dialog({
+	$('<div title="Delete selected mails">Delete?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Да": function() { delSelected(); $(this).dialog("close"); },
-			"Нет": function() { $(this).dialog("close"); }
+			"Yes": function() { delSelected(); $(this).dialog("close"); },
+			"No": function() { $(this).dialog("close"); }
 		},
 		width: 280
 	});
@@ -135,11 +135,11 @@ function delSelected() {
 }
 
 function clearFolderConfirm() {
-	$('<div title="Очистка папки">Действительно удалить все письма в папке?</div>').dialog({
+	$('<div title="Folder cleaning">Really delete all mails in folder?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Нет": function() { $(this).dialog("close"); },
-			"Да": function() { clearFolder(); $(this).dialog("close"); }
+			"No": function() { $(this).dialog("close"); },
+			"Yes": function() { clearFolder(); $(this).dialog("close"); }
 		},
 		width: 280
 	});
@@ -175,11 +175,11 @@ function delMails(json) {
 }
 
 function delMailConfirm() {
-	$('<div title="Удаление письма">Удалить?</div>').dialog({
+	$('<div title="Deleting mail">Delete?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Да": function() { delMailOut(); $(this).dialog("close"); },
-			"Нет": function() { $(this).dialog("close"); }
+			"Yes": function() { delMailOut(); $(this).dialog("close"); },
+			"No": function() { $(this).dialog("close"); }
 		},
 		width: 280
 	});

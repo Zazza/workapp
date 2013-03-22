@@ -1,6 +1,6 @@
 <ul class="nav nav-list">
 
-<li class="nav-header">Разделы</li>
+<li class="nav-header">Sections</li>
 
 {% if registry.ui.admin %}
 {% if registry.args.0 == "admin" or registry.args.0 == "templates" %}
@@ -8,7 +8,7 @@
 {% else %}
     <li>
 {% endif %}
-    <a href="{{ registry.uri }}objects/admin/"><img src="{{ registry.uri }}img/g.png" alt="" border="0" /> Управление объектами</a>
+    <a href="{{ registry.uri }}objects/admin/"><img src="{{ registry.uri }}img/g.png" alt="" border="0" /> Administration of objects</a>
 </li>
 {% endif %}
 
@@ -18,7 +18,7 @@
 {% else %}
     <li>
 {% endif %}
-    <a href="{{ registry.uri }}objects/forms/"><img src="{{ registry.uri }}img/application-form.png" alt="" border="0" /> Управление формами</a>
+    <a href="{{ registry.uri }}objects/forms/"><img src="{{ registry.uri }}img/application-form.png" alt="" border="0" /> Administration of forms</a>
 </li>
 {% endif %}
 
@@ -27,7 +27,7 @@
 {% else %}
     <li>
 {% endif %}
-    <a href="{{ registry.uri }}objects/"><img src="{{ registry.uri }}img/gear.png" alt="" border="0" /> Просмотр</a>
+    <a href="{{ registry.uri }}objects/"><img src="{{ registry.uri }}img/gear.png" alt="" border="0" /> View</a>
 </li>
 
 </ul>

@@ -25,7 +25,7 @@ class Compose extends Mail {
 	function index() {
 		$mailClass = new Model\Mail();
 
-		$this->view->setTitle("Новое сообщение");
+		$this->view->setTitle("New message");
 		
 		$this->view->setLeftContent($this->view->render("left_attach", array()));
 		

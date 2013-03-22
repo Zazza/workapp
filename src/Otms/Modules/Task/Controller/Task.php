@@ -35,7 +35,7 @@ class Task extends Controller {
 		$object = new Object();
 
 		if (count($tasks) == 0) {
-			$this->view->setMainContent("<p style='margin: 10px'>Задачи не найдены</p>");
+			$this->view->setMainContent("<p style='margin: 10px'>Tasks not found</p>");
 		}
 
 		foreach($tasks as $part) {
@@ -98,7 +98,7 @@ class Task extends Controller {
 	}
 
 	public function index() {
-		$this->view->setTitle("Задачи");
+		$this->view->setTitle("Tasks");
 
 		$this->view->setLeftContent($this->view->render("left_tt", array()));
 

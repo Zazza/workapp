@@ -4,14 +4,14 @@
 
 <a class="btn" href="{{ registry.uri }}settings/ttgroups/add/">
 	<img border="0" alt="plus" src="{{ registry.uri }}img/plus-button.png" />
-	Новый проект
+	New project
 </a>
 
 <table cellpadding="3" cellspacing="3">
 <tr>
-<td align="center" style="font-weight: bold; font-size: 10px">удалить</td>
-<td align="center" style="font-weight: bold; font-size: 10px">изменить</td>
-<td align="center" style="font-weight: bold; font-size: 10px">проект</td>
+<td align="center" style="font-weight: bold; font-size: 10px">delete</td>
+<td align="center" style="font-weight: bold; font-size: 10px">change</td>
+<td align="center" style="font-weight: bold; font-size: 10px">project</td>
 {% for part in group %}
 <tr>
 
@@ -28,7 +28,7 @@
 </td>
 </tr>
 {% else %}
-<tr><td colspan="3" align="center" style="border: 1px solid #ccc">Пусто</td></tr>
+<tr><td colspan="3" align="center" style="border: 1px solid #ccc">Empty</td></tr>
 {% endfor %}
 </table>
 

@@ -24,14 +24,14 @@ class Send extends Mail {
 	function index() {
 		$mailClass = new Model\Mail();
 		
-		$this->view->setTitle("Отправленные письма");
+		$this->view->setTitle("Sent mails");
 		
 		$this->view->setLeftContent($this->view->render("left_mail", array("folders" => $this->folders, "enableCheck" => $this->enableCheck)));
 		
 		if (isset($_GET["oid"])) {
 			$obj = true;
 			$mails = $mailClass->getObjOutMails($_GET["oid"]);
-			$this->view->setMainContent("<p class='title'>Просмотр отправленных писем: " . $mailClass->getContact() . "</p>");
+			$this->view->setMainContent("<p class='title'>Viewing of sent mails: " . $mailClass->getContact() . "</p>");
 		} else {
 			$mails = $mailClass->getOutMails();
 		}

@@ -18,7 +18,7 @@ class Logout extends Controller {
 	}
 
 	public function index() {
-		$this->view->setTitle("Выход");
+		$this->view->setTitle("Logout");
 		
 		$ui = new Ui();
 

@@ -10,9 +10,9 @@
 
 <div style="float: left; text-align:center; margin-right: 10px">
 	{% if data.avatar %}
-	<img class="avatar" id="ava" src="{{ data.avatar }}" alt="аватар" />
+	<img class="avatar" id="ava" src="{{ data.avatar }}" alt="avatar" />
 	{% else %}
-	<img class="avatar" id="ava" src="{{ registry.uri }}img/noavatar.gif" alt="аватар" />
+	<img class="avatar" id="ava" src="{{ registry.uri }}img/noavatar.gif" alt="avatar" />
 	{% endif %}
 	
 	{% if data.status %}

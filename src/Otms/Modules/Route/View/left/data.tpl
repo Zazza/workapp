@@ -4,13 +4,13 @@
 
 <ul class="nav nav-list">
 
-<li class="nav-header">Переменные:</li>
+<li class="nav-header">Variable:</li>
 
 {% for part in data %}
-<h4>Этап: {{ part.step_name }}</h4>
+<h4>Part: {{ part.step_name }}</h4>
 
 <li style="margin-bottom: 10px">
-<h5>Задача: {{ part.task_name }}</h5>
+<h5>Task: {{ part.task_name }}</h5>
 
 {% for val in part %}
 

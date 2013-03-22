@@ -10,14 +10,14 @@
 			<span class="btn btn-mini">
 				<a href="{{ registry.uri }}dashboard/settings/" style="color: black">
 				<i class="icon-cog"></i>
-				Настройки уведомлений
+				Notification settings
 				</a>
 			</span>
 	
 			<span class="btn btn-mini">
 				<a onclick="clearEvents()" style="cursor: pointer; color: black">
 				<i class="icon-trash"></i>
-				Очистить
+				Remove
 				</a>
 			</span>
 		</li>
@@ -83,13 +83,13 @@ $(document).ready(function(){
 		$("#numChats").removeClass("label-success");
 	}
 	if (numChats == 0) {
-		$("#chat_rooms").html("<li style='text-align: center; padding: 3px 15px;'>чатов нет</li>");
+		$("#chat_rooms").html("<li style='text-align: center; padding: 3px 15px;'>chats empty</li>");
 	}
 	$("#numChats").text(numChats);
 	$("#notifspan").text(numNotify);
 	
 	if (notify) {
-		$("title").text(numNotify + " новых уведомлений!");
+		$("title").text(numNotify + " new notification messages!");
 	};
 
 	$("#dashajax").everyTime(20000, function() {
@@ -119,14 +119,14 @@ $(document).ready(function(){
 							if (val > 0) {
 								notify = 1
 								numNotify = prev + parseInt(val);
-								$("title").text(numNotify + " новых уведомлений!");
+								$("title").text(numNotify + " new notification messages!");
 							}
 							break
 						case "numChats":
 							numChats = val
 							break
 						case "rooms":
-							$("#chat_rooms").html("<li style='text-align: center; padding: 3px 15px;'>чатов нет</li>");
+							$("#chat_rooms").html("<li style='text-align: center; padding: 3px 15px;'>chats empty</li>");
 
 							rendRooms(val)
 							break
@@ -167,7 +167,7 @@ function rendRooms(val) {
 }
 
 function clearEvents() {
-	setbStatus('Очистка лога событий...');
+	setbStatus('Remove events log...');
 	$("#ajaxLoader").modal('show');
 	
 	var data = "action=clearEvents";
@@ -176,7 +176,7 @@ function clearEvents() {
 		url: "{{ registry.uri }}ajax/dashboard/",
 		data: data,
 		success: function(res) {
-			$("#dashajaxlogs").html('<p id="emptyEvents">Новых событий нет</p>');
+			$("#dashajaxlogs").html('<p id="emptyEvents">Empty events</p>');
 			$("#notifspan").text('0');
 			$("#notifspan").removeClass("label-success");
 			$("#notifspan").removeClass("label-important");

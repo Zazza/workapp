@@ -1,4 +1,4 @@
-<div id="resday" title='Бронь' style="display: none; overflow: hidden; overflow-y: hidden;">
+<div id="resday" title='Reservation' style="display: none; overflow: hidden; overflow-y: hidden;">
 
 <h3 id="title_res" style="margin-bottom: 10px;"></h3>
 

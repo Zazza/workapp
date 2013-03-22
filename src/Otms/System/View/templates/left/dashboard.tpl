@@ -1,64 +1,64 @@
 <ul class="nav nav-list">
 
 <li>
-<label class="form-inline">Дата: <input type="text" id="datedash" value="выбрать дату" style="cursor: pointer; width: 67px" /></label>
+<label class="form-inline">Date: <input type="text" id="datedash" value="select date" style="cursor: pointer; width: 67px" /></label>
 <input type="hidden" name="date" id="date" />
-<p style="margin-top: 20px"><b>Инфо в календаре:</b></p>
+<p style="margin-top: 20px"><b>Info in calendar:</b></p>
 </li>
 
 <li>
 	<label class="checkbox inline">
 	<input type="checkbox" id="task" name="task" {% if notify.task %}checked="checked"{% endif %} />
-	задачи
+	tasks
 	</label>
 </li>
 
 <li>
 	<label class="checkbox inline">
 	<input type="checkbox" id="com" name="com" {% if notify.com %}checked="checked"{% endif %} />
-	комментарии
+	comments
 	</label>
 </li>
 
 <li>
 	<label class="checkbox inline">
 	<input type="checkbox" id="mail" name="mail" {% if notify.mail %}checked="checked"{% endif %} />
-	почта
+	mail
 	</label>
 </li>
 
 <li>
 	<label class="checkbox inline">
 	<input type="checkbox" id="obj" name="obj" {% if notify.obj %}checked="checked"{% endif %} />
-	объекты
+	objects
 	</label>
 </li>
 
 <li>
 	<label class="checkbox inline">
 	<input type="checkbox" id="info" name="info" {% if notify.info %}checked="checked"{% endif %} />
-	информация
+	information
 	</label>
 </li>
 
 <li>
 	<label class="checkbox inline">
 	<input type="checkbox" id="service" name="service" {% if notify.service %}checked="checked"{% endif %} />
-	сообщения
+	message
 	</label>
 </li>
 
 <div class="form-inline" style="margin: 10px 0;">
-Фильтр: <input type="text" id="filtr" name="filtr" value="{{ filtr }}" class="span12" />
+Filter: <input type="text" id="filtr" name="filtr" value="{{ filtr }}" class="span12" />
 </div>
 
 <div class="btn-group">
 <a class="btn btn-mini" style="margin-top: 20px" onclick="setDash()">
-Сохранить
+Save
 </a>
 
 <a class="btn btn-mini" style="margin-top: 20px" onclick="resetDash()">
-Сбросить
+Remove
 </a>
 </div>
 
@@ -74,10 +74,10 @@ $(document).ready(function() {
 	$('#datedash').datepicker({
 		changeYear: true,
 		changeMonth: true,
-	    dayName: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-	    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-	    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-	    monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+	    dayName: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+	    dayNamesMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+	    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+	    monthNamesShort: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 	    firstDay: 1,
 	    defaultDate: "{{ date }}",
 		onSelect: function(dateText, inst) {

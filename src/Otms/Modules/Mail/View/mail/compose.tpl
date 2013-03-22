@@ -8,22 +8,22 @@
 <form method="post" action="{{ registry.uri }}mail/compose/">
 
 <div class="input-prepend">
-<span class="add-on"><b>Кому:</b></span>
+<span class="add-on"><b>To whom:</b></span>
 <input name="to" type="text" class="span6" style="margin-bottom: 0" value="{{ post.to }}" />
 </div>
 
 <div class="input-prepend">
-<span class="add-on"><b>Тема:</b></span>
+<span class="add-on"><b>Theme:</b></span>
 <input name="subject" type="text" class="span6" style="margin-bottom: 0" value="{{ post.subject }}" />
 </div>
 
 <!-- attach -->
 <div style="overflow: hidden; margin-top: 10px">
 <div class="alert alert-success" style="float: left; width: 500px">
-	<p style="font-weight: bold">Прикреплённые файлы:</p>
+	<p style="font-weight: bold">Attached files:</p>
 	<a class="btn btn-mini btn-info" onclick="flushAttaches()">
 		<i class="icon-remove icon-white"></i>
-		очистить
+		clear
 	</a>
 	<div id="attach_files" style="margin-top: 10px"></div>
 </div>
@@ -40,7 +40,7 @@
 </div>
 <!-- /wysihtml5 -->
 
-<p><b>Почтовый ящик для отправки:</b></p>
+<p><b>Mailbox for sending:</b></p>
 <select name="mailbox" id="mailbox">
 {% if post.email %}
 	{% for mailbox in mailboxes %}
@@ -54,7 +54,7 @@
 </select>
 
 <p style="margin-top: 30px">
-<input type="submit" class="btn" name="submit" value="Написать" />
+<input type="submit" class="btn" name="submit" value="Write" />
 </p>
 
 </form>

@@ -2,7 +2,7 @@
 
 <hr />
 
-<li class="nav-header">Сортировать задачи:</li>
+<li class="nav-header">Sort tasks:</li>
 
 {% if sort["sort"] == "group" %}
 <li class="active">
@@ -11,7 +11,7 @@
 {% endif %}
 	<a style="cursor: pointer" onclick="setSort('group', false)">
 	<i class="icon-arrow-down"></i>
-	По группе
+	By group
 	</a>
 </li>
 
@@ -24,7 +24,7 @@
 	{% endif %}
 	<a style="cursor: pointer" onclick="setSort('group', '0')" class="{% if sort.id == "0" %}selsubmenu{% endif %}">
 	<i class="icon-minus"></i>
-	Без группы</a>
+	No group</a>
 	</li>
 	{% for key, part in sg.gname %}
 	{% if part %}
@@ -50,7 +50,7 @@
 {% endif %}
 	<a style="cursor: pointer" onclick="setSort('obj', false)">
 	<i class="icon-arrow-down"></i>
-	По объектам
+	By object
 	</a>
 </li>
 
@@ -61,7 +61,7 @@
 {% endif %}
 	<a style="cursor: pointer" onclick="setSort('imp', false)">
 	<i class="icon-arrow-down"></i>
-	По приоритету
+	By priority
 	</a>
 </li>
 
@@ -75,7 +75,7 @@
 	{% endif %}
 	<a style="cursor: pointer" onclick="setSort('imp', {{ part }})" class="{% if sort.id == part %}selsubmenu{% endif %}">
 	<i class="icon-minus"></i>
-	Приоритет: {{ part }}
+	Priority: {{ part }}
 	</a>
 	</li>
 	{% endfor %}
@@ -89,7 +89,7 @@
 {% endif %}
 	<a style="cursor: pointer" onclick="setSort('type', false)">
 	<i class="icon-arrow-down"></i>
-	По типу
+	By type
 	</a>
 </li>
 
@@ -106,7 +106,7 @@
 	
 	<a style="cursor: pointer" onclick="setSort('type', 0)" class="{% if sort.id == part %}selsubmenu{% endif %}">
 	<i class="icon-minus"></i>
-	Глобальные
+	Global
 	</a>
 	</li>{% endif %}
 	{% if part == "1" %}
@@ -119,7 +119,7 @@
 	
 	<a style="cursor: pointer" onclick="setSort('type', 1)" class="{% if sort.id == part %}selsubmenu{% endif %}">
 	<i class="icon-minus"></i>
-	Ограниченные по времени
+	Limited
 	</a>
 	</li>{% endif %}
 	{% if part == "2" %}
@@ -132,7 +132,7 @@
 	
 	<a style="cursor: pointer" onclick="setSort('type', 2)" class="{% if sort.id == part %}selsubmenu{% endif %}">
 	<i class="icon-minus"></i>
-	Повторяющиеся
+	Repeating
 	</a>
 	</li>{% endif %}
 	{% endfor %}
@@ -146,7 +146,7 @@
 {% endif %}
 	<a style="cursor: pointer" onclick="setSort('date', false)">
 	<i class="icon-chevron-right"></i>
-	По дате
+	By date
 	</a>
 </li>
 

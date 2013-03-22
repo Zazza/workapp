@@ -4,7 +4,7 @@
 
 <div style="padding: 4px 7px">
 {% if not task %}
-<span style="margin-right: 10px"><b>Дата: </b>
+<span style="margin-right: 10px"><b>Date: </b>
 {% if mail.0.date != "0000-00-00 00:00:00" %}
 {{ mail.0.date }}
 {% else %}
@@ -12,21 +12,21 @@
 {% endif %}
 </span>
 {% endif %}
-<span style="margin-right: 10px"><b>Тема:</b> {{ mail.0.subject }}</span>
+<span style="margin-right: 10px"><b>Theme:</b> {{ mail.0.subject }}</span>
 </div>
 
 {% if not task %}
 <div style="padding: 4px 7px">
 
-<b>Отправитель:</b>
+<b>Sender:</b>
 {% if mail.0.personal %}({{ mail.0.personal }})&nbsp;{% endif %}
 <a href="mailto: {{ mail.0.email }}" style="margin-right: 10px">{{ mail.0.email }}</a>
 
 <span style="float: right">
 {% if mail.0.contact %}
-	<a style="cursor: pointer; margin-right: 2px" onclick="getInfo('{{ mail.0.email }}')"><img src="{{ registry.uri }}img/information-button.png" title="полные данные" alt="info" border="0" style="position: relative; top: 1px" /></a>
+	<a style="cursor: pointer; margin-right: 2px" onclick="getInfo('{{ mail.0.email }}')"><img src="{{ registry.uri }}img/information-button.png" title="full data" alt="info" border="0" style="position: relative; top: 1px" /></a>
 {% else %}
-	<a onclick="addContact('{{ mail.0.email }}')" style="cursor: pointer; margin-right: 2px" title="добавить контакт"><img src="{{registry.uri }}img/plus-button.png" alt="" border="0" style="position: relative; top: 1px" /></a>
+	<a onclick="addContact('{{ mail.0.email }}')" style="cursor: pointer; margin-right: 2px" title="add contact"><img src="{{registry.uri }}img/plus-button.png" alt="" border="0" style="position: relative; top: 1px" /></a>
 {% endif %}
 </span>
 
@@ -35,7 +35,7 @@
 
 {% if not task %}
 <div style="padding: 4px 7px">
-<b>Получатель:</b>
+<b>Addressee:</b>
 <a href="mailto: {{ mail.0.email }}">{{ mail.0.to }}</a>
 </div>
 {% endif %}

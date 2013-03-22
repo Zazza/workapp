@@ -1,15 +1,15 @@
 <div class="sel" style="width: 150px; margin-bottom: 10px; font-weight: bold">
 <img border="0" style="vertical-align: middle;" alt="plus" src="{{ registry.uri }}img/plus-button.png" />
 &nbsp;
-<a href="{{ registry.uri }}settings/templates/add/" style="text-decoration: none">новый шаблон</a>
+<a href="{{ registry.uri }}settings/templates/add/" style="text-decoration: none">new template</a>
 </div>
 
 <table cellpadding="3" cellspacing="3">
 <tr>
-<td align="center" style="font-weight: bold; font-size: 10px">удалить</td>
-<td align="center" style="font-weight: bold; font-size: 10px">изменить</td>
-<td align="center" style="font-weight: bold; font-size: 10px">структура</td>
-<td align="center" style="font-weight: bold; font-size: 10px">название шаблона</td>
+<td align="center" style="font-weight: bold; font-size: 10px">delete</td>
+<td align="center" style="font-weight: bold; font-size: 10px">change</td>
+<td align="center" style="font-weight: bold; font-size: 10px">structure</td>
+<td align="center" style="font-weight: bold; font-size: 10px">name template</td>
 {% for part in list %}
 <tr>
 <td align="center" style="border: 1px solid #ccc">
@@ -29,6 +29,6 @@
 </td>
 </tr>
 {% else %}
-<tr><td colspan="3" align="center" style="border: 1px solid #ccc">Пусто</td></tr>
+<tr><td colspan="3" align="center" style="border: 1px solid #ccc">Empty</td></tr>
 {% endfor %}
 </table>

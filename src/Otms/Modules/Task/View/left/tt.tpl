@@ -1,5 +1,5 @@
 <ul class="nav nav-list">
-	<li class="nav-header">Актуальные задачи:</li>
+	<li class="nav-header">Actual tasks:</li>
 	
 	{% if not registry.args.0 %}
 	<li class="active">
@@ -8,7 +8,7 @@
 	{% endif %}
 		<a href="{{ registry.uri }}task/">
 		<i class="icon-home"></i>
-		Задачи [{{ registry.getNumTasks }}]
+		Tasks [{{ registry.getNumTasks }}]
 		</a>
 	</li>
 	
@@ -19,7 +19,7 @@
 	{% endif %}
 		<a href="{{ registry.uri }}task/task/me/">
 		<i class="icon-user"></i>
-		Я автор [{{ registry.getNumMeTasks }}]
+		I'm author [{{ registry.getNumMeTasks }}]
 		</a>
 	</li>
 	
@@ -30,7 +30,7 @@
 	{% endif %}
 		<a href="{{ registry.uri }}task/draft/">
 		<i class="icon-pencil"></i>
-		Черновики [{{ registry.draftttnum }}]
+		Draft [{{ registry.draftttnum }}]
 		</a>
 	</li>
 	

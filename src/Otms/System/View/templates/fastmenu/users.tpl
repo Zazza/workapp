@@ -1,7 +1,7 @@
 <li class="dropdown">
 	<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="text-shadow: none;">
 		<i class="icon-user"></i>
-		<span id="onlineUsers" class="label" title="online"></span>/<span id="allUsers" class="label" title="всего"></span>
+		<span id="onlineUsers" class="label" title="online"></span>/<span id="allUsers" class="label" title="all"></span>
 		
 		<b class="caret" style="border-bottom-color: #0088CC; border-top-color: #0088CC"></b>
 	</a>
@@ -15,16 +15,16 @@
 					<input type="hidden" name="rall" value="off" />
 				</div>
 				<div class="btn-group">
-					<span class="btn" id="rallbu"><i class="icon-th"></i>выбрать всех</span>
-					<span class="btn" id="addtaskbu"><i class="icon-user"></i>создать задачу</span>
-					<span class="btn" id="addchatbu"><i class="icon-comment"></i>создать чат</span>
+					<span class="btn" id="rallbu"><i class="icon-th"></i>select all</span>
+					<span class="btn" id="addtaskbu"><i class="icon-user"></i>create task</span>
+					<span class="btn" id="addchatbu"><i class="icon-comment"></i>create chat</span>
 				</div>
 			</div>
 		</div>
 	</ul>
 </li>
 
-<div title="Правка" id="editCat" style="display: none"><input type="text" id="catname" style="width: 150px" /></div>
+<div title="Edit" id="editCat" style="display: none"><input type="text" id="catname" style="width: 150px" /></div>
 
 <script type="text/javascript">
 $(document).ready(function(){

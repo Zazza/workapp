@@ -41,7 +41,7 @@ class Edit extends Controller {
 				if (isset($this->get["id"])) {
 					$route = $routes->getRoute($this->get["id"]);
 					
-					$this->view->setTitle("Бизнес-процесс: " . $route[0]["name"]);
+					$this->view->setTitle("Workflow: " . $route[0]["name"]);
 					
 					$steps = $routes->getSteps();
 					for($i=0; $i<count($steps); $i++) {

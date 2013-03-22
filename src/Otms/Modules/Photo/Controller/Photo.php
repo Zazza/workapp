@@ -24,7 +24,7 @@ use Engine\Modules\Controller;
 class Photo extends Controller {
 
 	public function index() {
-		$this->view->setTitle("Фотографии");
+		$this->view->setTitle("Photos");
 		
 		$file = new Model\Photofile();
 		$file->showTree(0);

@@ -1,45 +1,45 @@
-<h2>Настройка уведомлений</h2>
+<h2>Notification settings</h2>
 
-<p>Выберите, о каких событиях получать уведомления:</p>
+<p>Select, about what events to receive notification messages:</p>
 
-<p id="saveNoticeSuccess" style="display: none; margin: 10px 0; color: green">Настройки сохранены!</p>
+<p id="saveNoticeSuccess" style="display: none; margin: 10px 0; color: green">Settings saved!</p>
 
 <p style="margin: 0">
 	<label class="checkbox inline">
 	<input type="checkbox" id="task" name="task" {% if not registry.ajax_notice_sets.task %}checked="checked"{% endif %} />
-	задачи
+	tasks
 	</label>
 </p>
 
 <p style="margin: 0">
 	<label class="checkbox inline">
 	<input type="checkbox" id="com" name="com" {% if not registry.ajax_notice_sets.com %}checked="checked"{% endif %} />
-	комментарии
+	comments
 	</label>
 </p>
 
 <p style="margin: 0">
 	<label class="checkbox inline">
 	<input type="checkbox" id="mail" name="mail" {% if not registry.ajax_notice_sets.mail %}checked="checked"{% endif %} />
-	почта
+	mail
 	</label>
 </p>
 
 <p style="margin: 0">
 	<label class="checkbox inline">
 	<input type="checkbox" id="obj" name="obj" {% if not registry.ajax_notice_sets.obj %}checked="checked"{% endif %} />
-	объекты
+	objects
 	</label>
 </p>
 
 <p style="margin: 0">
 	<label class="checkbox inline">
 	<input type="checkbox" id="info" name="info" {% if not registry.ajax_notice_sets.info %}checked="checked"{% endif %} />
-	база знаний
+	knowledge base
 	</label>
 </p>
 
-<p style="padding-top: 20px"><input type="button" value="Сохранить" onclick="saveNotice()" /></p>
+<p style="padding-top: 20px"><input type="button" value="Save" onclick="saveNotice()" /></p>
 
 <script type="text/javascript">
 function saveNotice() {

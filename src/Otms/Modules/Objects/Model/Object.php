@@ -80,7 +80,7 @@ class Object extends Model {
             }
         }
             
-    	$string = "Добавление объекта <a href='" . $this->registry["uri"] . "objects/show/" . $oid . "/'>" . $oid . "</a>";
+    	$string = "Add object <a href='" . $this->registry["uri"] . "objects/show/" . $oid . "/'>" . $oid . "</a>";
     
     	$this->registry["logs"]->set("obj", $string, $oid, $logs_obj);
     }
@@ -529,7 +529,7 @@ class Object extends Model {
 	        }
     	}
         
-        $string = "Правка объекта <a href='" . $this->registry["uri"] . "objects/show/" . $post["tid"] . "/'>" . $post["tid"] . "</a>";
+        $string = "Edit object <a href='" . $this->registry["uri"] . "objects/show/" . $post["tid"] . "/'>" . $post["tid"] . "</a>";
 
     	$this->registry["logs"]->set("obj", $string, $post["tid"], $logs_obj);
     }

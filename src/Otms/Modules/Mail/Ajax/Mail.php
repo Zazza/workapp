@@ -297,7 +297,7 @@ class Mail extends Ajax {
 		$cid = $params["cid"];
 		
 		$_POST["to"] = $email;
-		$_POST["subject"] = "Комментарий";
+		$_POST["subject"] = "Comment";
 		$_POST["textfield"] = $this->registry["task"]->getCommentText($cid);
 		$carr = $this->registry["task"]->getComment($cid);
 		foreach($carr as $part) {

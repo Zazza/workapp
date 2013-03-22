@@ -1,6 +1,6 @@
 <div style="margin-bottom: 20px">
-	добавить:&nbsp;<input type="text" id="name" name="name" style="width: 150px; margin-right: 20px" />
-	<input type="button" value="Добавить" onclick="addTree()" />
+	add:&nbsp;<input type="text" id="name" name="name" style="width: 150px; margin-right: 20px" />
+	<input type="button" value="Add" onclick="addTree()" />
 </div>
 
 <div id="litree"></div>
@@ -36,14 +36,14 @@ function addTree() {
 }
 
 function delCat(id) {
-    $('<div title="Удаление">Действительно удалить?<div>').dialog({
+    $('<div title="Delete">Really delete?<div>').dialog({
 		modal: true,
 	    buttons: {
-            "Да": function() {
+            "Yes": function() {
                 delCatOK(id);
                 $(this).dialog("close");
             },
-			"Нет": function() {
+			"No": function() {
                  $(this).dialog("close");
             }
 		},

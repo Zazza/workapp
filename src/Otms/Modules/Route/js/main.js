@@ -10,21 +10,21 @@ function setResult(tid) {
 		data: "action=setResult&tid=" + tid,
 		success: function(res) {
 			if (res == "null") {
-				$("<div title='Уведомление'>Завершить задачу?</div>").dialog({
+				$("<div title='Notice'>Ending task?</div>").dialog({
 				    buttons: {
-				    	"Да": function() {
+				    	"Yes": function() {
 				    		contRoute(tid, "");
 							$(this).dialog("close");
 						},
-						"Нет": function() {
+						"No": function() {
 							$(this).dialog("close");
 						}
 					}
 				});
 			} else {
-				$("<div title='Результат'>" + res + "</div>").dialog({
+				$("<div title='Result'>" + res + "</div>").dialog({
 				    buttons: {
-				    	"Готово": function() {
+				    	"Done": function() {
 				    		var id = ""; var val = "";
 				    		var formData = new Array(); var i = 0;
 				    		$("#taskResults .valRes").each(function(n){

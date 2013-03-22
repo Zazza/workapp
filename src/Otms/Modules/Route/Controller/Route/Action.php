@@ -23,7 +23,7 @@ class Action extends Controller {
 	function index() {
 		if ($this->registry["ui"]["admin"]) {
 			if (isset($this->get["id"])) {
-				$this->view->setTitle("Действие");
+				$this->view->setTitle("Action");
 				
 				$routes = new Model\Route();
 				$data = $routes->getStepData($this->get["id"]);

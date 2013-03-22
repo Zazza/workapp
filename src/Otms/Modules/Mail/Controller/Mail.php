@@ -31,7 +31,7 @@ class Mail extends Controller {
 	}
 	
 	public function index() {
-		$this->view->setTitle("Почта");
+		$this->view->setTitle("Mail");
 		
 		$this->view->setLeftContent($this->view->render("left_mail", array("folders" => $this->folders, "enableCheck" => $this->enableCheck)));
 		
@@ -46,7 +46,7 @@ class Mail extends Controller {
 		} else if (isset($_GET["oid"])) {
 			$obj = true;
 			$mails = $mailClass->getObjMails($_GET["oid"]);
-			$this->view->setMainContent("<p class='title'>Просмотр почтовой переписки: " . $mailClass->getContact() . "</p>");
+			$this->view->setMainContent("<p class='title'>Viewing of mail correspondence: " . $mailClass->getContact() . "</p>");
 		} else {
 			$mails = $mailClass->getMails();
 		}

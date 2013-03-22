@@ -5,8 +5,8 @@
 </div>
 
 <div class="blockbd" style="padding-left: 50px; font-size: 11px; float: right">
-<p><label class="radio"><input type="radio" name="caltask" value="0" class="caltask" {% if caltype == 0 %}checked="checked"{% endif %} /> задачи, где я <b>ответственный</b></label></p>
-<p><label class="radio"><input type="radio" name="caltask" value="1" class="caltask" {% if caltype == 1 %}checked="checked"{% endif %} /> задачи, где я <b>автор</b></label></p>
+<p><label class="radio"><input type="radio" name="caltask" value="0" class="caltask" {% if caltype == 0 %}checked="checked"{% endif %} /> tasks, where I <b>responsible</b></label></p>
+<p><label class="radio"><input type="radio" name="caltask" value="1" class="caltask" {% if caltype == 1 %}checked="checked"{% endif %} /> tasks, where I <b>author</b></label></p>
 </div>
 
 </div>

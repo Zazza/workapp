@@ -1,10 +1,10 @@
-<div class="newRoute beginRoute alert alert-success">Начало</div>
+<div class="newRoute beginRoute alert alert-success">Start</div>
 <div id="appendRoute">
 
 <div id="subTable">
-	<div class="st_substep">Этап</div>
-	<div class="st_step">Задачи</div>
-	<div class="st_stepaction">Действия</div>
+	<div class="st_substep">Step</div>
+	<div class="st_step">Tasks</div>
+	<div class="st_stepaction">Actions</div>
 </div>
 	
 {% for part in steps %}
@@ -19,7 +19,7 @@
 	<div style="margin-bottom: 10px">
 	{{ action.ifdataval }} {{ action.ifcon }} {{ action.ifval }}
 	<br />
-	<b>Переход:</b> {{ action.gotoval }}
+	<b>Go to:</b> {{ action.gotoval }}
 	</div>
 	{% endfor %}
 	</div>
@@ -27,7 +27,7 @@
 </div>
 {% endfor %}
 </div>
-<div class="newRoute endRoute alert alert-error">Конец</div>
+<div class="newRoute endRoute alert alert-error">End</div>
 
 <script type="text/javascript">
 $.ajax({
@@ -38,7 +38,7 @@ $.ajax({
 	success: function(res) {
 		var taskname = "";
 		$.each(res, function(key, val) {
-			taskname = "Без названия";
+			taskname = "No name";
 			if (val["task"]) {
 				$.each(val["task"], function(param, value) {
 					if (param == "taskname") {

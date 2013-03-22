@@ -25,7 +25,7 @@ class Sort extends Mail {
 	function index() {
 		$mailClass = new Model\Mail();
 		
-		$this->view->setTitle("Правила обработки для почты");
+		$this->view->setTitle("Processing rules for mail");
 		
 		$this->view->setLeftContent($this->view->render("left_mail", array("folders" => $this->folders, "enableCheck" => $this->enableCheck)));
 
@@ -45,13 +45,13 @@ class Sort extends Mail {
 				$_POST["to"] = null;
 			}
 			if (isset($_POST["checkbox_subject"])) {
-				if ($_POST["subject"] == "") { $err[] = 'Поле "Тема" не может быть пустой'; }
+				if ($_POST["subject"] == "") { $err[] = 'Field "Theme" can not be empty'; }
 			} else {
 				$_POST["subject"] = null;
 			}
 			
 			if ( (!isset($_POST["checkbox_from"])) and (!isset($_POST["checkbox_to"])) and (!isset($_POST["checkbox_subject"])) ) {
-				$err[] = 'Не указано ни одного критерия для сортировки';
+				$err[] = 'Not specified any criterion for sorting';
 			}
 			
 			if (count($err) == 0) {
@@ -87,12 +87,12 @@ class Sort extends Mail {
 						else { $sort["type"] = "to"; $sort["val"] = $_POST["to"]; $sort["folder_id"] = $_POST["folder"]; }
 				}
 				if ( (isset($_POST["subject"])) and ($_POST["subject"] != null) ) {
-					if ($_POST["subject"] == "") { $err[] = 'Поле "Тема" не может быть пустой'; }
+					if ($_POST["subject"] == "") { $err[] = 'Field "Theme" can not be empty'; }
 						else { $sort["type"] = "subject"; $sort["val"] = $_POST["subject"]; $sort["folder_id"] = $_POST["folder"]; }
 				}
 				
 				if ( (!isset($_POST["from"])) and (!isset($_POST["to"])) and (!isset($_POST["subject"])) ) {
-					$err[] = 'Не указано ни одного критерия для сортировки';
+					$err[] = 'Not specified any criterion for sorting';
 				}
 				
 				if (count($err) == 0) {

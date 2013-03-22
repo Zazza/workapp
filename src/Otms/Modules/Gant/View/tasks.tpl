@@ -1,5 +1,5 @@
 {% for gid, part in gant %}
-<div style="text-align: center;"><h5>{% if gid == 0 %} Задачи без группы {% else %} {{ group[gid] }} {% endif %}</h5></div>
+<div style="text-align: center;"><h5>{% if gid == 0 %} Tasks without group {% else %} {{ group[gid] }} {% endif %}</h5></div>
 
 	{% for arrtask, val in part %}
 	<div style="overflow: hidden; padding: 1px;">

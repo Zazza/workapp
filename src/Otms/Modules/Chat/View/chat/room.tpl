@@ -10,7 +10,7 @@
 
 <div class="input-append" style="padding: 10px 0">
 	<input type="text" id="message" class="span6" />
-	<button type="button" id="addMessage" class="btn btn-primary" style="margin-bottom: 9px" />Написать</button>
+	<button type="button" id="addMessage" class="btn btn-primary" style="margin-bottom: 9px" />Write</button>
 </div>
 
 <script type="text/javascript">

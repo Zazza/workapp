@@ -23,7 +23,7 @@ class Setform extends Objects {
 
 	public function index() {
 
-		$this->view->setTitle("Форма для выбранного объектаы");
+		$this->view->setTitle("Form for selected object");
 		
 		$this->view->setLeftContent($this->view->render("left_objects", array()));
 

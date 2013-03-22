@@ -8,7 +8,7 @@
 {% endif %}
     <a href="{{ registry.uri }}route/">
     	<img style="vertical-align: middle" src="{{ registry.uri }}img/g.png" alt="" border="0" />
-    	Маршруты
+    	Routes
     </a>
 </li>
 
@@ -19,7 +19,7 @@
 {% endif %}
     <a href="{{ registry.uri }}route/draft/">
     	<img style="vertical-align: middle" src="{{ registry.uri }}img/application-form.png" alt="" border="0" />
-    	Черновики
+    	Draft copies
     </a>
 </li>
 

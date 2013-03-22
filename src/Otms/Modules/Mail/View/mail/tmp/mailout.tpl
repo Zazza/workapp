@@ -1,17 +1,17 @@
 <div class="emailhead">
 
 <div style="background-color: #DFE4EA; border-bottom: 1px solid #FFF; padding: 2px 4px">
-<span style="margin-right: 10px"><b>Дата: </b>
+<span style="margin-right: 10px"><b>Date: </b>
 {{ mail.0.timestamp }}
 </span>
-<span style="margin-right: 10px"><b>Тема:</b> {{ mail.0.subject }}</span>
+<span style="margin-right: 10px"><b>Theme:</b> {{ mail.0.subject }}</span>
 </div>
 <div style="background-color: #DFE4EA; border-bottom: 1px solid #FFF; padding: 2px 4px">
-<b>Отправитель:</b>
+<b>Sender:</b>
 <a href="mailto: {{ mail.0.email }}">{{ mail.0.email }}</a>
 </div>
 <div style="background-color: #DFE4EA; border-bottom: 1px solid #FFF; padding: 2px 4px">
-<b>Получатель:</b>
+<b>Addressee:</b>
 <a href="mailto: {{ mail.0.email }}">{{ mail.0.to }}</a>
 </div>
 <div style="background-color: #DFE4EA; padding: 6px 4px; border-bottom: 1px solid #FFF">
@@ -32,7 +32,7 @@
 <div style="float: right">
 	<a class="btn" onclick="delMailConfirm()">
 		<i class="icon-remove"></i>
-		удалить
+		delete
 	</a>
 </div>
 </div>

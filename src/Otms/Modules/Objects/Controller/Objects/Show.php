@@ -22,7 +22,7 @@ use Otms\Modules\Objects\Model;
 class Show extends Objects {
 	
 	public function index() {            
-        $this->view->setTitle("Объект");
+        $this->view->setTitle("Object");
         
         $this->view->setLeftContent($this->view->render("left_objects", array()));
 
@@ -43,7 +43,7 @@ class Show extends Objects {
             $numAdvInfo = $ai->getNumAdvancedInfo($this->args[1]);
             $this->view->objectMain(array("ui" => $this->registry["ui"], "mail" => $mail, "obj" => $obj, "advInfo" => $advInfo, "forms" => $forms, "numAdvInfo" => $numAdvInfo, "numTroubles" => $numTroubles));
         } else {
-            $this->view->setMainContent("<p>Объект не найден</p>");
+            $this->view->setMainContent("<p>Object not found</p>");
         }
         
         $this->view->showPage();

@@ -1,18 +1,18 @@
 <div style="overflow: hidden;">
 	<div style="float: left; margin-bottom: 20px">
-		добавить:&nbsp;<input type="text" id="name" name="name" style="width: 150px; margin-right: 20px" />
-		<input type="button" value="Добавить" onclick="addDataField()" />
+		add:&nbsp;<input type="text" id="name" name="name" style="width: 150px; margin-right: 20px" />
+		<input type="button" value="Add" onclick="addDataField()" />
 	</div>
 	
 	<div style="float: right">
 		<a class="btn" onclick="rmAllDataConfirm()">
 			<i class="icon-trash"></i>
-			Удалить всё
+			Delete all
 		</a>
 		
 		<a class="btn" href="{{ registry.uri }}settings/datatypes/">
 			<i class="icon-arrow-left"></i>
-			Назад
+			Back
 		</a>
 	</div>
 </div>
@@ -55,14 +55,14 @@ function addDataField() {
 }
 
 function delDataCat(id) {
-    $('<div title="Удаление">Действительно удалить?<div>').dialog({
+    $('<div title="Delete">Really delete?<div>').dialog({
 		modal: true,
 	    buttons: {
-            "Да": function() {
+            "Yes": function() {
                 delDataCatOK(id);
                 $(this).dialog("close");
             },
-			"Нет": function() {
+			"No": function() {
                  $(this).dialog("close");
             }
 		},
@@ -117,14 +117,14 @@ function editDataCat(id) {
 }
 
 function rmAllDataConfirm() {
-	$('<div title="Удаление">Действительно удалить?<div>').dialog({
+	$('<div title="Delete">Really delete?<div>').dialog({
 		modal: true,
 	    buttons: {
-            "Да": function() {
+            "Yes": function() {
             	rmAllData();
                 $(this).dialog("close");
             },
-			"Нет": function() {
+			"No": function() {
                  $(this).dialog("close");
             }
 		},

@@ -3,7 +3,7 @@
 <p>
 <a class="btn" href="{{ registry.uri }}objects/show/{{ vals.0.id }}/">
 	<i class="icon-zoom-in"></i>
-	Перейти к объекту
+	Go to object
 </a>
 </p>
 
@@ -11,13 +11,13 @@
 {% if email %}
 <a onclick="addEmail('{{ email }}')">
 	<img border="0" src="{{ registry.uri }}img/plus-button.png" alt="" style="vertical-align: middle" />
-	<b>Добавить email:</b> {{ email }}
+	<b>Add email:</b> {{ email }}
 </a>
 
 {% else %}
 <a onclick="addEmail('')" class="btn">
 	<img border="0" src="{{ registry.uri }}img/plus-button.png" alt="" style="vertical-align: middle" />
-	<b>Добавить email</b>
+	<b>Add email</b>
 </a>
 {% endif %}
 </p>
@@ -33,7 +33,7 @@
 
 <input type="hidden" name="tid" value="{{ vals.0.id }}" />
 
-<input type="submit" name="submit" value="Готово" class="btn" style="margin-top: 20px" />
+<input type="submit" name="submit" value="Ready" class="btn" style="margin-top: 20px" />
 
 </form>
 

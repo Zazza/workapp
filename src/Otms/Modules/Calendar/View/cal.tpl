@@ -6,18 +6,18 @@
 <p>
 <span>
 <select id="month" name="month">
-    <option value="01"{% if month == 1 %}selected="selected"{% endif %}>январь</option>
-    <option value="02"{% if month == 2 %}selected="selected"{% endif %}>февраль</option>
-    <option value="03"{% if month == 3 %}selected="selected"{% endif %}>март</option>
-    <option value="04"{% if month == 4 %}selected="selected"{% endif %}>апрель</option>
-    <option value="05"{% if month == 5 %}selected="selected"{% endif %}>май</option>
-    <option value="06"{% if month == 6 %}selected="selected"{% endif %}>июнь</option>
-    <option value="07"{% if month == 7 %}selected="selected"{% endif %}>июль</option>
-    <option value="08"{% if month == 8 %}selected="selected"{% endif %}>август</option>
-    <option value="09"{% if month == 9 %}selected="selected"{% endif %}>сентябрь</option>
-    <option value="10"{% if month == 10 %}selected="selected"{% endif %}>октябрь</option>
-    <option value="11"{% if month == 11 %}selected="selected"{% endif %}>ноябрь</option>
-    <option value="12"{% if month == 12 %}selected="selected"{% endif %}>декабрь</option>
+    <option value="01"{% if month == 1 %}selected="selected"{% endif %}>January</option>
+    <option value="02"{% if month == 2 %}selected="selected"{% endif %}>February</option>
+    <option value="03"{% if month == 3 %}selected="selected"{% endif %}>March</option>
+    <option value="04"{% if month == 4 %}selected="selected"{% endif %}>April</option>
+    <option value="05"{% if month == 5 %}selected="selected"{% endif %}>May</option>
+    <option value="06"{% if month == 6 %}selected="selected"{% endif %}>June</option>
+    <option value="07"{% if month == 7 %}selected="selected"{% endif %}>July</option>
+    <option value="08"{% if month == 8 %}selected="selected"{% endif %}>August</option>
+    <option value="09"{% if month == 9 %}selected="selected"{% endif %}>September</option>
+    <option value="10"{% if month == 10 %}selected="selected"{% endif %}>October</option>
+    <option value="11"{% if month == 11 %}selected="selected"{% endif %}>November</option>
+    <option value="12"{% if month == 12 %}selected="selected"{% endif %}>December</option>
 </select>
 </span>
 <span>
@@ -27,7 +27,7 @@
     {% endfor %}
 </select>
 </span>
-<input type="button" id="seldate" name="seldate" value="Сменить" class="btn" />
+<input type="button" id="seldate" name="seldate" value="replace" class="btn" />
 </p>
 </div>
 </form>
@@ -37,8 +37,8 @@
 
 <!-- Блок выбор типа задач для вывода -->
 <div class="blockbd" style="float: left; font-size: 11px">
-<p><label class="radio"><input type="radio" name="caltask" value="0" class="caltask" {% if caltype == 0 %}checked="checked"{% endif %} /> задачи, где я <b>ответственный</b></label></p>
-<p><label class="radio"><input type="radio" name="caltask" value="1" class="caltask" {% if caltype == 1 %}checked="checked"{% endif %} /> задачи, где я <b>автор</b></label></p>
+<p><label class="radio"><input type="radio" name="caltask" value="0" class="caltask" {% if caltype == 0 %}checked="checked"{% endif %} /> tasks <b>for me</b></label></p>
+<p><label class="radio"><input type="radio" name="caltask" value="1" class="caltask" {% if caltype == 1 %}checked="checked"{% endif %} /> tasks <b>my</b></label></p>
 </div>
 <!-- END Блок выбор типа задач для вывода -->
 
@@ -48,24 +48,24 @@
 <div class="well" style="padding: 2px 5px">
 
 <span style="position: static">
-<a style="text-decoration: none" title="периодические" href="{{ registry.uri }}task/task/iter/"><img src="{{ registry.uri }}img/calendar-blue.png" alt="" border="0" /> периодические</a> <b>[{{ itertask }}]</b>
+<a style="text-decoration: none" title="periodic" href="{{ registry.uri }}task/task/iter/"><img src="{{ registry.uri }}img/calendar-blue.png" alt="" border="0" /> periodic</a> <b>[{{ itertask }}]</b>
 </span>
 
 <span style="position: static; margin-left: 10px">
-<a style="text-decoration: none" title="ограниченные по времени" href="{{ registry.uri }}task/task/time/"><img src="{{ registry.uri }}img/alarm-clock.png" alt="" border="0" /> ограниченные по времени</a> <b>[{{ timetask }}]</b>
+<a style="text-decoration: none" title="limited" href="{{ registry.uri }}task/task/time/"><img src="{{ registry.uri }}img/alarm-clock.png" alt="" border="0" /> limited</a> <b>[{{ timetask }}]</b>
 </span>
 
 {% set noiter = allmytask - itertask - timetask %}
 <span style="position: static; margin-left: 10px">
-<a style="text-decoration: none" title="неограниченные по времени" href="{{ registry.uri }}task/task/noiter/"><img src="{{ registry.uri }}img/clock.png" alt="" border="0" /> неограниченные по времени</a> <b>[{{ noiter }}]</b>
+<a style="text-decoration: none" title="unlimited" href="{{ registry.uri }}task/task/noiter/"><img src="{{ registry.uri }}img/clock.png" alt="" border="0" /> unlimited</a> <b>[{{ noiter }}]</b>
 </span>
 
 <span style="position: static; margin-left: 10px">
-<img src="{{ registry.uri }}img/flag.png" alt="" /> закрытые
+<img src="{{ registry.uri }}img/flag.png" alt="" /> closed
 </span>
 
 <span style="position: static; margin-left: 10px">
-<img src="{{ registry.uri }}img/lock.png" alt="" /> забронированные ресурсы
+<img src="{{ registry.uri }}img/lock.png" alt="" /> reserved resources
 </span>
 
 </div>
@@ -78,13 +78,13 @@
 <table id="cal" cellpadding="3" cellspacing="2" width="100%" style="padding: 10px 50px 0 0; display: none">
 
 <tr>
-<td width="14%" class="weekday workday">Понедельник</td>
-<td width="14%" class="weekday workday">Вторник</td>
-<td width="14%" class="weekday workday">Среда</td>
-<td width="14%" class="weekday workday">Четверг</td>
-<td width="14%" class="weekday workday">Пятница</td>
-<td width="14%" class="weekday holiday">Суббота</td>
-<td width="14%" class="weekday holiday">Воскресенье</td>
+<td width="14%" class="weekday workday">Monday</td>
+<td width="14%" class="weekday workday">Tuesday</td>
+<td width="14%" class="weekday workday">Wednesday</td>
+<td width="14%" class="weekday workday">Thursday</td>
+<td width="14%" class="weekday workday">Friday</td>
+<td width="14%" class="weekday holiday">Saturday</td>
+<td width="14%" class="weekday holiday">Sunday</td>
 </tr>
 
 <tr style="height: 20px">
@@ -292,8 +292,8 @@ function renderCell(year, month, day, arr) {
 		fullfdate = day + "." + month + "." + year;
 	}
 
-	addtask += '<a style="float: left" href="' + url + 'task/add/?date=' + tdate + '" title="создать задачу"><img src="' + url + 'img/plus-button.png" alt="" style="margin-right: 5px;" /></a>';
-	addtask += '<a onclick="addReserv(\'' + fullfdate + '\')" title="добавить бронь" style="float: left; cursor: pointer;"><img src="' + url + 'img/lock.png" alt="" /></a>';
+	addtask += '<a style="float: left" href="' + url + 'task/add/?date=' + tdate + '" title="create task"><img src="' + url + 'img/plus-button.png" alt="" style="margin-right: 5px;" /></a>';
+	addtask += '<a onclick="addReserv(\'' + fullfdate + '\')" title="add reservation" style="float: left; cursor: pointer;"><img src="' + url + 'img/lock.png" alt="" /></a>';
 
     result = "<p class='subtd'>" + addtask + fdate + "</p>";
     
@@ -307,7 +307,7 @@ function renderCell(year, month, day, arr) {
 }
 
 function getDayReservs(date, fulldate) {
-	$("#title_res").text("Дата: " + fulldate);
+	$("#title_res").text("Date: " + fulldate);
 	$("#table_dreservs").show();
 	$("#ttdres").html('');
 
@@ -327,10 +327,10 @@ function getDayReservs(date, fulldate) {
 	
 	$("#resday").dialog({
 	    buttons: {
-	    	"Добавить": function() {
+	    	"Add": function() {
 	    		addReserv(fulldate);
 	    	},
-			"Закрыть": function() {
+			"Close": function() {
 				$("#title_res").text("title", '');
 				$("#ttdres").html('');
 				$("#resday").dialog("close");
@@ -346,10 +346,10 @@ function addReserv(fdate) {
 	
 	$("#newreserv").dialog({
 		buttons: {
-			"Отмена": function() {
+			"Cancel": function() {
 				$("#newreserv").dialog("close");
 			},
-			"Готово": function() {
+			"Done": function() {
 				if ($("#repeat").attr('checked')) {
 					var ch_r = 1;
 				} else {
@@ -362,11 +362,11 @@ function addReserv(fdate) {
 			        data: data,
 			        success: function(res) {
 			        	if (res == "object") {
-			        		$("<div title='Ошибка'>Объект не выбран</div>").dialog({width: 180, height: 80});
+			        		$("<div title='error'>object isn't chosen</div>").dialog({width: 180, height: 80});
 			        	} else if (res == "collision") {
-			        		$("<div title='Ошибка'>В заданный период времени объект уже забронирован</div>").dialog({width: 220, height: 120});
+			        		$("<div title='error'>during the set period of time the object is already reserved</div>").dialog({width: 220, height: 120});
 			        	} else if (res == "date") {
-			        		$("<div title='Ошибка'>Дата начала брони больше даты окончания</div>").dialog({width: 220, height: 120});
+			        		$("<div title='error'>reservation start date is more than expiration date</div>").dialog({width: 220, height: 120});
 			        	} else {
 			        		$("#newreserv").dialog("close");
 			        		$("#resday").dialog("close");
@@ -384,7 +384,7 @@ function addReserv(fdate) {
 $(".restd").live("click", function() {
 	var id = $(this).attr("id");
 	var dataid = $(this).attr("data-id");
-	$("#" + id).popover({placement: 'top', title: 'Информация', content: $("#resinfo_" + dataid).html()});
+	$("#" + id).popover({placement: 'top', title: 'Information', content: $("#resinfo_" + dataid).html()});
 	$("#" + id).popover('show');
 	$("#res_hid").val(id);
 });
@@ -402,7 +402,7 @@ $(".cres").live("mouseover", function() {
     	data: data,
     	async: false,
     	success: function(res) {
-    		$('#cr_' + date).popover({placement: 'top', title: 'Просмотр броней', content: res});
+    		$('#cr_' + date).popover({placement: 'top', title: 'Reservation viewing', content: res});
     		$('#cr_' + date).popover('show');
     	}
     });

@@ -1,5 +1,5 @@
 {% for part in reservs %}
-<div style="text-align: center;"><h5>Забронированные ресурсы</h5></div>
+<div style="text-align: center;"><h5>Reserved resources</h5></div>
 
 	{% for arrtask, val in part %}
 	<div style="overflow: hidden; padding: 1px;">

@@ -18,7 +18,7 @@ class Adduser extends Users {
 	public function index() {
 		if ($this->registry["ui"]["admin"]) {
 
-			$this->view->setTitle("Пользователи");
+			$this->view->setTitle("Users");
 			
 			$this->view->setLeftContent($this->view->render("left_users", array()));
 

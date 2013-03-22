@@ -59,7 +59,7 @@ class Draft extends Controller {
 				if (isset($this->get["id"])) {
 					$route = $routes->getDraftRoute($this->get["id"]);
 					
-					$this->view->setTitle("Правка маршрута: " . $route[0]["name"]);
+					$this->view->setTitle("Edit step: " . $route[0]["name"]);
 					
 					$steps = $routes->getDraftSteps();
 					for($i=0; $i<count($steps); $i++) {
@@ -69,7 +69,7 @@ class Draft extends Controller {
 					$this->view->draftedit(array("route" => $route, "rid" => $this->get["id"], "steps" => $steps));
 				}
 			} else {
-				$this->view->setTitle("Черновики бизнес-маршрутов");
+				$this->view->setTitle("Workflow draft");
 				
 				$list = $routes->getDraftRoutes();
 				

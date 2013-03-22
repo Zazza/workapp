@@ -23,7 +23,7 @@ class Removed extends Objects {
 
 	public function index() {
 		if ($this->registry["ui"]["admin"]) {
-			$this->view->setTitle("Просмотр удалённых объектов");
+			$this->view->setTitle("Viewing of remote objects");
 			
 			$this->view->setLeftContent($this->view->render("left_objects", array()));
 	

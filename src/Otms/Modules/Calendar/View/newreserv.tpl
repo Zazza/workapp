@@ -1,11 +1,11 @@
 {% if edit %}
-<div id="newreserv" title='Редактирование' style="display: none">
+<div id="newreserv" title='Editing' style="display: none">
 {% else %}
-<div id="newreserv" title='Забронировать ресурс' style="display: none">
+<div id="newreserv" title='Reserve resource' style="display: none">
 {% endif %}
 <table class="table">
 <tr>
-	<td><h5>Объект</h5></td>
+	<td><h5>Object</h5></td>
 	{% if edit %}
 	<td colspan="4">
 		<h5 id="rObject"></h5>
@@ -18,7 +18,7 @@
 	</td>
 	{% else %}
 	<td colspan="4">
-		<a class="btn" onclick="selObject()"><i class="icon-th-list"></i> Выбрать объект</a>
+		<a class="btn" onclick="selObject()"><i class="icon-th-list"></i> Choose object</a>
 		<div id="newObj" style="margin-bottom: 20px; display: none">
 		<div id="selObj" style="margin-top: 10px"></div>
 		<input type="hidden" id="selObjHid" value="{{ oid }}" />
@@ -27,7 +27,7 @@
 	{% endif %}
 </tr>
 <tr>
-	<td><h5>Начало</h5></td>
+	<td><h5>Begin</h5></td>
 	<td></td>
 	<td colspan="2"><input type="text" id="reservstart" class="reservdate" style="cursor: pointer; width: 80px;" /></td>
 	<td>
@@ -60,7 +60,7 @@
 	</td>
 </tr>
 <tr>
-	<td><h5>Конец</h5></td>
+	<td><h5>End</h5></td>
 	<td></td>
 	<td colspan="2"><input type="text" id="reservend" class="reservdate endform" style="cursor: pointer; width: 80px;" /></td>
 	<td>
@@ -93,9 +93,9 @@
 	</td>
 </tr>
 <tr>
-	<td rowspan="2"><h5>Повтор</h5></td>
+	<td rowspan="2"><h5>Repetition</h5></td>
 	<td rowspan="2"><input type="checkbox" id="repeat" /></td>
-	<td><b>каждые:</b></td>
+	<td><b>each:</b></td>
 	<td>
 		<select id="repeat_num" style="width: 50px;" disabled="disabled" class="repeatform">
 			<option>1</option>
@@ -133,14 +133,14 @@
 	</td>
 	<td>
 		<select id="repeat_period" style="width: 80px;" disabled="disabled" class="repeatform">
-			<option value="d">день</option>
-			<option value="m">месяц</option>
-			<option value="y">год</option>
+			<option value="d">day</option>
+			<option value="m">month</option>
+			<option value="y">year</option>
 		</select>
 	</td>
 </tr>
 <tr>
-	<td><b>в течение:</b></td>
+	<td><b>during:</b></td>
 	<td>
 		<select id="repeat_cont_num" style="width: 50px;" disabled="disabled" class="repeatform">
 			<option>1</option>
@@ -178,9 +178,9 @@
 	</td>
 	<td>
 		<select id="repeat_cont_period" style="width: 80px;" disabled="disabled" class="repeatform">
-			<option value="d">день</option>
-			<option value="m">месяц</option>
-			<option value="y">год</option>
+			<option value="d">day</option>
+			<option value="m">month</option>
+			<option value="y">year</option>
 		</select>
 	</td>
 </tr>
@@ -194,10 +194,10 @@ $(document).ready(function() {
 		changeMonth: true,
 		dateFormat: 'dd.mm.yy',
 		minDate: 0,
-	    dayName: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-	    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-	    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-	    monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+	    dayName: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+	    dayNamesMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+	    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+	    monthNamesShort: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 	    firstDay: 1,
 	    defaultDate: "{{ date }}"
 	});
@@ -207,10 +207,10 @@ $(document).ready(function() {
 		changeMonth: true,
 		dateFormat: 'dd.mm.yy',
 		minDate: 0,
-	    dayName: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-	    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-	    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-	    monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+	    dayName: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+	    dayNamesMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+	    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+	    monthNamesShort: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 	    firstDay: 1,
 	    defaultDate: "{{ date }}"
 	});

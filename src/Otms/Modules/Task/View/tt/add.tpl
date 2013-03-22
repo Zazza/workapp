@@ -5,17 +5,17 @@
 {% endif %}
 
 <div class="input-prepend">
-	<span class="add-on"><b>Название задачи:</b></span>
+	<span class="add-on"><b>Name task:</b></span>
 	<input type="text" name="taskname" id="titletask" style="margin-bottom: 0" class="span6" />
 </div>
 
 <!-- attach -->
 <div style="overflow: hidden; margin-top: 10px">
 <div class="alert alert-success" style="float: left; width: 500px">
-	<p style="font-weight: bold">Прикреплённые файлы:</p>
+	<p style="font-weight: bold">Attach files:</p>
 	<a class="btn btn-mini btn-info" onclick="flushAttaches()">
 		<i class="icon-remove icon-white"></i>
-		очистить
+		remove
 	</a>
 	<div id="attach_files" style="margin-top: 10px"></div>
 </div>
@@ -38,13 +38,13 @@
 <!-- /tabs -->
 
 <p style="margin-top: 30px">
-<input type="submit" class="btn" name="draft" value="В черновик" style="margin-right: 10px" />
-<input type="submit" class="btn" name="submit" value="Создать" />
+<input type="submit" class="btn" name="draft" value="In draft" style="margin-right: 10px" />
+<input type="submit" class="btn" name="submit" value="Create" />
 </p>
 
 </form>
 
-<div id="usersDialog" title="Выбор пользователей" style="text-align: left"></div>
+<div id="usersDialog" title="Select users" style="text-align: left"></div>
 
 <script type="text/javascript">
 $('#wysihtml5').wysihtml5();

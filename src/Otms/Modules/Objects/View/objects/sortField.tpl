@@ -7,7 +7,7 @@
 <option value="<"><</option>
 <option value="=">=</option>
 <option value="!=">!=</option>
-<option value="%">содержит</option>
+<option value="%">contain</option>
 </select>
 </span>
 {% if field.type == 2 %}

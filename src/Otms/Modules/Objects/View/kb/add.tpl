@@ -1,4 +1,4 @@
-<p>Название: <input type="text" name="title" id="title" style="width: 300px" /></p>
+<p>Title: <input type="text" name="title" id="title" style="width: 300px" /></p>
 
 <!-- wysihtml5 -->
 <div style="overflow: hidden; margin-bottom: 10px">
@@ -10,10 +10,10 @@
 </div>
 <!-- /wysihtml5 -->
 
-<p>Теги: <input type="text" name="tags" id="tags" style="width: 300px" /></p>
+<p>Tags: <input type="text" name="tags" id="tags" style="width: 300px" /></p>
 
 <div style="width: 500px">
-	<input type="submit" data-inline="true" onclick="addAINote()" name="submit" value="Добавить" />
+	<input type="submit" data-inline="true" onclick="addAINote()" name="submit" value="Add" />
 </div>
 
 <script type="text/javascript">
@@ -29,7 +29,7 @@
 				if (res != "false") { 
 	            	document.location.href = "{{ registry.uri }}objects/kb/";
 				} else {
-					$('<div title="Уведомление">Заполнены не все поля!</div>').dialog();
+					$('<div title="Notice">All fields are filled not!</div>').dialog();
 				}
 			}
 		});

@@ -8,9 +8,9 @@
 
 <div style="float: left; text-align:center; margin-right: 10px">
 	{% if data.avatar %}
-	<img class="avatar" id="ava" src="{{ data.avatar }}" alt="аватар" />
+	<img class="avatar" id="ava" src="{{ data.avatar }}" alt="avatar" />
 	{% else %}
-	<img class="avatar" id="ava" src="{{ registry.uri }}img/noavatar.gif" alt="аватар" />
+	<img class="avatar" id="ava" src="{{ registry.uri }}img/noavatar.gif" alt="avatar" />
 	{% endif %}
 	
 	{% if data.status %}
@@ -28,15 +28,15 @@
 {% if registry.ui.admin %}
 <br />
 <a style="font-size: 10px; text-decoration: none" href="{{ registry.uri }}users/edituser/{{ data.uid }}/" style="margin-left: 10px">
-[правка]
+[edit]
 </a>
 <a style="font-size: 10px; text-decoration: none" onclick="delUserConfirm({{ data.uid }})" style="cursor: pointer; margin-left: 10px">
-[удалить]
+[delete]
 </a>
 {% endif %}
 </p>
 
-<p><a style="color: green" href="{{ registry.uri }}users/tasks/{{ data.uid }}/">задачи</a></p>
+<p><a style="color: green" href="{{ registry.uri }}users/tasks/{{ data.uid }}/">tasks</a></p>
 
 </div>
 

@@ -22,7 +22,7 @@ use Otms\Modules\Route\Model;
 class Route extends Controller {
 	function index() {
 		if ($this->registry["ui"]["admin"]) {
-			$this->view->setTitle("Управление бизнес-процессами");
+			$this->view->setTitle("Administration workflow");
 			
 			$this->view->setLeftContent($this->view->render("left_route", array()));
 			

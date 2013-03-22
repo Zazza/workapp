@@ -17,10 +17,10 @@
 	
 	<div style="font-weight: bold" class="evtext">{{ event.event }}</div>
 	
-	<span class="evadv"><a style="cursor: pointer" onclick="$('#einfo_{{ event.id }}').dialog({ width: 500, height: 300 })">подробнее</a></span>
+	<span class="evadv"><a style="cursor: pointer" onclick="$('#einfo_{{ event.id }}').dialog({ width: 500, height: 300 })">more</a></span>
 </div>
 
-<div style="display: none; text-align: left" id="einfo_{{ event.id }}" title="Подробный вывод">
+<div style="display: none; text-align: left" id="einfo_{{ event.id }}" title="Detailed output">
 {% for part in event.param %}
 {% if part.key %} 
 <p style="margin: 0"><b>{{ part.key }}:</b> {{ part.val }}</p>
@@ -47,7 +47,7 @@ function closeDashEvent(id) {
 				$("#notifspan").removeClass("label-important");
 				$("#notifspan").removeClass("label-success");
 				
-				$("#dashajaxlogs").html("<p id='emptyEvents'>Новых событий нет</p>");
+				$("#dashajaxlogs").html("<p id='emptyEvents'>Empty events</p>");
 			} else if (!res) {
 				$("#notifspan").removeClass("label-important");
 				$("#notifspan").addClass("label-success");

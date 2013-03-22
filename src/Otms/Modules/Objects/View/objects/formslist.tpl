@@ -1,6 +1,6 @@
 <a class="btn" href="{{ registry.uri }}objects/forms/add/">
 <img src="{{ registry.uri }}img/plus-button.png" border="0" />
-Добавить
+Add
 </a>
 
 <table cellpadding="3" cellspacing="3" style="margin-top: 10px">

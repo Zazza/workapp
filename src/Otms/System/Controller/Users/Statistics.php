@@ -17,7 +17,7 @@ class Statistics extends Users {
 	public function index() {			
 		if ($this->registry["ui"]["admin"]) {
 
-			$this->view->setTitle("Статистика");
+			$this->view->setTitle("Statistic");
 			
 			$this->view->setLeftContent($this->view->render("left_users", array()));
 
@@ -36,7 +36,7 @@ class Statistics extends Users {
 				
 			foreach($data["users"] as $part) {
 				if ($part["quota"] == 0) {
-					$user[$part["login"]]["quota_val"] = "<span style='font-size: 18px; position: relative; top: 3px'>&infin;</span> (квота не задана)";
+					$user[$part["login"]]["quota_val"] = "<span style='font-size: 18px; position: relative; top: 3px'>&infin;</span> (quota isn't set)";
 				}
 				
 				if (($part["quota"] / 1024 / 1024) > 1) {

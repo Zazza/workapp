@@ -1,7 +1,7 @@
 <form method="post" action="{{ registry.uri }}route/draft/edit/?id={{ rid }}">
 
 <div style="overflow: hidden">
-<h3>Условие:</h3>
+<h3>Condition:</h3>
 <span style="margin-right: 10px">
 <select id="ifdata">
 {% for part in data %}
@@ -28,9 +28,9 @@
 </div>
 
 <div style="overflow: hidden; margin-bottom: 10px">
-<h3>Действие:</h3>
+<h3>Action:</h3>
 <p>
-Переход:
+Go to:
 <select id="goto">
 {% for part in steps %}
 <option value="{{ part.id }}">{{ part.name }}</option>
@@ -39,14 +39,14 @@
 </p>
 </div>
 
-<span class="btn" onclick="addSortField()">Добавить условие</span> 
+<span class="btn" onclick="addSortField()">Add condition</span> 
 
 <div id="conds" class="well" style="margin-top: 10px">
 {% set i = 0 %}
 {% for part in action %}
 <div style="margin: 10px">
-<div><b>Условие: </b>{{ part.ifdataval }} {{ part.ifcon }} {{ part.ifval }}</div>
-<div><b>Действие: </b>{{ part.gotoval }}</div>
+<div><b>Condition: </b>{{ part.ifdataval }} {{ part.ifcon }} {{ part.ifval }}</div>
+<div><b>Action: </b>{{ part.gotoval }}</div>
 
 <input type="hidden" name="ifdata[{{ i }}]" value="{{ part.ifdata }}" />
 <input type="hidden" name="ifcon[{{ i }}]" value="{{ part.ifcon }}" />
@@ -55,7 +55,7 @@
 
 {% set i = i + 1 %}
 
-<a class="delStepAction btn btn-mini">удалить</a>
+<a class="delStepAction btn btn-mini">delete</a>
 </div>
 
 <input type="hidden" name="ifid[{{ i - 1 }}]" value="{{ part.id }}" />
@@ -64,7 +64,7 @@
 </div>
 
 <input type="hidden" name="step_id" value="{{ step_id }}" />
-<input type="submit" name="actionsubmit" style="margin-top: 20px" class="btn" value="Готово" />
+<input type="submit" name="actionsubmit" style="margin-top: 20px" class="btn" value="Done" />
 </form>
 
 <script type="text/javascript">

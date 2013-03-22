@@ -3,11 +3,11 @@
 <div class="tabs">
 
 <ul>
-	<li><a href="#tabs-1">Главные</a></li>
-	<li><a href="#tabs-2">Объект</a></li>
-	<li><a href="#tabs-3">Ответственные</a></li>
-	<li><a href="#tabs-4">Сроки</a></li>
-	<li><a href="#tabs-5">Делегировать</a></li>
+	<li><a href="#tabs-1">Main</a></li>
+	<li><a href="#tabs-2">Object</a></li>
+	<li><a href="#tabs-3">Responsible</a></li>
+	<li><a href="#tabs-4">Periods</a></li>
+	<li><a href="#tabs-5">Delegate</a></li>
 </ul>
 
 <div class="tab_container" style="width: 700px">
@@ -17,19 +17,19 @@
 <div style="margin-bottom: 10px">
 	<label class="radio inline">
 		<input type="radio" id="secure" name="secure" value="0" {% if not data.0.secure %} checked {% endif %} />
-		обычная
+		normal
 	</label>
 	
 	<label class="radio inline">
 		<input type="radio" id="secure" name="secure" value="1" {% if data.0.secure %} checked {% endif %} />
-		приватная
+		private
 	</label>
 </div>
 
 <div style="overflow: hidden">
 
 <div style="float: left">
-   <label for="select-imp" class="select">Важность:</label>
+   <label for="select-imp" class="select">Importance:</label>
    <select name="imp" id="select-imp">
     <option value="1" {% if data.0.imp == 1 %}selected="selected"{% endif %}>1</option>
     <option value="2" {% if data.0.imp == 2 %}selected="selected"{% endif %}>2</option>
@@ -40,7 +40,7 @@
 </div>
 
 <div style="float: left; margin-left: 30px">
-	<label for="ttgid" class="select">Проект / группа задач:</label>
+	<label for="ttgid" class="select">Project / task group:</label>
 	<select name="ttgid" id="ttgid">
 	    {% for part in registry.ttgroups %}
 	    <option value="{{ part.id }}" {% if data.0.gid == part.id %}selected="selected"{% endif %}>{{ part.name }}</option>
@@ -55,7 +55,7 @@
 <div id="tabs-2" class="tabcont">
 
 
-<a class="btn" onclick="selObject()"><i class="icon-th-list"></i> Выбрать объект</a>
+<a class="btn" onclick="selObject()"><i class="icon-th-list"></i> Select object</a>
 <div id="newObj" style="margin-bottom: 20px; {% if not obj %}display: none;{% endif %}">
 <div id="selObj" style="margin-top: 10px">
 
@@ -75,12 +75,12 @@
 <div class="btn-group">
 	<a class="btn" onclick="addruser()">
 		<i class="icon-user"></i>
-		добавить ответственных
+		add responsible
 	</a>
 	
 	<a class="btn" onclick="delRusers()">
 	<i class="icon-remove-circle"></i>
-	Очистить
+	remove
 	</a>
 </div>
 
@@ -93,11 +93,11 @@
 <div style="float: left; width: 240px">
 
 <div>
-   <p><label for="type" class="select">Периодичность:</label></p>
+   <p><label for="type" class="select">Periodicity:</label></p>
    <select id="type" name="type">
-    <option value="0" {% if data.0.type == 0 %}selected="selected"{% endif %}>Без условий</option>
-    <option value="1" {% if data.0.type == 1 %}selected="selected"{% endif %}>Один раз</option>
-    <option value="2" {% if data.0.type == 2 %}selected="selected"{% endif %}>Повторять</option>
+    <option value="0" {% if data.0.type == 0 %}selected="selected"{% endif %}>Without conditions</option>
+    <option value="1" {% if data.0.type == 1 %}selected="selected"{% endif %}>Once</option>
+    <option value="2" {% if data.0.type == 2 %}selected="selected"{% endif %}>Repeat</option>
    </select>
 </div>
 
@@ -105,7 +105,7 @@
 
 <div style="margin-left: 260px" id="advDeadline">
     <div id="global" style="overflow: hidden">
-        	<p><b>Начиная с:</b></p>
+        	<p><b>Since:</b></p>
         	
         	<div style="float: left; clear: none; padding: 0 2px">
             <input type="text" style="width: 90px" name="startdate_global" class="startdate" value="{{ data.0.startdate }}" />
@@ -118,7 +118,7 @@
 
     <div id="noiter" style="display: none; overflow: hidden">
     	<div style="overflow: hidden">
-        <p><b>Начиная с:</b></p>
+        <p><b>Since:</b></p>
         	<div style="float: left; clear: none; padding: 0 2px">
             <input type="text" style="width: 90px" name="startdate_noiter" class="startdate" value="{{ data.0.startdate }}" />
             </div>
@@ -129,16 +129,16 @@
         </div>
         
         <div style="overflow: hidden">
-        <p><b>продолжительность:</b></p>
+        <p><b>duration:</b></p>
         	<div style="float: left; clear: none; padding: 0 2px">
             <input type="text" style="width: 90px" name="lifetime_noiter" value="{{ data.0.deadline }}" />
             </div>
   
             <div style="float: left; width: 200px; clear: none; padding: 0 2px">
             <select name="timetype_noiter">
-                <option value="min" {% if data.0.deadline_date == "минут" %}selected="selected"{% endif %}>минут</option>
-                <option value="hour" {% if data.0.deadline_date == "часов" %}selected="selected"{% endif %}>часов</option>
-                <option value="day" {% if data.0.deadline_date == "дней" or not data.0.deadline_date %}selected="selected"{% endif %}>дней</option>
+                <option value="min" {% if data.0.deadline_date == "минут" %}selected="selected"{% endif %}>minutes</option>
+                <option value="hour" {% if data.0.deadline_date == "часов" %}selected="selected"{% endif %}>hours</option>
+                <option value="day" {% if data.0.deadline_date == "дней" or not data.0.deadline_date %}selected="selected"{% endif %}>days</option>
             </select>
             </div>
 		</div>
@@ -146,21 +146,21 @@
     
     <div id="iter" style="display: none; overflow: hidden">
     	<div style="overflow: hidden">
-        	<p><b>Повторять каждые:</b></p>
+        	<p><b>Repeat each:</b></p>
         	<div style="float: left; clear: none; padding: 0 2px">
             <input type="text" style="width: 90px" name="itertime" value="1" value="{{ data.0.iteration }}" />
             </div>
             
             <div style="float: left; width: 200px; clear: none; padding: 0 2px">
             <select name="timetype_itertime">
-                <option value="day" {% if data.0.timetype_iteration == "day" or not data.0.timetype_iteration %}selected="selected"{% endif %}>дней</option>
-                <option value="month" {% if data.0.timetype_iteration == "month" %}selected="selected"{% endif %}>месяцев</option>
+                <option value="day" {% if data.0.timetype_iteration == "day" or not data.0.timetype_iteration %}selected="selected"{% endif %}>days</option>
+                <option value="month" {% if data.0.timetype_iteration == "month" %}selected="selected"{% endif %}>months</option>
             </select>
             </div>
         </div>
         
         <div style="overflow: hidden">        
-        <p><b>Начиная с:</b></p>
+        <p><b>Since:</b></p>
         	<div style="float: left; clear: none; padding: 0 2px">
             <input type="text" style="width: 90px" name="startdate_iter" class="startdate" value="{{ data.0.startdate }}" />
             </div>
@@ -171,14 +171,14 @@
         </div>
         
         <div style="overflow: hidden">    
-        <p><b>продолжительность:</b></p>
+        <p><b>duration:</b></p>
         	<div style="float: left; clear: none; padding: 0 2px">
             <input type="text" style="width: 90px" name="lifetime_iter" value="{{ data.0.deadline }}" />
             </div>
             
             <div style="float: left; clear: none; padding: 0 2px">
             <select name="timetype_iter">
-                <option value="day" {% if data.0.deadline_date == "дней" %}selected="selected"{% endif %}>дней</option>
+                <option value="day" {% if data.0.deadline_date == "дней" %}selected="selected"{% endif %}>days</option>
             </select>
             </div>
         </div>
@@ -188,17 +188,17 @@
 </div>
 
 <div id="tabs-5" class="tabcont">
-<p>Назначить авторство задачи другому пользователю</p>
+<p>Assign authorship of task to other user</p>
 
 <div class="btn-group">
 	<a class="btn" onclick="delegate()">
 	<i class="icon-user"></i>
-	сменить автора
+	Replace author
 	</a>
 	
 	<a class="btn" onclick="delDelegate()">
 	<i class="icon-remove-circle"></i>
-	Очистить
+	Remove
 	</a>
 </div>
 
@@ -236,10 +236,10 @@
 //});
 
 $(".startdate").datepicker({
-    dayName: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
-    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-    monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    dayName: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    dayNamesMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    monthNamesShort: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     firstDay: 1,
     dateFormat: 'yy-mm-dd'
 });

@@ -17,7 +17,7 @@ function checkMail() {
     				if (window.loadCheck == false) {
     					window.loadCheck = true;
     					
-    					setbStatus("Проверяется: " + res[window.i]);
+    					setbStatus("Checking: " + res[window.i]);
     					
     					checkMbox(res[window.i]);
     				}
@@ -25,7 +25,7 @@ function checkMail() {
     				$("body").stopTime("timer");
     				
     				$("body").oneTime(1000, function() {
-    					setbStatus("Завершение...");
+    					setbStatus("End...");
 
     					document.location.href = document.location.href;
     				});
@@ -46,12 +46,12 @@ function checkMbox(mbox) {
     
     request.done(function(msg) {
     	if (msg == "false") {
-    		setbStatus("<span style='color: red;'>Ошибка</span>");
-    		setbStatus("<span style='color: red;'>Не удаётся подключиться: " + mbox + "</span>");
+    		setbStatus("<span style='color: red;'>Error</span>");
+    		setbStatus("<span style='color: red;'>Not possible to be connected: " + mbox + "</span>");
     	} else if (msg == "true") {
     		setbStatus("<span style='color: green;'>OK</span>");
     	} else {
-    		setbStatus("<span style='color: red;'>Ошибка</span>");
+    		setbStatus("<span style='color: red;'>Error</span>");
     		setbStatus("<span style='color: red;'>" + msg + "</span>");
     	}
     	
@@ -60,8 +60,8 @@ function checkMbox(mbox) {
     });
     
     request.fail(function(jqXHR, textStatus) {
-    	setbStatus("<span style='color: red;'>Ошибка</span>");
-    	setbStatus("<span style='color: red;'>Не удаётся подключиться: " + mbox + "</span>");
+    	setbStatus("<span style='color: red;'>Error</span>");
+    	setbStatus("<span style='color: red;'>Not possible to be connected: " + mbox + "</span>");
 
     	window.loadCheck = false;
 		window.i++;
@@ -69,11 +69,11 @@ function checkMbox(mbox) {
 };
 
 function delSortConfirm(sid) {
-	$('<div title="Удаление правила сортировки">Удалить?</div>').dialog({
+	$('<div title="Deleting rule of sorting">Delete?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Нет": function() { $(this).dialog("close"); },
-			"Да": function() { delSort(sid); $(this).dialog("close"); }
+			"No": function() { $(this).dialog("close"); },
+			"Yes": function() { delSort(sid); $(this).dialog("close"); }
 		},
 		width: 280
 	});
@@ -92,11 +92,11 @@ function delSort(sid) {
 }
 
 function delMailDirConfirm(fid) {
-	$('<div title="Удаление папки">Удалить?</div>').dialog({
+	$('<div title="Deleting folder">Delete?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Нет": function() { $(this).dialog("close"); },
-			"Да": function() { delMailDir(fid); $(this).dialog("close"); }
+			"No": function() { $(this).dialog("close"); },
+			"Yes": function() { delMailDir(fid); $(this).dialog("close"); }
 		},
 		width: 280
 	});
@@ -115,11 +115,11 @@ function delMailDir(fid) {
 }
 
 function sendMailCommentConfirm(email, cid) {
-	$('<div title="Отправка письма">Вы уверены, что хотите отправить письмо?</div>').dialog({
+	$('<div title="Sending email">You are sure that you want to send email?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Нет": function() { $(this).dialog("close"); },
-			"Да": function() { sendMailComment(email, cid); $(this).dialog("close"); }
+			"No": function() { $(this).dialog("close"); },
+			"Yes": function() { sendMailComment(email, cid); $(this).dialog("close"); }
 		},
 		width: 280
 	});

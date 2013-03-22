@@ -1,8 +1,8 @@
-<h2>Статистика</h2>
+<h2>Statistics</h2>
 
-<h3>Всего занимаемого места: {{ total.all_val }} {{ total.all_unit }}</h3>
+<h3>All quotas: {{ total.all_val }} {{ total.all_unit }}</h3>
 
-<p style="margin: 10px 0">Статистика по пользователям:</p>
+<p style="margin: 10px 0">Statistics on users:</p>
 
 {% for key, val in users %}
 <div class="well">

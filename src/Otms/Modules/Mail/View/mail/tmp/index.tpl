@@ -4,19 +4,19 @@
 <div class="btn-group">
 	<button class="btn" onclick="setRead()">
 		<i class="icon-ok icon-gray"></i>
-		Пометить все как прочитанные
+		Mark everything as read
 	</button>
 
 	{% if not obj %}
 	<button class="btn" onclick="clearFolderConfirm()">
 		<i class="icon-trash icon-gray"></i>
-		Очистить папку
+		Clear folder
 	</button>
 	{% endif %}
 	
 	<button class="btn" onclick="delMailsConfirm()">
 		<i class="icon-remove icon-gray"></i>
-		Удалить помеченные
+		Delete marked
 	</button>
 </div>
 </div>
@@ -76,10 +76,10 @@
 <!-- CONTEXT MENU -->
 <div class="contextMenu" id="mailMenu" style="display: none">
 	<ul class="cm">
-		<li id="mm_repeat"><i class="icon-repeat"></i> Ответить</li>
-		<li id="mm_task"><i class="icon-plus"></i> + задача</li>
-		<li id="mm_sort"><i class="icon-random"></i> Сортировка</li>
-		<li id="mm_remove"><i class="icon-remove"></i> Удалить</li>
+		<li id="mm_repeat"><i class="icon-repeat"></i> Answer</li>
+		<li id="mm_task"><i class="icon-plus"></i> + task</li>
+		<li id="mm_sort"><i class="icon-random"></i> Sorting</li>
+		<li id="mm_remove"><i class="icon-remove"></i> Delete</li>
 	</ul>
 </div>
 
@@ -150,11 +150,11 @@ function setRead() {
 }
 
 function clearFolderConfirm() {
-	$('<div title="Очистка папки">Действительно удалить все письма в папке?</div>').dialog({
+	$('<div title="Folder cleaning">Really delete all mails in folder?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Нет": function() { $(this).dialog("close"); },
-			"Да": function() { clearFolder(); $(this).dialog("close"); }
+			"No": function() { $(this).dialog("close"); },
+			"Yes": function() { clearFolder(); $(this).dialog("close"); }
 		},
 		width: 280
 	});
@@ -211,11 +211,11 @@ function getMail(mid) {
 };
 
 function delMailConfirm() {
-	$('<div title="Удаление письма">Удалить?</div>').dialog({
+	$('<div title="Deleting mail">Delete?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Да": function() { delMail(); $(this).dialog("close"); },
-			"Нет": function() { $(this).dialog("close"); }
+			"Yes": function() { delMail(); $(this).dialog("close"); },
+			"No": function() { $(this).dialog("close"); }
 		},
 		width: 280
 	});
@@ -257,11 +257,11 @@ function delMail() {
 };
 
 function delMailsConfirm() {
-	$('<div title="Удалить выделенные письма">Удалить?</div>').dialog({
+	$('<div title="Delete selected mails">Delete?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Да": function() { delSelected(); $(this).dialog("close"); },
-			"Нет": function() { $(this).dialog("close"); }
+			"Yes": function() { delSelected(); $(this).dialog("close"); },
+			"No": function() { $(this).dialog("close"); }
 		},
 		width: 280
 	});

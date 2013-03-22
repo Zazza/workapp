@@ -357,7 +357,7 @@ class MailStructure extends Model {
 
 	    	if ($otms_mail["email"] != $mail["mailbox"] . "@" . $mail["host"]) {
 	    		if ($json->method == "addtask") {
-	    			$this->textMailAction = "Новая задача(другая OTMS)";
+	    			$this->textMailAction = "New task(another OTMS)";
 			    	foreach($mail["body"] as $part) {
 			    		$part = json_decode(base64_decode($part["text"]), true);
 
@@ -374,7 +374,7 @@ class MailStructure extends Model {
 						}
 					}
 	    		} elseif ($json->method == "edittask") {
-	    			$this->textMailAction = "Правка задачи(другая OTMS)";
+	    			$this->textMailAction = "Edit task(another OTMS)";
 	    			foreach($mail["body"] as $part) {
 			    		$part = json_decode(base64_decode($part["text"]), true);
 
@@ -399,11 +399,11 @@ class MailStructure extends Model {
 						}
 					}
 	    		} elseif ($json->method == "closetask") {
-	    			$this->textMailAction = "Задача закрыта(другая OTMS)";
+	    			$this->textMailAction = "Task closed(another OTMS)";
 	    			
 	    			$ttmail->closeTask($json->tid);
 	    		} elseif ($json->method == "comment") {
-	    			$this->textMailAction = "Комментарий к задаче(другая OTMS)";
+	    			$this->textMailAction = "Comment to task(another OTMS)";
 	    			
 	    			foreach($mail["body"] as $part) {
 	    				$part = json_decode(base64_decode($part["text"]), true);

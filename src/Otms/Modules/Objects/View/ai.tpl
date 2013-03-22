@@ -9,17 +9,17 @@
 		<a class="btn" href="{{ registry.uri }}objects/info/edit/?oaid={{ info.id }}">
 		{% endif %}
 			<img src="{{ registry.uri }}img/edititem.gif" alt="" style="vertical-align: middle" />
-			Правка
+			Edit
 		</a>
 
 		<a class="btn" onclick="delAdvConfirm({{ info.id }})">
 			<img src="{{ registry.uri }}img/delete.png" />
-			Удалить
+			Delete
 		</a>
 		
 		<a class="btn" href="{{ registry.uri }}objects/kb/?history={{ info.id }}">
-			<img src="{{ registry.uri }}img/clock-history.png" alt="История" style="vertical-align: middle" />
-			История
+			<img src="{{ registry.uri }}img/clock-history.png" alt="History" style="vertical-align: middle" />
+			History
 		</a>
 
     </div>
@@ -56,8 +56,8 @@
 </div>
 {% endif %}
 
-<div style="text-align: left; margin-top: 20px; padding: 2px 4px; background-color: #EEE">Объект добавлен: <a style="cursor: pointer" onclick="getUserInfo('{{ ai.auid }}')">{{ info.aname }} {{ info.asoname }}</a> <span style="color: #777">[{{ info.adate }}]</span></div>
+<div style="text-align: left; margin-top: 20px; padding: 2px 4px; background-color: #EEE">Object add: <a style="cursor: pointer" onclick="getUserInfo('{{ ai.auid }}')">{{ info.aname }} {{ info.asoname }}</a> <span style="color: #777">[{{ info.adate }}]</span></div>
 {% if info.edate != '0000-00-00 00:00:00' %}
-<div style="text-align: left; margin-top: 5px; padding: 2px 4px; background-color: #EEE">Последняя правка: <a style="cursor: pointer" onclick="getUserInfo('{{ ai.euid }}')">{{ info.ename }} {{ info.esoname }}</a> <span style="color: #777">[{{ info.edate }}]</span></div>
+<div style="text-align: left; margin-top: 5px; padding: 2px 4px; background-color: #EEE">last edit: <a style="cursor: pointer" onclick="getUserInfo('{{ ai.euid }}')">{{ info.ename }} {{ info.esoname }}</a> <span style="color: #777">[{{ info.edate }}]</span></div>
 {% endif %}
 </div>

@@ -2,18 +2,18 @@
 
 <a href="{{ registry.uri }}objects/add/?p={{ gid }}" class="btn">
 	<img alt="add object" border="0" src="{{ registry.uri }}img/plus-button.png" />
-	Добавить объект
+	Add object
 </a>
 
 {% if sort_flag %}
 <a onclick='sortObjs()' class="btn btn-success">
 	<i class="icon-search"></i>
-	сортировка
+	sorting
 </a>
 {% else %}
 <a onclick='sortObjs()' class="btn">
 	<i class="icon-search"></i>
-	сортировка
+	sorting
 </a>
 {% endif %}
 
@@ -21,19 +21,19 @@
 {% if mail %}
 <a onclick='writeMail()' class="btn">
 	<img src="{{ registry.uri }}img/left/mail-plus.png" alt="mail" border="0" />
-	написать письмо
+	write mail
 </a>
 {% endif %}
 
 {% if registry.ui.admin %}
 <a onclick='removeObjsConfirm()' class="btn btn-danger">
 	<i class="icon-remove icon-white"></i>
-	удалить
+	delete
 </a>
 
 <a href="{{ registry.uri }}objects/removed/{{ gid }}/" class="btn">
 	<i class="icon-trash"></i>
-	Корзина
+	Basket
 </a>
 {% endif %}
 
@@ -46,8 +46,8 @@
 <tr>
 	<th style="width: 30px"></th>
 	<th style="text-align: center; width: 30px">ID</th>
-	<th>Объект</th>
-	<th>Данные</th>
+	<th>Object</th>
+	<th>Date</th>
 </tr>
 </thead>
 {% for obj in objs %}
@@ -64,14 +64,14 @@
 				</a>
 			
 				<ul class="dropdown-menu">
-					<li><a style="cursor: pointer;" onclick="oc_info({{ obj.0.id }})"><img src="{{ registry.uri }}img/information-button.png" class="cm_img" />Инфо</a></li>
-					<li><a style="cursor: pointer;" onclick="oc_edit({{ obj.0.id }})"><img src="{{ registry.uri }}img/edititem.gif" class="cm_img" />Правка</a></li>
-					<li><a style="cursor: pointer;" onclick="oc_folder({{ obj.0.fdirid }})"><img src="{{ registry.uri }}img/folder.png" class="cm_img" />Файлы</a></li>
+					<li><a style="cursor: pointer;" onclick="oc_info({{ obj.0.id }})"><img src="{{ registry.uri }}img/information-button.png" class="cm_img" />Info</a></li>
+					<li><a style="cursor: pointer;" onclick="oc_edit({{ obj.0.id }})"><img src="{{ registry.uri }}img/edititem.gif" class="cm_img" />Edit</a></li>
+					<li><a style="cursor: pointer;" onclick="oc_folder({{ obj.0.fdirid }})"><img src="{{ registry.uri }}img/folder.png" class="cm_img" />Files</a></li>
 					<hr style="padding: 3px 0; margin: 0;" />
-					<li><a style="cursor: pointer;" onclick="oc_addtask({{ obj.0.id }})"><img src="{{ registry.uri }}img/context/task--plus.png" class="cm_img" />Задача</a></li>
-					<li><a style="cursor: pointer;" onclick="oc_addinfo({{ obj.0.id }})"><img src="{{ registry.uri }}img/context/database--plus.png" class="cm_img" />Инфо</a></li>
-					<li><a style="cursor: pointer;" onclick="oc_addform({{ obj.0.id }})"><img src="{{ registry.uri }}img/context/address-book--plus.png" class="cm_img" />Форма</a></li>
-					<li><a style="cursor: pointer;" onclick="oc_reserv({{ obj.0.id }})"><img src="{{ registry.uri }}img/context/status-busy.png" class="cm_img" />Бронь</a></li>
+					<li><a style="cursor: pointer;" onclick="oc_addtask({{ obj.0.id }})"><img src="{{ registry.uri }}img/context/task--plus.png" class="cm_img" />Task</a></li>
+					<li><a style="cursor: pointer;" onclick="oc_addinfo({{ obj.0.id }})"><img src="{{ registry.uri }}img/context/database--plus.png" class="cm_img" />Info</a></li>
+					<li><a style="cursor: pointer;" onclick="oc_addform({{ obj.0.id }})"><img src="{{ registry.uri }}img/context/address-book--plus.png" class="cm_img" />Form</a></li>
+					<li><a style="cursor: pointer;" onclick="oc_reserv({{ obj.0.id }})"><img src="{{ registry.uri }}img/context/status-busy.png" class="cm_img" />Reservation</a></li>
 				</ul>
 			</div>
 		</div>
@@ -106,7 +106,7 @@
 
 </div>
 
-<div id="sortObjs" title="Сортировка" style="display: none">
+<div id="sortObjs" title="Sort" style="display: none">
 <form name="setSort" action="{{ registry.uri }}objects/sub/{{ gid }}/" method="post">
 <div style="overflow: hidden; margin-bottom: 20px">
 <div style="float: left">
@@ -117,10 +117,10 @@
 </select>
 </div>
 <div style="float: left">
-<span class="btn" onclick="addSortField()">Добавить</span> 
+<span class="btn" onclick="addSortField()">Add</span> 
 </div>
 <div style="float: right" class="btn">
-<a href="{{ registry.uri }}objects/sub/{{ gid }}/?clear">сбросить</a>
+<a href="{{ registry.uri }}objects/sub/{{ gid }}/?clear">drop</a>
 </div>
 </div>
 
@@ -129,9 +129,9 @@
 </div>
 
 <!-- FORMS -->
-<div title="Формы" style="display: none" id="forms">
+<div title="Forms" style="display: none" id="forms">
 	{% if not forms %}
-	<p style="text-align: center">форм нет</p>
+	<p style="text-align: center">not forms</p>
 	{% endif %}
 	<select id="form_current">
 	{% for form in forms %}
@@ -164,11 +164,11 @@ function oc_addinfo(id) {
 function oc_addform(id) {
 	$("#forms").dialog({
 	    buttons: {
-			"Продолжить": function() {
+			"Continue": function() {
 				window.location.href = "{{ registry.uri }}objects/setform/?oid=" + id + "&fid=" + $("#form_current").val();
 				$(this).dialog("close");
 			},
-			"Закрыть": function() {
+			"Close": function() {
 				$(this).dialog("close");
 			}
 		},
@@ -219,11 +219,11 @@ function writeMail() {
 }
 
 function removeObjsConfirm() {
-	$('<div title="Предупреждение">Действительно удалить выбранные объекты?</div>').dialog({
+	$('<div title="Notice">Really delete selected objects?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Нет": function() { $(this).dialog("close"); },
-			"Да": function() { removeObjs(); $(this).dialog("close"); }
+			"No": function() { $(this).dialog("close"); },
+			"Yes": function() { removeObjs(); $(this).dialog("close"); }
 		},
 		width: 540
 	});
@@ -258,8 +258,8 @@ function sortObjs() {
 	$('#sortObjs').dialog({
 		modal: true,
 	    buttons: {
-			"Закрыть": function() { $(this).dialog("close"); },
-			"Применить": function() { document.forms["setSort"].submit(); $(this).dialog("close"); }
+			"Close": function() { $(this).dialog("close"); },
+			"Apply": function() { document.forms["setSort"].submit(); $(this).dialog("close"); }
 		},
 		width: 540
 	});

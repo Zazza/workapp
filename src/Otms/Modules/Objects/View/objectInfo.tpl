@@ -2,30 +2,30 @@
 
 <span class="btn" style="float: left; font-weight: bold">
 	<img src="{{ registry.uri }}img/edititem.gif" alt="" style="vertical-align: middle" />
-	<a style="outline: none; cursor: pointer; text-decoration: none" href="{{ registry.uri }}objects/edit/{{ data.0.id }}/">Правка</a>
+	<a style="outline: none; cursor: pointer; text-decoration: none" href="{{ registry.uri }}objects/edit/{{ data.0.id }}/">Edit</a>
 </span>
 
 {% if mail %}
 <div class="btn" style="margin-left: 10px; float: left">
 	<img style="vertical-align: middle" src="{{ registry.uri }}img/left/mail-receive.png" alt="mail" border="0" />
-	<a href="{{ registry.uri }}mail/?oid={{ data.0.id }}">входящая почта</a>
+	<a href="{{ registry.uri }}mail/?oid={{ data.0.id }}">incoming mail</a>
 </div>
 
 <div class="btn" style="margin-left: 10px; float: left">
 	<img style="vertical-align: middle" src="{{ registry.uri }}img/left/mail-send.png" alt="mail" border="0" />
-	<a href="{{ registry.uri }}mail/send/?oid={{ data.0.id }}">исходящая почта</a>
+	<a href="{{ registry.uri }}mail/send/?oid={{ data.0.id }}">outgoing mail</a>
 </div>
 {% endif %}
 
 <span class="btn" style="margin-left: 10px; float: left; font-weight: bold">
-	<a style="text-decoration: none" href="{{ registry.uri }}objects/history/{{ data.0.id }}/" title="История">
-	<img src="{{ registry.uri }}img/clock-history.png" alt="История" style="vertical-align: middle" border="0" />
+	<a style="text-decoration: none" href="{{ registry.uri }}objects/history/{{ data.0.id }}/" title="History">
+	<img src="{{ registry.uri }}img/clock-history.png" alt="History" style="vertical-align: middle" border="0" />
 	</a>
 </span>
 
 <span class="btn" style="margin-left: 10px; float: left; font-weight: bold">
 	<a style="cursor: pointer" onclick="refreshurl('{{ siteName }}{{ registry.uri }}objects/show/{{ data.0.id }}/')">
-	<img src="{{ registry.uri }}img/enter.png" title="перейти к объекту" alt="object" border="0" style="vertical-align: middle" />
+	<img src="{{ registry.uri }}img/enter.png" title="go to object" alt="object" border="0" style="vertical-align: middle" />
 	</a>
 </span>
 
@@ -63,7 +63,7 @@
 
 </div>
 
-<div style="text-align: left; margin-top: 20px; padding: 2px 4px; background-color: #EEE">Объект добавлен: <a style="cursor: pointer" onclick="getUserInfo('{{ data.0.auid }}')">{{ data.0.aname }} {{ data.0.asoname }}</a> <span style="color: #777">[{{ data.0.adate }}]</span></div>
+<div style="text-align: left; margin-top: 20px; padding: 2px 4px; background-color: #EEE">Object add: <a style="cursor: pointer" onclick="getUserInfo('{{ data.0.auid }}')">{{ data.0.aname }} {{ data.0.asoname }}</a> <span style="color: #777">[{{ data.0.adate }}]</span></div>
 {% if data.0.edate and  data.0.edate != data.0.adate %}
-<div style="text-align: left; margin-top: 5px; padding: 2px 4px; background-color: #EEE">Последняя правка: <a style="cursor: pointer" onclick="getUserInfo('{{ data.0.euid }}')">{{ data.0.ename }} {{ data.0.esoname }}</a> <span style="color: #777">[{{ data.0.edate }}]</span></div>
+<div style="text-align: left; margin-top: 5px; padding: 2px 4px; background-color: #EEE">Last edit: <a style="cursor: pointer" onclick="getUserInfo('{{ data.0.euid }}')">{{ data.0.ename }} {{ data.0.esoname }}</a> <span style="color: #777">[{{ data.0.edate }}]</span></div>
 {% endif %}

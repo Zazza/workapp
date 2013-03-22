@@ -23,7 +23,7 @@ use Otms\Modules\Calendar\Model\Reserv;
 class Gant extends Controller {
 
 	public function index() {
-		$this->view->setTitle("Диаграмма Ганта");
+		$this->view->setTitle("Gant Chart");
 		
 		$mgant = new Model\Gant();
 		$gant = $mgant->getCalendar();

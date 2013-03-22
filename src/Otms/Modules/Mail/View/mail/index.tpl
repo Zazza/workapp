@@ -4,19 +4,19 @@
 <div class="btn-group">
 	<button class="btn" onclick="setRead()">
 		<i class="icon-ok icon-gray"></i>
-		Пометить все как прочитанные
+		Mark everything as read
 	</button>
 
 	{% if not obj %}
 	<button class="btn" onclick="clearFolderConfirm()">
 		<i class="icon-trash icon-gray"></i>
-		Очистить папку
+		Clear folder
 	</button>
 	{% endif %}
 	
 	<button class="btn" onclick="delMailsConfirm()">
 		<i class="icon-remove icon-gray"></i>
-		Удалить помеченные
+		Delete marked
 	</button>
 </div>
 </div>
@@ -64,7 +64,7 @@
 </div>
 
 <span class="btn btn-small" id="mailman" style="margin-bottom: 10px; display: none" onclick="backtolist()">
-	<img alt="назад" src="{{ registry.uri }}img/back.png" style="vertical-align: middle">
+	<img alt="back" src="{{ registry.uri }}img/back.png" style="vertical-align: middle">
 </span>
 
 <div id="mail_body" style="display: none"></div>
@@ -111,11 +111,11 @@ function setRead() {
 }
 
 function clearFolderConfirm() {
-	$('<div title="Очистка папки">Действительно удалить все письма в папке?</div>').dialog({
+	$('<div title="Folder cleaning">Really delete all mails in folder?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Нет": function() { $(this).dialog("close"); },
-			"Да": function() { clearFolder(); $(this).dialog("close"); }
+			"No": function() { $(this).dialog("close"); },
+			"Yes": function() { clearFolder(); $(this).dialog("close"); }
 		},
 		width: 280
 	});
@@ -179,11 +179,11 @@ function getMail(mid) {
 };
 
 function delMailConfirm() {
-	$('<div title="Удаление письма">Удалить?</div>').dialog({
+	$('<div title="Deleting mails">Delete?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Да": function() { delMail(); $(this).dialog("close"); },
-			"Нет": function() { $(this).dialog("close"); }
+			"Yes": function() { delMail(); $(this).dialog("close"); },
+			"No": function() { $(this).dialog("close"); }
 		},
 		width: 280
 	});
@@ -225,11 +225,11 @@ function delMail() {
 };
 
 function delMailsConfirm() {
-	$('<div title="Удалить выделенные письма">Удалить?</div>').dialog({
+	$('<div title="Delete selected mails">Delete?</div>').dialog({
 		modal: true,
 	    buttons: {
-			"Да": function() { delSelected(); $(this).dialog("close"); },
-			"Нет": function() { $(this).dialog("close"); }
+			"Yes": function() { delSelected(); $(this).dialog("close"); },
+			"No": function() { $(this).dialog("close"); }
 		},
 		width: 280
 	});

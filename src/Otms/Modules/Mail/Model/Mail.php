@@ -107,7 +107,7 @@ class Mail extends Model {
 								$this->saveMailTask($mail_array);
 								
 								if ($mailStructure->notLog) {
-									$string = "Новое письмо от " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
+									$string = "New email from " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
 								} else {
 									$string = "";
 								}
@@ -115,26 +115,26 @@ class Mail extends Model {
 								if ($tid = $this->registry["task"]->issetTaskFromMail($mail_array["mailbox"] . "@" . $mail_array["host"])) {
 									$mid = $this->saveMail($mail_array);
 									$this->registry["task"]->addComment($tid, null, 0, false, $mid);
-									$this->registry["task"]->SpamUsers("Новый комментарий", $tid);
+									$this->registry["task"]->SpamUsers("New comment", $tid);
 									
-									$string = "Новое письмо " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
+									$string = "New email " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
 								} else {
 									$mid = $this->saveMail($mail_array);
 									$tid = $this->registry["task"]->addTask(0, $mailStructure->task, $mid);
-									$this->registry["task"]->SpamUsers("Новая задача", $tid);
+									$this->registry["task"]->SpamUsers("New task", $tid);
 									
-									$string = "Новое письмо " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
+									$string = "New email " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
 								}
 							} else {
 								$mid = $this->saveMail($mail_array);
 								
 								if ($tid = $this->registry["task"]->issetTaskFromMail($mail_array["mailbox"] . "@" . $mail_array["host"])) {
 									$this->registry["task"]->addComment($tid, null, 0, false, $mid);
-									$this->registry["task"]->SpamUsers("Новый комментарий", $tid);
+									$this->registry["task"]->SpamUsers("New comment", $tid);
 									
-									$string = "Новое письмо " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
+									$string = "New email " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
 								} else {
-									$string = "Новое письмо " . $mail_array["mailbox"] . "@" . $mail_array["host"];
+									$string = "New email " . $mail_array["mailbox"] . "@" . $mail_array["host"];
 								}
 								
 								
@@ -226,7 +226,7 @@ class Mail extends Model {
 					$this->saveMailTask($mail_array);
 					
 					if ($mailStructure->notLog) {
-						$string = "Новое письмо " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
+						$string = "New email " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
 					} else {
 						$string = "";
 					}
@@ -234,26 +234,26 @@ class Mail extends Model {
 					if ($tid = $this->registry["task"]->issetTaskFromMail($mail_array["mailbox"] . "@" . $mail_array["host"])) {
 						$mid = $this->saveMail($mail_array);
 						$this->registry["task"]->addComment($tid, null, 0, false, $mid);
-						$this->registry["task"]->SpamUsers("Новый комментарий", $tid);
+						$this->registry["task"]->SpamUsers("New comment", $tid);
 						
-						$string = "Новое письмо " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
+						$string = "New email " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
 					} else {
 						$mid = $this->saveMail($mail_array);
 						$tid = $this->registry["task"]->addTask(0, $mailStructure->task, $mid);
-						$this->registry["task"]->SpamUsers("Новая задача", $tid);
+						$this->registry["task"]->SpamUsers("New task", $tid);
 						
-						$string = "Новое письмо " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
+						$string = "New email " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
 					}
 				} else {
 					$mid = $this->saveMail($mail_array);
 					
 					if ($tid = $this->registry["task"]->issetTaskFromMail($mail_array["mailbox"] . "@" . $mail_array["host"])) {
 						$this->registry["task"]->addComment($tid, null, 0, false, $mid);
-						$this->registry["task"]->SpamUsers("Новый комментарий", $tid);
+						$this->registry["task"]->SpamUsers("New comment", $tid);
 						
-						$string = "Новое письмо " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
+						$string = "New email " . $mail_array["mailbox"] . "@" . $mail_array["host"] . " -> " . $mailStructure->textMailAction;
 					} else {
-						$string = "Новое письмо " . $mail_array["mailbox"] . "@" . $mail_array["host"];
+						$string = "New email " . $mail_array["mailbox"] . "@" . $mail_array["host"];
 					}
 				}
 				

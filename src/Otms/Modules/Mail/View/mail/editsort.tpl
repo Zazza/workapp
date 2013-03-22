@@ -8,26 +8,26 @@
 
 <form method="post" action="{{ registry.uri }}mail/sort/?id={{ sort.0.sort_id }}">
 
-<p><b>Сортировать по:</b></p>
+<p><b>Sort on:</b></p>
 
 {% for part in sort %}
 
 {% if part.type == "from" %}
-<p>Поле "От кого"</p>
+<p>Field "from whom"</p>
 <p>
 	<input type="text" name="from" value="{{ part.val }}" style="width: 280px" />
 </p>
 {% endif %}
 
 {% if part.type == "to" %}
-<p>Поле "Кому"</p>
+<p>Field "to whom"</p>
 <p>
 	<input type="text" name="to" value="{{ part.val }}" style="width: 280px" />
 </p>
 {% endif %}
 
 {% if part.type == "subject" %}
-<p>Поле "Тема" (содержит текст)</p>
+<p>Field "Theme" (contains text)</p>
 <p>
 	<input type="text" name="subject" value="{{ part.val }}" style="width: 280px" />
 </p>
@@ -35,18 +35,18 @@
 
 {% endfor %}
 
-<p><b>Действие:</b></p>
+<p><b>Action:</b></p>
 
 <p>
 {% if not folders %}
 	<a class="btn" href="{{ registry.uri }}mail/folder/">
 	<i class="icon-folder-open"></i>
-	Создать папку
+	Create folder
 	</a>
 {% else %}
 	<label class="radio inline">
 	<input type="radio" class="mail_action" name="mail_action" {% if sort.0.action == "move" %}checked="checked"{% endif %} value="move" />
-	Переместить в
+	Move in
 	</label>
 	<select name="folder">
 		{% for part in folders %}
@@ -59,14 +59,14 @@
 <p>
 <label class="radio inline">
 	<input type="radio" class="mail_action" name="mail_action" {% if sort.0.action == "remove" %}checked="checked"{% endif %} value="remove" />
-	удалить
+	delete
 </label>
 </p>
 
 <p style="margin-top: 10px">
 <label class="radio inline">
 	<input type="radio" class="mail_action" name="mail_action" {% if sort.0.action == "task" %}checked="checked"{% endif %} value="task" />
-	создать задачу
+	create task
 </label>
 </p>
 
@@ -75,7 +75,7 @@
 </div>
 
 <p style="margin-top: 20px">
-	<input type="submit" name="edit_sort" class="btn" value="Редактировать сортировку" />
+	<input type="submit" name="edit_sort" class="btn" value="Edit sorting" />
 </p>
 
 </form>
