@@ -486,7 +486,7 @@ qqfa.FileUploader = function(o){
                 
         template: '<div class="qqfa-uploader">' + 
                 '<div class="qqfa-upload-drop-area"><span></span></div>' +
-                '<div class="qqfa-upload-button btn"><i class="icon-upload"></i> С компьютера</div>' +
+                '<div class="qqfa-upload-button btn"><i class="icon-upload"></i> Upload</div>' +
                 '<ul class="qqfa-upload-list"></ul>' + 
              '</div>',
 

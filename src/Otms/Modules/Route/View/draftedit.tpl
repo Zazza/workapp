@@ -50,7 +50,7 @@
 <!-- ACTION CONTEXT MENU -->
 <div class="contextMenu" id="actionMenu" style="display: none">
 	<ul class="cm">
-		<li id="substep_action"><i class="icon-random"></i>&nbsp;Actoin</li>
+		<li id="substep_action"><i class="icon-random"></i>&nbsp;Action</li>
 	</ul>
 </div>
 
@@ -186,8 +186,8 @@ function subStepRename(id) {
 			},
 			"Close": function() { $(this).dialog("close"); }
 		},
-		width: 250,
-		height: 150
+		width: 300,
+		height: 200
 	});
 }
 
